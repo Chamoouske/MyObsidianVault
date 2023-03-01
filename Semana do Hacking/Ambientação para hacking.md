@@ -1,0 +1,19 @@
+# Ambientação para hacking
+
+- Sempre buscar proteger o meu sistema.
+    - Usar VMs
+        - VirtualBox
+        - VirtualBox Extension Pack
+        - Iso Kali para VM
+    - Docker
+    - WSL
+    - Sistemas em nuvem
+- Softwares/Alvos para teste
+    - metasploitable
+    - vulnhub.com
+- Plataformas de treinamento
+    - TryHackMe
+    - HackeTheBox
+- Plataformas de Bug Bounty
+    - HackerOne
+    - BugCrowd

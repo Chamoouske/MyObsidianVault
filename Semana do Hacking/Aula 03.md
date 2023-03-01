@@ -1,0 +1,26 @@
+# Aula 03
+
+- pentest-standard.org
+- Passos
+    - Alvo
+    - Conhecer
+        - Quais as tecnologias?
+        - Nível dos programadores?
+    - Analisar
+    - Explorar
+- Ao começar o ataque
+    - Cria documento no Notion e seta o Alvo
+    - Analisar as ferramentas usadas
+    - ferramentas:
+        - whatweb
+        - wappalyzer
+        - wpscan - ferramenta de scan para sites em wordpress
+        - subfinder - Ferramenta de busca de subdomínios
+        - httpx - verifica se o domínio está ativo
+        - exemplo do subfinder com httpx:
+            - .subfinder -d site - silent | ./httpx
+        - nickto - scanner de aplicações web
+        - drib http://site
+        - setoolkit
+        - gobuster
+        - wireshark - monitoramento da minha rede
