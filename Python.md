@@ -1,15 +1,15 @@
-[Create Virtual Env Python](Create%20Virtual%20Env%20Python.md)
+[Create Virtual Env Python](Python/Create%20Virtual%20Env%20Python.md)
 
-[Pyinstaller](Pyinstaller.md)
+[Pyinstaller](Python/Pyinstaller.md)
 
-[Boas práticas](Boas%20práticas.md)
+[Boas práticas](Python/Boas%20práticas.md)
 
-[Relative imports](Relative%20imports.md)
+[Relative imports](Python/Relative%20imports.md)
 
-[Jupyter venv](Jupyter%20venv.md)
+[Jupyter venv](Python/Jupyter%20venv.md)
 
-[Guia init Django](Guia%20init%20Django.md)
+[Guia init Django](Python/Guia%20init%20Django.md)
 
-[Comandos Anaconda](Python/Comandos%20Anaconda%2001c771d02c524e559654ce4947125414.md)
+[Comandos Anaconda](Python/Comandos%20Anaconda.md)
 
-[Uso do Webdriver manager](Uso%20do%20Webdriver%20manager.md)
+[Uso do Webdriver manager](Python/Uso%20do%20Webdriver%20manager.md)
