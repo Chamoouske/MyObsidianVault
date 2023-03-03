@@ -1,4 +1,3 @@
-# Estrutura de pastas no Django
 
 - Project folder
     

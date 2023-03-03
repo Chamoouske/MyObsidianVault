@@ -1,4 +1,3 @@
-# Uso do Webdriver manager
 
 Primeiro precisa instalar o webdriver_manager com o comando:
 

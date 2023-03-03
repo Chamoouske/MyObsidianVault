@@ -1,4 +1,3 @@
-# Semana do Hacking
 
 ![[Ambientação para hacking]]
 

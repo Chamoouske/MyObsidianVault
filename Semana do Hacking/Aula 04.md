@@ -1,4 +1,3 @@
-# Aula 04
 
 - Sites úteis:
     - shodan - busca de dispositivos que estão públicos na internet

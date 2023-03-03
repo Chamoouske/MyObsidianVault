@@ -1,8 +1,7 @@
-# Guia init Django
 
-[Estrutura de pastas no Django](Python/Guia%20init%20Django/Estrutura%20de%20pastas%20no%20Django.md)
+![[Estrutura de pastas no Django]]
 
-[Define global template](Python/Guia%20init%20Django/Define%20global%20template.md)
+![[Define global template]]
 
 ```bash
 mkdir myproject && cd myproject && py -m venv venv && pip install django

@@ -1,4 +1,3 @@
-# Aula 02
 
 - Qual sistema usar?
     

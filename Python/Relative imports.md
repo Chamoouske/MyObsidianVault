@@ -1,4 +1,3 @@
-# Relative imports
 
 ```python
 import sys

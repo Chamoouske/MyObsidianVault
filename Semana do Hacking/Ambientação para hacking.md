@@ -1,4 +1,3 @@
-# Ambientação para hacking
 
 - Sempre buscar proteger o meu sistema.
     - Usar VMs

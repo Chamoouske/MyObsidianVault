@@ -1,4 +1,3 @@
-# Comandos Anaconda
 
 - Criar ambiente virtual
     

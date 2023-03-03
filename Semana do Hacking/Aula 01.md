@@ -1,4 +1,3 @@
-# Aula 01
 
 - Google Hacking
     - intext: palavra específica

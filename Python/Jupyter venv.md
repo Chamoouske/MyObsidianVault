@@ -1,4 +1,3 @@
-# Jupyter venv
 
 - Instalar o kernel jupyter no ambiente virtual
     

@@ -1,4 +1,3 @@
-# Aula 03
 
 - pentest-standard.org
 - Passos

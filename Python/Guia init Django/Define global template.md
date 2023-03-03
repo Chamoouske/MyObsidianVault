@@ -1,4 +1,3 @@
-# Define global template
 
 Precisa o seguinte código no settings.py, em TEMPLATES
 

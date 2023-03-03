@@ -1,4 +1,3 @@
-# Boas práticas
 
 - Criar ambiente virtual
     

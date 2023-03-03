@@ -1,4 +1,3 @@
-# Create Virtual Env Python
 
 - Pelo Python
     

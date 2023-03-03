@@ -1,3 +1,4 @@
+
 ![[Create Virtual Env Python]]
 
 ![[Pyinstaller]]
