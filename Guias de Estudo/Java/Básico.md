@@ -1,5 +1,4 @@
 ### Básico
-- [ ] Sintaxe
 - [x] Tipos de dados
 - [x] Declaração de variáveis
 - [ ] Condicionais
