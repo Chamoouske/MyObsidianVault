@@ -9,7 +9,7 @@
     - fundamentos programação python
     - sistema operacional
     
-    ![Untitled](Aula%2001/Untitled.png)
+    ![Untitled](Untitled.png)
     
 
 [http://youtube.com/watch?v=nIcJuLcb5y0](http://youtube.com/watch?v=nIcJuLcb5y0)
