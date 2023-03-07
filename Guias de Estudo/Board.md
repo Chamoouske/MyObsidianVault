@@ -6,12 +6,12 @@ kanban-plugin: basic
 
 ## Estudar
 
-- [ ] [[Java]]<br>![[Java#Básico]] @{2023-03-07}
-- [ ] [[Java]]<br>![[Java#SpringBoot]] @{2023-03-07}
+- [ ] [[Java]]<br>![[Java#SpringBoot]] @{07/03/2023}
 
 
 ## Estudando
 
+- [ ] [[Java]]<br>![[Java#Básico]] @{07/03/2023}
 
 
 ## Revisar

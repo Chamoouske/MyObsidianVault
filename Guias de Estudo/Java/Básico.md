@@ -1,5 +1,5 @@
 ### Básico
-- [ ] Sintaxe básica
+- [ ] Sintaxe
 - [ ] Declaração de variáveis
 - [ ] Condicionais
 - [ ] Laços de repetição
