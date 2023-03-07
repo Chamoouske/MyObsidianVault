@@ -3,6 +3,7 @@
 - [x] Declaração de variáveis
 - [x] Condicionais
 - [ ] Laços de repetição
+- [ ] Vetores
 - [ ] Funções
 
 ### Avançado
