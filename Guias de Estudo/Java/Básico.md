@@ -2,7 +2,7 @@
 - [x] Tipos de dados
 - [x] Declaração de variáveis
 - [x] Condicionais
-- [ ] Laços de repetição
+- [x] Laços de repetição
 - [ ] Vetores
 - [ ] Funções
 
