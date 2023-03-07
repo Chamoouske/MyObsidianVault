@@ -1,6 +1,6 @@
 ### Básico
 - [ ] Sintaxe
-- [ ] Tipos de dados
+- [x] Tipos de dados
 - [ ] Declaração de variáveis
 - [ ] Condicionais
 - [ ] Laços de repetição
