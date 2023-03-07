@@ -1,10 +1,10 @@
 ### Básico
-- [x] Sintaxe
-- [x] Tipos de dados
+- [ ] Sintaxe
+- [ ] Tipos de dados
 - [ ] Declaração de variáveis
-- [x] Condicionais
+- [ ] Condicionais
 - [ ] Laços de repetição
-- [x] Funções
+- [ ] Funções
 
 ### Avançado
 - [ ] Classes
