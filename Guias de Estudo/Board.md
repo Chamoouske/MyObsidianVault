@@ -12,6 +12,7 @@ kanban-plugin: basic
 ## Estudando
 
 - [ ] [[Java]]<br>![[Java#Básico]] @{07/03/2023}
+- [ ] [[Java]]<br>![[Java#Intermediário]] @{07/03/2023}
 
 
 ## Revisar

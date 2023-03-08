@@ -1,0 +1,4 @@
+- [ ] Classes
+- [ ] Heranças
+- [ ] Interfaces
+- [ ] Design Patterns
