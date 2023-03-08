@@ -3,6 +3,9 @@
 - [ ] Templates
 - [ ] Básicos de plugins
 
+# Advanced tables
+- [ ] Atalhos
+
 # Obsidian Git
 - [ ] Baixar um vault
 - [ ] Configuração básica
