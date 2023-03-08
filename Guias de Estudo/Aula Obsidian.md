@@ -5,6 +5,7 @@
 
 # Advanced tables
 - [ ] Atalhos
+- [ ] Toolbar
 
 # Obsidian Git
 - [ ] Baixar um vault
