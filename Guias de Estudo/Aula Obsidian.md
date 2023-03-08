@@ -23,3 +23,4 @@
 - [ ] Criar cartão
 - [ ] Personalisar o cartão
 - [ ] Configurações básicas
+- [ ] Uso de Metadados
