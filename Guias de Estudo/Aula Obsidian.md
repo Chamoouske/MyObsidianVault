@@ -19,8 +19,8 @@
 - [x] Uso de tag
 
 # Kanban
-- [ ] Criar quadro
-- [ ] Criar cartão
-- [ ] Personalisar o cartão
-- [ ] Configurações básicas
+- [x] Criar quadro
+- [x] Criar cartão
+- [x] Personalisar o cartão
+- [x] Configurações básicas
 - [ ] Uso de Metadados
