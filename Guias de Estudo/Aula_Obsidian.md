@@ -17,10 +17,6 @@ kanban-plugin: basic
 
 
 
-## Dúvidas
-
-
-
 ## Finalizado
 
 **Concluído**
