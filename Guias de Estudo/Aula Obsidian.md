@@ -4,8 +4,8 @@
 - [x] Básicos de plugins
 
 # Advanced tables
-- [ ] Atalhos
-- [ ] Toolbar
+- [x] Atalhos
+- [x] Toolbar
 
 # Obsidian Git
 - [x] Baixar um vault
