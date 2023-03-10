@@ -1,5 +1,5 @@
 # Obsidian
-- [ ] Atalhos básicos
+- [x] Atalhos básicos
 - [ ] Templates
 - [ ] Básicos de plugins
 
