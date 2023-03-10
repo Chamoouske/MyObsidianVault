@@ -1,6 +1,7 @@
+
 # Obsidian
 - [x] Atalhos básicos
-- [ ] Templates
+- [x] Templates
 - [x] Básicos de plugins
 
 # Advanced tables
@@ -23,4 +24,4 @@
 - [x] Criar cartão
 - [x] Personalisar o cartão
 - [x] Configurações básicas
-- [ ] Uso de Metadados
+- [x] Uso de Metadados
