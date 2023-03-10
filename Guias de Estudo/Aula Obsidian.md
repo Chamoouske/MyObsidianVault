@@ -12,11 +12,11 @@
 - [x] Configuração básica
 
 # Dataview
-- [ ] Task
-- [ ] Table
-- [ ] List
-- [ ] Uso de caminho
-- [ ] Uso de tag
+- [x] Task
+- [x] Table
+- [x] List
+- [x] Uso de caminho
+- [x] Uso de tag
 
 # Kanban
 - [ ] Criar quadro
