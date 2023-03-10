@@ -8,7 +8,7 @@
 - [ ] Toolbar
 
 # Obsidian Git
-- [ ] Baixar um vault
+- [x] Baixar um vault
 - [ ] Configuração básica
 
 # Dataview
