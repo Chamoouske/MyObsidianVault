@@ -1,7 +1,7 @@
 # Obsidian
 - [x] Atalhos básicos
 - [ ] Templates
-- [ ] Básicos de plugins
+- [x] Básicos de plugins
 
 # Advanced tables
 - [ ] Atalhos
@@ -9,7 +9,7 @@
 
 # Obsidian Git
 - [x] Baixar um vault
-- [ ] Configuração básica
+- [x] Configuração básica
 
 # Dataview
 - [ ] Task
