@@ -6,11 +6,6 @@ kanban-plugin: basic
 
 ## Assuntos
 
-- [ ] [[Aula Obsidian]]<br>![[Aula Obsidian#Obsidian]]
-- [ ] [[Aula Obsidian]]<br>![[Aula Obsidian#Obsidian Git]]
-- [ ] [[Aula Obsidian]]<br>![[Aula Obsidian#Advanced tables]]
-- [ ] [[Aula Obsidian]]<br>![[Aula Obsidian#Dataview]]
-- [ ] [[Aula Obsidian]]<br>![[Aula Obsidian#Kanban]]
 
 
 ## Ministrar
@@ -22,7 +17,15 @@ kanban-plugin: basic
 **Concluído**
 
 
+***
 
+## Arquivado
+
+- [x] [[Aula Obsidian]]<br>![[Aula Obsidian#Obsidian]]
+- [x] [[Aula Obsidian]]<br>![[Aula Obsidian#Obsidian Git]]
+- [x] [[Aula Obsidian]]<br>![[Aula Obsidian#Dataview]]
+- [x] [[Aula Obsidian]]<br>![[Aula Obsidian#Advanced tables]]
+- [x] [[Aula Obsidian]]<br>![[Aula Obsidian#Kanban]]
 
 %% kanban:settings
 ```
