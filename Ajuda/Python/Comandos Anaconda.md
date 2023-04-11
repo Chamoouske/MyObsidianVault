@@ -32,5 +32,5 @@
 - Clonar um ambiente virtual
     
     ```bash
-    conda env create --name (-n) <NEW_ENV_NAME> --clone (-c) <CLONE_ENV_NAME>
+    conda create -n <NEW_ENV_NAME> --clone <CLONE_ENV_NAME>
     ```
