@@ -4,21 +4,21 @@ O Abstract Factory é um padrão...
 
 ## Exemplo
 ```python
-class Car:
+class CarFactory:
 	def __init__(self, color, n_doors=2, max_velocity=120):
 		self.color = color
 		self.n_doors = n_doors
 		self.max_velocity = max_velocity
 		
-class Bike:
+class BikeFactory:
 	def __init__(self, color, max_velocity=120):
 		self.color = color
 		self.max_velocity = max_velocity
 
 class VehicleFactory:
 	_registry= {
-		"car": Car,
-		"bike": Bike
+		"car": CarFactory(),
+		"bike": BikeFactory()
 	}
 	
 	def __call__(self, obj, *args, **kwargs):
