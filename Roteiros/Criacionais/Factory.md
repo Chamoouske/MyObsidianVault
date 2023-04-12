@@ -11,11 +11,11 @@ class Car:
 		self.max_velocity = max_velocity
 class SportCar(Car):
 	def __init__(self, *args, **kwargs):
-		super(*args, **kwargs)
+		super().__init__(*args, **kwargs)
 		self.type = "Sport"
 class ConversibleCar(Car):
 	def __init__(self, *args, **kwargs):
-		super(*args, **kwargs)
+		super().__init__(*args, **kwargs)
 		self.type = "Conversible"
 
 class CarFactory:
