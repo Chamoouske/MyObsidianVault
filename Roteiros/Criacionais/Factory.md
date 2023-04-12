@@ -1,0 +1,8 @@
+
+## O que é?
+O Factory é um padrão...
+
+## Exemplo
+```python
+print("Adicione um exemplo de aplicação do padrão Factory aqui")
+```
