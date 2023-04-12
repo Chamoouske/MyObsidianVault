@@ -14,7 +14,7 @@ class SportCar(Car):
 		super(*args, **kwargs)
 		self.type = "Sport"
 class ConversibleCar(Car):
-	def __init__(self, *args, **kwargs)
+	def __init__(self, *args, **kwargs):
 		super(*args, **kwargs)
 		self.type = "Conversible"
 
