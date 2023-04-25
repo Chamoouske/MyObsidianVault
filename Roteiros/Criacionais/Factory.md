@@ -1,7 +1,7 @@
 
 - [ ] [[Factory]]
 ## O que é?
-O Factory é um padrão...
+O Factory é um padrão que fornece uma interface para criar objetos em uma superclasse, mas permite que as subclasses alterem o tipo de objetos que serão criados
 
 ## Exemplo
 ```python
