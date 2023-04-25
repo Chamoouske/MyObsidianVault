@@ -1,4 +1,5 @@
 
+- [ ] [[Singleton]]
 ## O que é?
 O Singleton é um padrão...
 

@@ -1,4 +1,5 @@
 
+- [ ] [[Visitor]]
 ## O que é?
 O Visitor é um padrão...
 

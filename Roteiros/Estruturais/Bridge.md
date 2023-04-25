@@ -1,4 +1,5 @@
 
+- [ ] [[Bridge]]
 ## O que é?
 O Bridge é um padrão...
 
