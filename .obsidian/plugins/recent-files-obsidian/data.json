@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Java",
+      "path": "Guias de Estudo/Java.md"
+    },
+    {
+      "basename": "Inglês",
+      "path": "Guias de Estudo/Inglês.md"
+    },
+    {
+      "basename": "Semana01",
+      "path": "Guias de Estudo/Semanas/Semana01.md"
+    },
+    {
       "basename": "Home",
       "path": "Home.md"
     },
     {
       "basename": "Padrões de projetos",
       "path": "Roteiros/Padrões de projetos.md"
-    },
-    {
-      "basename": "Java",
-      "path": "Guias de Estudo/Java.md"
     },
     {
       "basename": "SpringBoot",
@@ -31,10 +39,6 @@
     {
       "basename": "Exemplo Readme",
       "path": "Ajuda/README GitHub/Exemplo Readme.md"
-    },
-    {
-      "basename": "Inglês",
-      "path": "Guias de Estudo/Inglês.md"
     },
     {
       "basename": "Semana13",
@@ -83,10 +87,6 @@
     {
       "basename": "Semana02",
       "path": "Guias de Estudo/Semanas/Semana02.md"
-    },
-    {
-      "basename": "Semana01",
-      "path": "Guias de Estudo/Semanas/Semana01.md"
     },
     {
       "basename": "Template_Guia_estudos",
