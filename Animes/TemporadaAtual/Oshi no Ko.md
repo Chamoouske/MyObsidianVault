@@ -7,6 +7,7 @@ last_episode: 3
 dropped: false
 finished: false
 created_at: 2023-04-27 15:32
+banner: "999_Assets/1311951.jpg"
 
 ---
 ## Gênero

@@ -25,13 +25,14 @@ switch(month){
 		temp = 'Summer-' + date.getFullYear();
 		break;
 	case 10:
-	case 12:
+	case 11:
 	case 12:
 		temp = 'Fall-' + date.getFullYear();
 		break;
 }
 let on_air = await tp.system.prompt("Dia do lançamento: ")
-on_air = (new Date(`${month}/${on_air}/${date.getFullYear()}`)).toLocaleDateString('en', { weekday: 'long' })
+on_air = (new Date(`${month}/${on_air}/${date.getFullYear()}`))
+on_air = on_air.toLocaleDateString('en', { weekday: 'long' })
 %>---
 
 tag: animes <% temp %>
@@ -41,6 +42,7 @@ last_episode: <% await tp.system.prompt("Último ep assistido: ") || 0 %>
 dropped: false
 finished: false
 created_at: <% tp.file.creation_date() %>
+banner: <% await tp.system.prompt("Link de um banner: ") || 0 %>
 
 ---
 ## Gênero
