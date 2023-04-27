@@ -6,6 +6,9 @@ banner_y: 0.328
 ## [[Animes]]
 
 ## Vídeos pra assistir
+```ad-warning
+Para adicionar um novo vídeo, acesse o arquivo [[Vídeos pra assistir]] e clique no botão para adicionar um vídeo.
+```
 ```dataview
 TASK
 FROM "Youtube"
