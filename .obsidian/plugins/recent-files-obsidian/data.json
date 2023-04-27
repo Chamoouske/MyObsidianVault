@@ -1,8 +1,108 @@
 {
   "recentFiles": [
     {
+      "basename": "Animes",
+      "path": "Animes/Animes.md"
+    },
+    {
+      "basename": "Jijou wo Shiranai",
+      "path": "Animes/TemporadaAtual/Jijou wo Shiranai.md"
+    },
+    {
+      "basename": "AnimeTempAtual",
+      "path": "_Template/AnimeTempAtual.md"
+    },
+    {
+      "basename": "Kono Subarashii Sekai ni Bakuen wo",
+      "path": "Animes/TemporadaAtual/Kono Subarashii Sekai ni Bakuen wo.md"
+    },
+    {
+      "basename": "Yamada-kun to Lv999",
+      "path": "Animes/TemporadaAtual/Yamada-kun to Lv999.md"
+    },
+    {
+      "basename": "Watashi no Yuri wa Oshigoto Desu",
+      "path": "Animes/TemporadaAtual/Watashi no Yuri wa Oshigoto Desu.md"
+    },
+    {
+      "basename": "Tonikaku kawaii 2",
+      "path": "Animes/TemporadaAtual/Tonikaku kawaii 2.md"
+    },
+    {
+      "basename": "Tensei Kizoku no Isekai Boukenroku",
+      "path": "Animes/TemporadaAtual/Tensei Kizoku no Isekai Boukenroku.md"
+    },
+    {
+      "basename": "Tengoku Daimakyou",
+      "path": "Animes/TemporadaAtual/Tengoku Daimakyou.md"
+    },
+    {
+      "basename": "Skip to Loafer",
+      "path": "Animes/TemporadaAtual/Skip to Loafer.md"
+    },
+    {
+      "basename": "Rokudou no Onna-tachi",
+      "path": "Animes/TemporadaAtual/Rokudou no Onna-tachi.md"
+    },
+    {
+      "basename": "Oshi no Ko",
+      "path": "Animes/TemporadaAtual/Oshi no Ko.md"
+    },
+    {
+      "basename": "My Home Hero",
+      "path": "Animes/TemporadaAtual/My Home Hero.md"
+    },
+    {
+      "basename": "Mahou Tsukai no Yome 2",
+      "path": "Animes/TemporadaAtual/Mahou Tsukai no Yome 2.md"
+    },
+    {
+      "basename": "Kuma Kuma Kuma Bear Punch!",
+      "path": "Animes/TemporadaAtual/Kuma Kuma Kuma Bear Punch!.md"
+    },
+    {
+      "basename": "Kimi wa Houkago Insomnia",
+      "path": "Animes/TemporadaAtual/Kimi wa Houkago Insomnia.md"
+    },
+    {
+      "basename": "Kimetsu no Yaiba 3",
+      "path": "Animes/TemporadaAtual/Kimetsu no Yaiba 3.md"
+    },
+    {
+      "basename": "Kaminaki Sekai no Kamisama Katsudou",
+      "path": "Animes/TemporadaAtual/Kaminaki Sekai no Kamisama Katsudou.md"
+    },
+    {
+      "basename": "Isekai Shoukan wa Nidome desu",
+      "path": "Animes/TemporadaAtual/Isekai Shoukan wa Nidome desu.md"
+    },
+    {
+      "basename": "Isekai de Cheat Skill wo Te ni Shita Ore wa",
+      "path": "Animes/TemporadaAtual/Isekai de Cheat Skill wo Te ni Shita Ore wa.md"
+    },
+    {
+      "basename": "Dr. Stone New World",
+      "path": "Animes/TemporadaAtual/Dr. Stone New World.md"
+    },
+    {
+      "basename": "Dead Mount Death Play",
+      "path": "Animes/TemporadaAtual/Dead Mount Death Play.md"
+    },
+    {
       "basename": "Home",
       "path": "Home.md"
+    },
+    {
+      "basename": "Guia_estudos",
+      "path": "_Template/Guia_estudos.md"
+    },
+    {
+      "basename": "Untitled",
+      "path": "Guias de Estudo/Untitled.md"
+    },
+    {
+      "basename": "DesignPatters",
+      "path": "_Template/DesignPatters.md"
     },
     {
       "basename": "Inglês",
@@ -91,14 +191,6 @@
     {
       "basename": "Semana02",
       "path": "Guias de Estudo/Inglês/Semanas/Semana02.md"
-    },
-    {
-      "basename": "Template_Guia_estudos",
-      "path": "_Template/Template_Guia_estudos.md"
-    },
-    {
-      "basename": "Template_DesignPatters",
-      "path": "_Template/Template_DesignPatters.md"
     },
     {
       "basename": "Chain of Responsability",

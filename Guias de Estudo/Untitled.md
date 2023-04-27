@@ -8,6 +8,7 @@ await tp.file.rename(title);
 tag: guia/estudo/<% await title %>
 kanban-plugin: basic
 ---
+
 ## Estudar
 
 ## Estudando
