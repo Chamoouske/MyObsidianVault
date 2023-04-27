@@ -7,19 +7,19 @@ kanban-plugin: basic
 
 ## Estudar
 
-- [ ] [[Semana01]]<br>![[Semana01#Estudar]]
-- [ ] [[Semana02]]<br>![[Semana02#Estudar]]
-- [ ] [[Semana03]]<br>![[Semana03#Estudar]]
-- [ ] [[Semana04]]<br>![[Semana04#Estudar]]
-- [ ] [[Semana05]]<br>![[Semana05#Estudar]]
-- [ ] [[Semana06]]<br>![[Semana06#Estudar]]
-- [ ] [[Semana07]]<br>![[Semana07#Estudar]]
-- [ ] [[Semana08]]<br>![[Semana08#Estudar]]
-- [ ] [[Semana09]]<br>![[Semana09#Estudar]]
-- [ ] [[Semana10]]<br>![[Semana10#Estudar]]
-- [ ] [[Semana11]]<br>![[Semana11#Estudar]]
-- [ ] [[Semana12]]<br>![[Semana12#Estudar]]
-- [ ] [[Semana13]]<br>![[Semana13#Estudar]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana01]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana02]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana03]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana05]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana05]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana06]]
+- [ ]![[Guias de Estudo/Inglês/Inglês#Semana07]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana08]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana09]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana10]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana11]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana12]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana13]]
 
 
 ## Estudando
