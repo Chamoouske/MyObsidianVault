@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Home",
+      "path": "Home.md"
+    },
+    {
       "basename": "Inglês",
       "path": "Guias de Estudo/Inglês.md"
+    },
+    {
+      "basename": "Padrões de projetos",
+      "path": "Roteiros/Padrões de projetos.md"
     },
     {
       "basename": "Java",
@@ -23,14 +31,6 @@
     {
       "basename": "Semana01",
       "path": "Guias de Estudo/Inglês/Semanas/Semana01.md"
-    },
-    {
-      "basename": "Home",
-      "path": "Home.md"
-    },
-    {
-      "basename": "Padrões de projetos",
-      "path": "Roteiros/Padrões de projetos.md"
     },
     {
       "basename": "Intermediário",

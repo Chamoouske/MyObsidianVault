@@ -13,7 +13,7 @@ kanban-plugin: basic
 - [ ] ![[Guias de Estudo/Inglês/Inglês#Semana05]]
 - [ ] ![[Guias de Estudo/Inglês/Inglês#Semana05]]
 - [ ] ![[Guias de Estudo/Inglês/Inglês#Semana06]]
-- [ ]![[Guias de Estudo/Inglês/Inglês#Semana07]]
+- [ ] ![[Guias de Estudo/Inglês/Inglês#Semana07]]
 - [ ] ![[Guias de Estudo/Inglês/Inglês#Semana08]]
 - [ ] ![[Guias de Estudo/Inglês/Inglês#Semana09]]
 - [ ] ![[Guias de Estudo/Inglês/Inglês#Semana10]]
