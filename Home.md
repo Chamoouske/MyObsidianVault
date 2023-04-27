@@ -13,7 +13,13 @@ FROM "Ajuda" and #Ajuda
 LIST
 FROM "Guias de Estudo" and #guia/estudo
 ```
-
+```button
+name Novo Guia da Estudos
+type note(Guias de Estudos) template
+action Template_Guia_estudos
+templater true
+```
+^button-d49n
 ## Roteiros
 ```dataview
 LIST
