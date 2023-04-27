@@ -1,13 +1,12 @@
 ---
-
 tag: animes Spring-2023
 name: Kimetsu no Yaiba 3
 on_air: Sunday
 last_episode: 3
+season: Spring-2023
 dropped: false
 finished: false
 created_at: 2023-04-27 15:27
-
 ---
 ## Gênero
 

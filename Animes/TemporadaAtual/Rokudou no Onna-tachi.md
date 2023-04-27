@@ -1,13 +1,12 @@
 ---
-
 tag: animes Spring-2023
 name: Rokudou no Onna-tachi
 on_air: Saturday
 last_episode: 2
+season: Spring-2023
 dropped: true
 finished: false
 created_at: 2023-04-27 15:25
-
 ---
 ## Gênero
 

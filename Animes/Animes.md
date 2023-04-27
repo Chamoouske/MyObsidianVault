@@ -61,39 +61,42 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 let pages= dv.pages(`#${dv.current().anime_season}`);
 
-dv.header(2, "Não dropados");
-dv.table(['Nome', 'Lançamento', 'Último EP', '', ''],
-	 pages.where(item => !item.dropped && !item.finished)
-		 .sort(a=>a.on_air).map(anime=>[
-			anime.file.link,
-			anime.on_air,
-			anime.last_episode,
-			createButton({
-				app,
-				el: this.container,
-				args: {name: anime.dropped ? "Reassistir" : "Drop"},
-				clickOverride: {
-					click: update,
-					params: [
-						'dropped', !anime.dropped,
-						anime.file.path
-					]
-				}
-			}),
-			createButton({
-				app,
-				el: this.container,
-				args: {name: "+1 ep"},
-				clickOverride: {
-					click: update,
-					params: [
-						'last_episode', anime.last_episode + 1,
-						anime.file.path
-					]
-				}
-			})
-		]
-))
+dv.header(2, 'Não dropados')
+for(let group of pages.groupBy(a=>a.on_air)){
+	dv.header(3, group.key)
+	dv.table(['Nome', 'Último EP', '', ''],
+		 group.rows.where(item => !item.dropped && !item.finished)
+			 .sort(a=>a.on_air)
+			 .map(anime=>[
+				anime.file.link,
+				anime.last_episode,
+				createButton({
+					app,
+					el: this.container,
+					args: {name: anime.dropped ? "Reassistir" : "Drop"},
+					clickOverride: {
+						click: update,
+						params: [
+							'dropped', !anime.dropped,
+							anime.file.path
+						]
+					}
+				}),
+				createButton({
+					app,
+					el: this.container,
+					args: {name: "+1 ep"},
+					clickOverride: {
+						click: update,
+						params: [
+							'last_episode', anime.last_episode + 1,
+							anime.file.path
+						]
+					}
+				})
+			]
+	))
+}
 ```
 
 ```dataviewjs
@@ -130,11 +133,15 @@ const {createButton} = app.plugins.plugins["buttons"];
 let pages = dv.pages(`#animes`);
 
 dv.header(2, "Tudo");
-dv.table(['Nome', 'Lançamento', 'Último EP', ''],
-	 pages.sort(a=>a.name).map(anime=>[
-			anime.file.link,
-			anime.on_air,
-			anime.last_episode
-		]
-))
+
+for(let group of pages.groupBy(a=>a.season)){
+	dv.header(3, group.key)
+	dv.table(['Nome', 'Episódios'],
+		 group.rows.sort(a=>a.name)
+			 .map(anime=>[
+				anime.file.link,
+				anime.last_episode
+			]
+	))
+}
 ```

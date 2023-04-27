@@ -1,13 +1,12 @@
 ---
-
 tag: animes Spring-2023
 name: Kimi wa Houkago Insomnia
 on_air: Tuesday
 last_episode: 3
+season: Spring-2023
 dropped: false
 finished: false
 created_at: 2023-04-27 15:30
-
 ---
 ## Gênero
 

@@ -1,13 +1,12 @@
 ---
-
 tag: animes Spring-2023
 name: Tensei Kizoku no Isekai Boukenroku
 on_air: Sunday
 last_episode: 3
+season: Spring-2023
 dropped: true
 finished: false
 created_at: 2023-04-27 15:24
-
 ---
 ## Gênero
 
