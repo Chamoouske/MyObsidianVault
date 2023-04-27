@@ -5,6 +5,12 @@ banner_y: 0.328
 
 ## [[Animes]]
 
+## Vídeos pra assistir
+```dataview
+TASK
+FROM "Youtube"
+```
+
 ## Guias de Ajuda
 ```dataview
 LIST
@@ -28,3 +34,4 @@ templater true
 LIST
 FROM "Roteiros" and #roteiros
 ```
+

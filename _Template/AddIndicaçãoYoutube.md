@@ -1,0 +1,1 @@
+- [ ] [<% await tp.system.prompt("Título do vídeo: ") %>](<% await tp.system.prompt("Link do vídeo para adicionar: ") %>)
