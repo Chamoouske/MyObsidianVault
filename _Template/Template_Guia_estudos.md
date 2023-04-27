@@ -1,5 +1,5 @@
 ---
-tag: guia/estudo
+tag: guia/estudo/<% tp.file.title %>
 kanban-plugin: basic
 ---
 
