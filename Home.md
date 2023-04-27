@@ -2,7 +2,7 @@
 banner: "https://images5.alphacoders.com/750/750261.png"
 banner_y: 0.328
 ---
-## Estudos
+## Guias de Ajuda
 ```dataview
 LIST
 FROM "Ajuda" and #Ajuda
@@ -19,7 +19,7 @@ type note(Guias de Estudo/Untitled) template
 action Template_Guia_estudos
 templater true
 ```
-^button-d49n
+
 ## Roteiros
 ```dataview
 LIST
