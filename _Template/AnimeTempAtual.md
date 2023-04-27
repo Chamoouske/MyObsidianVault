@@ -42,7 +42,7 @@ last_episode: <% await tp.system.prompt("Último ep assistido: ") || 0 %>
 dropped: false
 finished: false
 created_at: <% tp.file.creation_date() %>
-banner: <% await tp.system.prompt("Link de um banner: ") || 0 %>
+banner: <% await tp.system.prompt("Link de um banner: ") %>
 
 ---
 ## Gênero
@@ -103,3 +103,12 @@ createButton({
 	}
 })
 ```
+
+```button
+name Jogar pro Histórico
+type prepend template
+action MoveToHistóricoInAnime
+templater true
+color purple
+```
+^button-sdyp

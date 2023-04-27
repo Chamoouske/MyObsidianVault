@@ -67,3 +67,12 @@ createButton({
 	}
 })
 ```
+
+```button
+name Jogar pro Histórico
+type prepend template
+action MoveToHistóricoInAnime
+templater true
+color purple
+```
+^button-sdyp
