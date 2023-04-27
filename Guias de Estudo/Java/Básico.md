@@ -4,4 +4,4 @@
 - [x] Condicionais
 - [x] Laços de repetição
 - [x] Vetores
-- [ ] Funções
+- [x] Funções

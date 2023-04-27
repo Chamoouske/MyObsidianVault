@@ -1,4 +1,7 @@
-
+---
+banner: "https://images5.alphacoders.com/750/750261.png"
+banner_y: 0.328
+---
 ## Estudos
 ```dataview
 LIST

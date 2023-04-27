@@ -17,17 +17,17 @@ Padrões de projetos são soluções típicas para problemas comuns em projetos 
 ## Padrões Criacionas
 ```dataview
 TASK
-FROM "Roteiros/Criacionais"
+FROM "Roteiros/Desing Patterns/Criacionais"
 ```
 
 ## Padrões Estruturais
 ```dataview
 TASK
-FROM "Roteiros/Estruturais"
+FROM "Roteiros/Desing Patterns/Estruturais"
 ```
 
 ## Padrões Comportamentais
 ```dataview
 TASK
-FROM "Roteiros/Comportamentais"
+FROM "Roteiros/Desing Patterns/Comportamentais"
 ```

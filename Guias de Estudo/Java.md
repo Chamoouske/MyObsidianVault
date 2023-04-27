@@ -1,6 +1,8 @@
 ---
+
 tag: guia/estudo
 kanban-plugin: basic
+
 ---
 
 ## Estudar
@@ -10,12 +12,12 @@ kanban-plugin: basic
 
 ## Estudando
 
-- [ ] [[Guias de Estudo/Java/Java]]<br>![[Guias de Estudo/Java/Java#Básico]] @{07/03/2023}
 - [ ] [[Guias de Estudo/Java/Java]]<br>![[Guias de Estudo/Java/Java#Intermediário]] @{07/03/2023}
 
 
 ## Revisar
 
+- [ ] [[Guias de Estudo/Java/Java]]<br>![[Guias de Estudo/Java/Java#Básico]] @{07/03/2023}
 
 
 ## Tudo certo
