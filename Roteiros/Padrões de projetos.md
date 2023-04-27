@@ -1,3 +1,6 @@
+---
+tag: roteiros/design_patterns
+---
 
 ## O que é?
 Padrões de projetos são soluções típicas para problemas comuns em projetos de software, ou seja, são moldes customizáveis para resolver um problema recorrente no código.

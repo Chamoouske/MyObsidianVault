@@ -1,3 +1,6 @@
+---
+tag: ajuda
+---
 - Logo ou banner
     - Status: Opcional
     - A logo ou banner pode substituir o título do projeto mas não a descrição.

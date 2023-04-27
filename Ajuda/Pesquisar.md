@@ -1,3 +1,6 @@
+---
+tag: ajuda
+---
 
 - Terminal Hyper
 - pydantic

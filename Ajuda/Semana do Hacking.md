@@ -1,3 +1,6 @@
+---
+tag: ajuda
+---
 
 ![[Ambientação para hacking]]
 
