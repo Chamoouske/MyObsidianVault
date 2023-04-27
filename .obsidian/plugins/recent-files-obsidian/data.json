@@ -1,0 +1,107 @@
+{
+  "recentFiles": [
+    {
+      "basename": "Home",
+      "path": "Home.md"
+    },
+    {
+      "basename": "Padrões de projetos",
+      "path": "Roteiros/Padrões de projetos.md"
+    },
+    {
+      "basename": "Java",
+      "path": "Guias de Estudo/Java.md"
+    },
+    {
+      "basename": "SpringBoot",
+      "path": "Guias de Estudo/Java/SpringBoot.md"
+    },
+    {
+      "basename": "Intermediário",
+      "path": "Guias de Estudo/Java/Intermediário.md"
+    },
+    {
+      "basename": "Java",
+      "path": "Guias de Estudo/Java/Java.md"
+    },
+    {
+      "basename": "README Github template",
+      "path": "Ajuda/README Github template.md"
+    },
+    {
+      "basename": "Exemplo Readme",
+      "path": "Ajuda/README GitHub/Exemplo Readme.md"
+    },
+    {
+      "basename": "Inglês",
+      "path": "Guias de Estudo/Inglês.md"
+    },
+    {
+      "basename": "Semana13",
+      "path": "Guias de Estudo/Semanas/Semana13.md"
+    },
+    {
+      "basename": "Semana12",
+      "path": "Guias de Estudo/Semanas/Semana12.md"
+    },
+    {
+      "basename": "Semana11",
+      "path": "Guias de Estudo/Semanas/Semana11.md"
+    },
+    {
+      "basename": "Semana10",
+      "path": "Guias de Estudo/Semanas/Semana10.md"
+    },
+    {
+      "basename": "Semana09",
+      "path": "Guias de Estudo/Semanas/Semana09.md"
+    },
+    {
+      "basename": "Semana08",
+      "path": "Guias de Estudo/Semanas/Semana08.md"
+    },
+    {
+      "basename": "Semana07",
+      "path": "Guias de Estudo/Semanas/Semana07.md"
+    },
+    {
+      "basename": "Semana06",
+      "path": "Guias de Estudo/Semanas/Semana06.md"
+    },
+    {
+      "basename": "Semana05",
+      "path": "Guias de Estudo/Semanas/Semana05.md"
+    },
+    {
+      "basename": "Semana04",
+      "path": "Guias de Estudo/Semanas/Semana04.md"
+    },
+    {
+      "basename": "Semana03",
+      "path": "Guias de Estudo/Semanas/Semana03.md"
+    },
+    {
+      "basename": "Semana02",
+      "path": "Guias de Estudo/Semanas/Semana02.md"
+    },
+    {
+      "basename": "Semana01",
+      "path": "Guias de Estudo/Semanas/Semana01.md"
+    },
+    {
+      "basename": "Template_Guia_estudos",
+      "path": "_Template/Template_Guia_estudos.md"
+    },
+    {
+      "basename": "Template_DesignPatters",
+      "path": "_Template/Template_DesignPatters.md"
+    },
+    {
+      "basename": "Chain of Responsability",
+      "path": "Roteiros/Desing Patterns/Comportamentais/Chain of Responsability.md"
+    }
+  ],
+  "omittedPaths": [],
+  "maxLength": null,
+  "openType": "tab"
+}
