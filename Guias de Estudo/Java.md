@@ -7,11 +7,11 @@ kanban-plugin: basic
 
 ## Estudar
 
-- [ ] [[Guias de Estudo/Java/Java]]<br>![[Guias de Estudo/Java/Java#SpringBoot]] @{07/03/2023}
 
 
 ## Estudando
 
+- [ ] [[Guias de Estudo/Java/Java]]<br>![[Guias de Estudo/Java/Java#SpringBoot]] @{07/03/2023}
 - [ ] [[Guias de Estudo/Java/Java]]<br>![[Guias de Estudo/Java/Java#Intermediário]] @{07/03/2023}
 
 
