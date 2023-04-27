@@ -1,6 +1,6 @@
 ---
 
-tag: guia/estudo
+tag: guia/estudo/java
 kanban-plugin: basic
 
 ---
