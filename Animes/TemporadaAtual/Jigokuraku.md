@@ -1,46 +1,13 @@
-<%*
-let title = tp.file.title;
-if (title.startsWith("Untitled")){
-	title = await tp.system.prompt("File name: ");
-}
-await tp.file.rename(title);
-
-const date = new Date(tp.file.creation_date());
-const month = date.getMonth() + 1;
-let season;
-switch(month){
-	case 1:
-	case 2:
-	case 3:
-		season = 'Winter-' + date.getFullYear();
-		break;
-	case 4:
-	case 5:
-	case 6:
-		season = 'Spring-' + date.getFullYear();
-		break;
-	case 7:
-	case 8:
-	case 9:
-		season = 'Summer-' + date.getFullYear();
-		break;
-	case 10:
-	case 11:
-	case 12:
-		season = 'Fall-' + date.getFullYear();
-		break;
-}
-let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Sunday"], ["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Sunday"], false, "Dia do lançamento: ")
-%>---
-tag: animes <% season %>
-name: <% await title %>
-on_air: <% await on_air %>
-last_episode: <% await tp.system.prompt("Último ep assistido: ") || 0 %>
-season: <% season %>
+---
+tag: animes Spring-2023
+name: Jigokuraku
+on_air: Saturday
+last_episode: 4
+season: Spring-2023
 dropped: false
 finished: false
-created_at: <% tp.file.creation_date() %>
-banner: <% await tp.system.prompt("Link de um banner: ") || '' %>
+created_at: 2023-05-02 15:00
+banner: 
 ---
 ## Gênero
 
