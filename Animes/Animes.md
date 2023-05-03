@@ -61,11 +61,12 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 let pages= dv.pages(`#${dv.current().anime_season}`);
 
+
 dv.header(2, 'Não dropados')
-for(let group of pages.groupBy(a=>a.on_air)){
-	dv.header(3, group.key)
+for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday']){
+	dv.header(3, group)
 	dv.table(['Nome', 'Último EP', '', ''],
-		 group.rows.where(item => !item.dropped && !item.finished)
+		 pages.where(item => !item.dropped && !item.finished && item.on_air==group)
 			 .sort(a=>a.on_air)
 			 .map(anime=>[
 				anime.file.link,
