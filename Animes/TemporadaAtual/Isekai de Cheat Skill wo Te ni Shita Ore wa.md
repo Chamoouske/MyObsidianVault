@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: Isekai de Cheat Skill wo Te ni Shita Ore wa
 on_air: Tuesday
-last_episode: 3
+last_episode: 4
 season: Spring-2023
 dropped: true
 finished: false
