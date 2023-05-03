@@ -67,7 +67,7 @@ for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 	dv.header(3, group)
 	dv.table(['Nome', 'Último EP', '', ''],
 		 pages.where(item => !item.dropped && !item.finished && item.on_air==group)
-			 .sort(a=>a.on_air)
+			 .sort(a=>a.last_episode)
 			 .map(anime=>[
 				anime.file.link,
 				anime.last_episode,
