@@ -63,7 +63,7 @@ let pages= dv.pages(`#${dv.current().anime_season}`);
 
 
 dv.header(2, 'Não dropados')
-for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday']){
+for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']){
 	dv.header(3, group)
 	dv.table(['Nome', 'Último EP', '', ''],
 		 pages.where(item => !item.dropped && !item.finished && item.on_air==group)

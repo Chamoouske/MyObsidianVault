@@ -30,7 +30,7 @@ switch(month){
 		season = 'Fall-' + date.getFullYear();
 		break;
 }
-let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Sunday"], ["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Sunday"], false, "Dia do lançamento: ")
+let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"], ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"], false, "Dia do lançamento: ")
 %>---
 tag: animes <% season %>
 name: <% await title %>

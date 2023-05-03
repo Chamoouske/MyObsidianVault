@@ -1,7 +1,7 @@
 ---
 tag: animes Spring-2023
 name: Mahou Tsukai no Yome 2
-on_air: Thusday
+on_air: Thursday
 last_episode: 4
 season: Spring-2023
 dropped: false
