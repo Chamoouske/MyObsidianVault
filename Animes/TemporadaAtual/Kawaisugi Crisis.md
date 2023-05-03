@@ -1,12 +1,13 @@
 ---
 tag: animes Spring-2023
-name: Dead Mount Death Play
-on_air: Tuesday
+name: Kawaisugi Crisis
+on_air: Friday
 last_episode: 4
 season: Spring-2023
 dropped: false
 finished: false
-created_at: 2023-04-27 15:29
+created_at: 2023-05-03 09:52
+banner: 
 ---
 ## Gênero
 
