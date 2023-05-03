@@ -1,5 +1,5 @@
 
-- [ ] [[Iterator]]
+- [ ] Iterator
 ## O que é?
 O Iterator é um padrão...
 

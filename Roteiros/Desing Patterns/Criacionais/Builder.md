@@ -1,5 +1,5 @@
 
-- [ ] [[Builder]]
+- [ ] Builder
 ## O que é?
 O Builder é um padrão...
 

@@ -1,5 +1,5 @@
 
-- [ ] [[Command]]
+- [ ] Command
 ## O que é?
 O Command é um padrão...
 

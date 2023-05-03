@@ -1,5 +1,5 @@
 
-- [ ] [[Mediator]]
+- [ ] Mediator
 ## O que é?
 O Mediator é um padrão...
 

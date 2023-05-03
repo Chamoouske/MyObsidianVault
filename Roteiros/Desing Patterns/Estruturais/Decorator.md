@@ -1,5 +1,5 @@
 
-- [ ] [[Decorator]]
+- [ ] Decorator
 ## O que é?
 O Decorator é um padrão...
 

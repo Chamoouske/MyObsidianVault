@@ -1,5 +1,5 @@
 
-- [ ] [[Adapter]]
+- [ ] Adapter
 ## O que é?
 O Adapter é um padrão...
 

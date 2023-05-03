@@ -1,5 +1,5 @@
 
-- [ ] [[Abstract Factory]]
+- [ ] Abstract Factory
 ## O que é?
 O Abstract Factory é um padrão...
 

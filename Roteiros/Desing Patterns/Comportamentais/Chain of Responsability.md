@@ -1,5 +1,5 @@
 
-- [ ] [[Chain of Responsability]]
+- [ ] Chain of Responsability
 ## O que é?
 O Chain of Responsability é um padrão...
 

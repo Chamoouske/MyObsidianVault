@@ -1,5 +1,5 @@
 
-- [ ] [[Flyweight]]
+- [ ] Flyweight
 ## O que é?
 O Flyweight é um padrão...
 

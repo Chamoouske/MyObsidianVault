@@ -1,5 +1,5 @@
 
-- [ ] [[State]]
+- [ ] State
 ## O que é?
 O State é um padrão...
 

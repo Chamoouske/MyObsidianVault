@@ -1,5 +1,5 @@
 
-- [ ] [[Memento]]
+- [ ] Memento
 ## O que é?
 O Memento é um padrão...
 

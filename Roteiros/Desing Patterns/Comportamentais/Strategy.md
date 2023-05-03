@@ -1,5 +1,5 @@
 
-- [ ] [[Strategy]]
+- [ ] Strategy
 ## O que é?
 O Strategy é um padrão...
 
