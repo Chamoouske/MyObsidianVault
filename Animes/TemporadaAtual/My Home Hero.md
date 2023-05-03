@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: My Home Hero
 on_air: Sunday
-last_episode: 4
+last_episode: 5
 season: Spring-2023
 dropped: false
 finished: false
