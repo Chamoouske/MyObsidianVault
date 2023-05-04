@@ -6,8 +6,8 @@ until: 2023-05-06
 project: Teste
 
 Total: 1
-Complete: 0
-Incomplete: 1
+Complete: 1
+Incomplete: 0
 
 ---
 ```dataviewjs
@@ -27,4 +27,4 @@ const {update} = this.app.plugins.plugins['metaedit'].api;
 
 
 ## Tasks
-- [ ]  
+- [x]  

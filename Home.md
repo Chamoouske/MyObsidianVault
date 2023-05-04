@@ -4,7 +4,41 @@ banner_y: 0.328
 ---
 
 ## [[Animes]]
+```button
+name Add Anime
+type note(Animes/TemporadaAtual/Untitled, split) template
+action AnimeTempAtual
+templater true
+```
+```dataviewjs
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const {createButton} = app.plugins.plugins["buttons"];
+let pages= dv.pages(`#${dv.pages('"Animes/Animes"')[0].anime_season}`);
 
+const today = new Date().toLocaleString('en', { weekday: 'long' });
+
+dv.header(4, 'Today')
+dv.table(['Nome', 'Último EP', '', ''],
+	 pages.where(item => !item.dropped && !item.finished && item.on_air==today)
+		 .sort(a=>a.last_episode)
+		 .map(anime=>[
+			anime.file.link,
+			anime.last_episode,
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "+1 ep"},
+				clickOverride: {
+					click: update,
+					params: [
+						'last_episode', anime.last_episode + 1,
+						anime.file.path
+					]
+				}
+			})
+		]
+))
+```
 ## Tasks
 ```button
 name Add Task
