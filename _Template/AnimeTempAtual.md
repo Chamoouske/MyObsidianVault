@@ -1,9 +1,9 @@
 <%*
 let title = tp.file.title;
-if (title.startsWith("Untitled")){
+if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await tp.system.prompt("File name: ");
+	await tp.file.rename(title);
 }
-await tp.file.rename(title);
 
 const date = new Date(tp.file.creation_date());
 const month = date.getMonth() + 1;
@@ -31,16 +31,21 @@ switch(month){
 		break;
 }
 let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"], ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"], false, "Dia do lançamento: ")
+
+let lastEpisode = await tp.system.prompt("Último ep assistido: ") || 0;
+let banner = await tp.system.prompt("Link de um banner: ") || '';
 %>---
+
 tag: animes <% season %>
-name: <% await title %>
-on_air: <% await on_air %>
-last_episode: <% await tp.system.prompt("Último ep assistido: ") || 0 %>
+name: <% title %>
+on_air: <% on_air %>
+last_episode: <% lastEpisode %>
 season: <% season %>
 dropped: false
 finished: false
 created_at: <% tp.file.creation_date() %>
-banner: <% await tp.system.prompt("Link de um banner: ") || '' %>
+banner: <% banner %>
+
 ---
 ## Gênero
 

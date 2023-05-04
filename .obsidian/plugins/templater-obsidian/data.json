@@ -15,8 +15,12 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "GTRR",
+      "folder": "Tasks",
       "template": "_Template/NewMainTaskGTRR.md"
+    },
+    {
+      "folder": "Animes",
+      "template": "_Template/AnimeTempAtual.md"
     }
   ],
   "syntax_highlighting": true,

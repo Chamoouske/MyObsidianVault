@@ -1,4 +1,10 @@
 <%*
+let title = tp.file.title;
+if(title.startsWith("Untitled") || title.startsWith("Sem título")){
+	title = await prompt("Título da tarefa")
+	await tp.file.rename(title)
+}
+
 const prompt = tp.system.prompt;
 const suggester = tp.system.suggester;
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -7,12 +13,6 @@ const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks
 
 function parseDateWithNLDates(date){
 	return app.plugins.plugins['nldates-obsidian'].parseDate(date).moment.format("YYYY-MM-DD")
-}
-
-let title = tp.file.title;
-if(title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = await prompt("Título da tarefa")
-	await tp.file.rename(title)
 }
 
 let status = await suggester(
@@ -46,12 +46,24 @@ priority: <% priority %>
 until: <% until %>
 project: <% project %>
 
-total: <% await tasks.length %>
-complete: <% await tasks.where(t=>t.completed).length %>
-incomplete: <% await tasks.where(t=>!t.completed).length %>
+Total: <% await tasks.length %>
+Complete: <% await tasks.where(t=>t.completed).length %>
+Incomplete: <% await tasks.where(t=>!t.completed).length %>
 
 ---
+```dataviewjs
+const {update} = this.app.plugins.plugins['metaedit'].api;
 
+(async () => {
+	const tasks = dv.current().file.tasks;
+	const completedTasks = tasks.where(t=>t.completed).length;
+	const incompletedTasks = tasks.where(t=>!t.completed).length;
+	
+	await update('Total', tasks.length, dv.current().file.path)
+	await update('Complete', completedTasks, dv.current().file.path)
+	await update('Incomplete', incompletedTasks, dv.current().file.path)
+})()
+```
 ## Description
 
 

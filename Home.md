@@ -16,19 +16,22 @@ templater true
 const {createButton} = app.plugins.plugins['buttons'];
 const {update} = this.app.plugins.plugins['metaedit'].api;
 
-async function setButtonColorDateTask(value){
-	
-	
-	return "red"
+function createDivPercentage(percent){
+	let style = `
+		width:100%;
+		border:1px solid green;
+		text-align:center;
+		border-radius:0.7rem;
+		background-image:linear-gradient(to right, rgb(0,130,0,1) ${percent<100?percent-10:percent}%,rgb(0,0,0,0) ${percent<100?percent+20:0}%);`;
+	return `<div style="${style}">${percent}%</div>`
 }
 
-dv.header(2, 'Lista de Tarefas')
 const pages = dv.pages('"Tasks"');
-for(let group of pages.groupBy(t=>t.project)){
-	dv.header(4, group.key)
+for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project)){
+	dv.header(3, group.key)
 	dv.table(
-		['Task', 'Status', 'Priority', 'Due Date', ''],
-		group.rows.sort(t=>t.status)
+		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
+		group.rows.sort(t=>((t.Complete / t.Total || 0) * 100))
 			.where(t=>!(t.status=='Completed'))
 			.map(t => {
 				const daysRemaining = (new Date(t.until) - new Date()) / (1000 * 60 * 60 * 24);
@@ -40,11 +43,13 @@ for(let group of pages.groupBy(t=>t.project)){
 				}else{
 					color = "green";
 				}
+				const progress = ((t.Complete / t.Total || 0) * 100)
 				return [
 					t.file.link,
 					t.status,
 					t.priority,
 					t.until,
+					createDivPercentage(progress.toFixed(2)),
 					createButton({
 						app,
 						el: this.container,
@@ -65,6 +70,24 @@ for(let group of pages.groupBy(t=>t.project)){
 			})
 	)
 }
+
+dv.header(3, "All Tasks")
+dv.table(
+	['Task', 'Project', 'Status', 'Priority', 'Due Date', 'Progress'],
+	pages.sort(t=>((t.Complete / t.Total || 0) * 100))
+		.map(t => {
+				const progress = ((t.Complete / t.Total || 0) * 100)
+				return [
+					t.file.link,
+					t.project,
+					t.status,
+					t.priority,
+					t.until,
+					createDivPercentage(progress.toFixed(2))
+				]
+			}
+		)
+)
 ```
 
 ## [[Vídeos pra assistir]]
