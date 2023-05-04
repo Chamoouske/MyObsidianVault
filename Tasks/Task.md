@@ -1,6 +1,6 @@
 ---
 
-status: In Progress
+status: Completed
 priority: Low
 until: 2023-05-06
 project: Teste

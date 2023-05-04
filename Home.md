@@ -54,7 +54,7 @@ for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project))
 						app,
 						el: this.container,
 						args: {
-							name: t.status == "To Do" ? "In Progress" : "Completed",
+							name: t.status == "To Do" ? "In Progress" : " Complete ",
 							color: t.until ? color : "green"
 						},
 						clickOverride: {
