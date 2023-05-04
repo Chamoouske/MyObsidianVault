@@ -3,7 +3,7 @@ const prompt = tp.system.prompt;
 const suggester = tp.system.suggester;
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const dv = this.app.plugins.plugins['dataview'].api;
-const tasks = dv.pages(`"${tp.file.path(true)}"`).file.tasks;
+const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks;
 
 function parseDateWithNLDates(date){
 	return app.plugins.plugins['nldates-obsidian'].parseDate(date).moment.format("YYYY-MM-DD")
@@ -30,20 +30,31 @@ let priority = await suggester(
 ) || "Low";
 
 let until = parseDateWithNLDates(await prompt("Until") || "today");
-_%>---
-Status: <% status %>
-Priority: <% priority %>
-Until: <% until %>
 
-Total: <% tasks.length %>
-Complete: <% tasks.where(t=>t.completed).length %>
-Incomplete: <% tasks.where(t=>!t.completed).length %>
+let project = await suggester(
+	["Personal", "GTRR", "Other"],
+	["Personal", "GTRR", "Other"],
+	false,
+	"Projeto"
+) || "Personal";
+
+await tp.file.move("Tasks/" + title)
+%>---
+
+status: <% status %>
+priority: <% priority %>
+until: <% until %>
+project: <% project %>
+
+total: <% await tasks.length %>
+complete: <% await tasks.where(t=>t.completed).length %>
+incomplete: <% await tasks.where(t=>!t.completed).length %>
+
 ---
-```dataview
-TASK
-FROM "GTRR/Tasks"
-WHERE !completed
-```
+
+## Description
+
+
+## Tasks
 
 - [ ]  <% tp.file.cursor() %>
-- [x] Teste
