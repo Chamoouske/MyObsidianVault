@@ -1,8 +1,9 @@
 <%*
 let title = tp.file.title;
+const re = /[^\w\s()']/g;
 if (title.startsWith("Untitled")){
 	title = await tp.system.prompt("File name: ");
-	await tp.file.rename(title.replace(/[^*\\/"<>:|?]+/, ''));
+	await tp.file.rename(title.replace(re, '_'));
 }
 %>---
 tag: guia/estudo/<% await title %>

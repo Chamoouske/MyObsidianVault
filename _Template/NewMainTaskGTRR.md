@@ -1,8 +1,9 @@
 <%*
 let title = tp.file.title;
+const re = /[^\w\s()']/g;
 if(title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await prompt("Título da tarefa")
-	await tp.file.rename(title.replace(/[^*\\/"<>:|?]+/, ''))
+	await tp.file.rename(title.replace(re, '_'))
 }
 
 const prompt = tp.system.prompt;
@@ -38,7 +39,7 @@ let project = await suggester(
 	"Projeto"
 ) || "Personal";
 
-await tp.file.move("Tasks/" + title.replace(/[^*\\/"<>:|?]+/, ''))
+await tp.file.move("Tasks/" + title.replace(re, '_'))
 %>---
 
 status: <% status %>

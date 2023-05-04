@@ -7,7 +7,7 @@ banner_y: 0.328
 
 ## Tasks
 ```button
-name Nova Task
+name Add Task
 type note(Untitled) template
 action NewMainTaskGTRR
 templater true
@@ -90,16 +90,39 @@ dv.table(
 )
 ```
 
-## [[Showcasing Excalidraw in Obsidian]]
+## Vídeos
+```button
+name Add Vídeo
+type note(Untitled) template
+action AddIndicaçãoYoutube
+templater true
+```
+```dataviewjs
+const {createButton} = app.plugins.plugins['buttons'];
+const {update} = this.app.plugins.plugins['metaedit'].api;
 
-> [!warning] Adicionar vídeos na lista
-> Para adicionar um novo vídeo, acesse o arquivo [[Showcasing Excalidraw in Obsidian]] e clique no botão _Add Vídeo_.
-```dataview
-TABLE
-	title,
-	url
-FROM "Youtube"
-WHERE !watched
+dv.table(
+	['Title', 'Link', ''],
+	dv.pages('"Youtube"')
+		.where(t=>!t.watched)
+		.map(video => [
+			video.file.link,
+			`<a href="${video.url}">Here</a>`,
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "Watched"},
+				clickOverride: {
+					click: update,
+					params: [
+						'watched',
+						true,
+						video.file.path
+					]
+				}
+			})
+		])
+)
 ```
 
 ## Guias de Ajuda
