@@ -15,8 +15,8 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "",
-      "template": ""
+      "folder": "GTRR",
+      "template": "_Template/NewMainTaskGTRR.md"
     }
   ],
   "syntax_highlighting": true,
