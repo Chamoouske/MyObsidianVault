@@ -7,7 +7,7 @@ banner_y: 0.328
 
 ## Tasks
 ```button
-name Nota Task
+name Nova Task
 type note(Untitled) template
 action NewMainTaskGTRR
 templater true
@@ -90,10 +90,10 @@ dv.table(
 )
 ```
 
-## [[Vídeos pra assistir]]
+## [[Showcasing Excalidraw in Obsidian]]
 
 > [!warning] Adicionar vídeos na lista
-> Para adicionar um novo vídeo, acesse o arquivo [[Vídeos pra assistir]] e clique no botão _Add Vídeo_.
+> Para adicionar um novo vídeo, acesse o arquivo [[Showcasing Excalidraw in Obsidian]] e clique no botão _Add Vídeo_.
 ```dataview
 TASK
 FROM "Youtube"
