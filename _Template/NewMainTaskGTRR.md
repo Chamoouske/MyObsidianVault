@@ -1,11 +1,11 @@
 <%*
 const prompt = tp.system.prompt;
 const suggester = tp.system.suggester;
-const {autoprop} = this.app.plugins.plugins["metaedit"].api;
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const dv = this.app.plugins.plugins['dataview'].api;
+const tasks = dv.pages(`"${tp.file.path(true)}"`).file.tasks;
 
-let t;
 function parseDateWithNLDates(date){
-	t = date
 	return app.plugins.plugins['nldates-obsidian'].parseDate(date).moment.format("YYYY-MM-DD")
 }
 
@@ -35,15 +35,15 @@ Status: <% status %>
 Priority: <% priority %>
 Until: <% until %>
 
-Total: 1
-Complete: 0
-Incomplete: 1
+Total: <% tasks.length %>
+Complete: <% tasks.where(t=>t.completed).length %>
+Incomplete: <% tasks.where(t=>!t.completed).length %>
 ---
 ```dataview
-TABLE
-	Priority,
-	Until
+TASK
 FROM "GTRR/Tasks"
+WHERE !completed
 ```
 
-- [ ]  <% t %> <% tp.file.cursor() %>
+- [ ]  <% tp.file.cursor() %>
+- [x] Teste

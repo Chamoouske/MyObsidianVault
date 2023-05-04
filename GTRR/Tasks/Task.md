@@ -1,17 +1,17 @@
 ---
 Status: To Do
 Priority: Low
-Until: 2023-05-13
+Until: 2023-05-03
 
-Total: 1
-Complete: 0
+Total: 2
+Complete: 1
 Incomplete: 1
 ---
 ```dataview
-TABLE
-	Priority,
-	Until
+TASK
 FROM "GTRR/Tasks"
+WHERE !completed
 ```
 
-- [ ]  next 10 days 
+- [ ]  
+- [x] Teste
