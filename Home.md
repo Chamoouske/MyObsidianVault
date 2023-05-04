@@ -22,13 +22,13 @@ function createDivPercentage(percent){
 		border:1px solid green;
 		text-align:center;
 		border-radius:0.7rem;
-		background-image:linear-gradient(to right, rgb(0,130,0,1) ${percent<100?percent-10:percent}%,rgb(0,0,0,0) ${percent<100?percent+20:0}%);`;
+		background-image:linear-gradient(to right, rgb(0,130,0,1) ${percent<100?percent-10:percent}%,rgb(0,130,0,0) ${percent<100?percent+20:0}%);`;
 	return `<div style="${style}">${percent}%</div>`
 }
 
 const pages = dv.pages('"Tasks"');
 for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project)){
-	dv.header(3, group.key)
+	dv.header(4, group.key)
 	dv.table(
 		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
 		group.rows.sort(t=>((t.Complete / t.Total || 0) * 100))
@@ -71,7 +71,7 @@ for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project))
 	)
 }
 
-dv.header(3, "All Tasks")
+dv.header(4, "All Tasks")
 dv.table(
 	['Task', 'Project', 'Status', 'Priority', 'Due Date', 'Progress'],
 	pages.sort(t=>((t.Complete / t.Total || 0) * 100))

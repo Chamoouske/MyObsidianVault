@@ -43,19 +43,18 @@ switch(date.getMonth() + 1){
 }
 
 createButton({
-				app,
-				el: this.container,
-				args: {name: "Update Season"},
-				clickOverride: {
-					click: update,
-					params: [
-						'anime_season', temp,
-						dv.current().file.path
-					]
-				}
-			})
+	app,
+	el: this.container,
+	args: {name: "Update Season"},
+	clickOverride: {
+		click: update,
+		params: [
+			'anime_season', temp,
+			dv.current().file.path
+		]
+	}
+})
 ```
-
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];

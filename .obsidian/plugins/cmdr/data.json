@@ -1,5 +1,5 @@
 {
-  "confirmDeletion": true,
+  "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
   "editorMenu": [],
@@ -13,7 +13,11 @@
   "explorer": [],
   "hide": {
     "statusbar": [],
-    "leftRibbon": []
+    "leftRibbon": [
+      "Advanced Tables Toolbar",
+      "Templater",
+      "Inserir modelo"
+    ]
   },
   "spacing": 8,
   "advancedToolbar": {
