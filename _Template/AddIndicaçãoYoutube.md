@@ -1,15 +1,15 @@
 <%*
 let title = tp.file.title;
-const reg = new RegExp(`[^*\\/"<>:|?]+`)
+const re = /[^*\\/"<>:|?]+/g
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await tp.system.prompt("Título do vídeo: ");
 	console.log(reg.exec(title))
-	await tp.file.rename(reg.exec(title));
+	await tp.file.rename(title.replace(re, "_"));
 }
 
 let link = await tp.system.prompt("Link");
 
-await tp.file.move("Youtube/" + reg.exec(title))
+await tp.file.move("Youtube/" + title.replace(re, "_"))
 %>---
 
 tag: vídeos
