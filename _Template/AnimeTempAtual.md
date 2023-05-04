@@ -1,8 +1,8 @@
 <%*
 let title = tp.file.title;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = await tp.system.prompt("File name: ");
-	await tp.file.rename(title);
+	title = await tp.system.prompt("Nome do Anime: ");
+	await tp.file.rename(title.replace(/[^*\\/"<>:|?]+/, ''));
 }
 
 const date = new Date(tp.file.creation_date());

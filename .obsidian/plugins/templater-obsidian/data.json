@@ -21,6 +21,10 @@
     {
       "folder": "Animes",
       "template": "_Template/AnimeTempAtual.md"
+    },
+    {
+      "folder": "Youtube",
+      "template": "_Template/AddIndicaçãoYoutube.md"
     }
   ],
   "syntax_highlighting": true,

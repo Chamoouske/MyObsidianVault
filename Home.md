@@ -95,9 +95,11 @@ dv.table(
 > [!warning] Adicionar vídeos na lista
 > Para adicionar um novo vídeo, acesse o arquivo [[Showcasing Excalidraw in Obsidian]] e clique no botão _Add Vídeo_.
 ```dataview
-TASK
+TABLE
+	title,
+	url
 FROM "Youtube"
-WHERE !completed
+WHERE !watched
 ```
 
 ## Guias de Ajuda
