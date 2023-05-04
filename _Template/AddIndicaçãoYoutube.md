@@ -1,6 +1,6 @@
 <%*
 let title = tp.file.title;
-const re = /[^*\\/"<>:|?]+/g
+const re = /[^a-zA-Z0-9]+/g
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await tp.system.prompt("Título do vídeo: ");
 	console.log(reg.exec(title))
