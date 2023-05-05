@@ -60,6 +60,19 @@ function createDivPercentage(percent){
 	return `<div style="${style}">${percent}%</div>`
 }
 
+async function updatePercentTasks(file){
+	const tasks = file.file.tasks;
+	const completedTasks = tasks.where(t=>t.completed).length;
+	const incompletedTasks = tasks.where(t=>!t.completed).length;
+	
+	if(tasks.length != file.Total)
+		await update('Total', tasks.length, file.file.path);
+	if(completedTasks != file.Complete)
+		await update('Complete', completedTasks, file.file.path);
+	if(incompletedTasks != file.Incomplete)
+		await update('Incomplete', incompletedTasks, file.file.path);
+}
+
 const pages = dv.pages('"Tasks"');
 for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project)){
 	dv.header(4, group.key)
@@ -111,6 +124,7 @@ dv.table(
 	pages.sort(t=>((t.Complete / t.Total || 0) * 100))
 		.map(t => {
 				const progress = ((t.Complete / t.Total || 0) * 100)
+				updatePercentTasks(t)
 				return [
 					t.file.link,
 					t.project,
