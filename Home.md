@@ -182,4 +182,3 @@ templater true
 LIST
 FROM "Roteiros" and #roteiros
 ```
-
