@@ -2,7 +2,7 @@
 
 status: In Progress
 priority: High
-until: 2023-07-14
+until: 
 project: GTRR
 
 Total: 14
