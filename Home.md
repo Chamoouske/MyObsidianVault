@@ -139,7 +139,7 @@ for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project))
 
 dv.header(4, "All Tasks")
 dv.table(
-	['Task', 'Project', 'Status', 'Priority', 'Due Date', 'Progress'],
+	['Task', 'Project', 'Status', 'Priority', 'Progress'],
 	pages.sort(t=>((t.Complete / t.Total || 0) * 100))
 		.map(t => {
 				const progress = ((t.Complete / t.Total || 0) * 100)
@@ -149,7 +149,6 @@ dv.table(
 					t.project,
 					t.status,
 					t.priority,
-					t.until,
 					createDivPercentage(progress.toFixed(2))
 				]
 			}
