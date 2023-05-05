@@ -49,6 +49,7 @@ templater true
 ```dataviewjs
 const {createButton} = app.plugins.plugins['buttons'];
 const {update} = this.app.plugins.plugins['metaedit'].api;
+const prompt = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[4].static_functions.get('prompt');
 
 function createDivPercentage(percent){
 	let style = `
@@ -73,6 +74,14 @@ async function updatePercentTasks(file){
 		await update('Incomplete', incompletedTasks, file.file.path);
 }
 
+async function setDueDate(path){
+	const date = await prompt('Set Due Date');
+	if(date){
+		const newDate = app.plugins.plugins['nldates-obsidian'].parseDate(date).moment.format("YYYY-MM-DD");
+		await update('until', newDate, path)
+	}
+}
+
 const pages = dv.pages('"Tasks"');
 for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project)){
 	dv.header(4, group.key)
@@ -95,7 +104,17 @@ for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project))
 					t.file.link,
 					t.status,
 					t.priority,
-					t.until,
+					t.until || createButton({
+							app,
+							el: this.container,
+							args: {name: "Set Date"},
+							clickOverride: {
+								click: setDueDate,
+								params: [
+									t.file.path
+								]
+							}
+						}),
 					createDivPercentage(progress.toFixed(2)),
 					createButton({
 						app,

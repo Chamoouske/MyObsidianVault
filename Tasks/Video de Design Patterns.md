@@ -2,16 +2,17 @@
 
 status: In Progress
 priority: Low
-until: 2023-05-06
-project: Teste
+until: 
+project: Personal
 
 Total: 1
-Complete: 1
-Incomplete: 0
+Complete: 0
+Incomplete: 1
 
 ---
 ## Description
 
 
 ## Tasks
-- [x]  
+
+- [ ]  

@@ -5,9 +5,9 @@ priority: High
 until: 
 project: GTRR
 
-Total: 13
+Total: 14
 Complete: 7
-Incomplete: 6
+Incomplete: 7
 
 ---
 ## Description
@@ -28,3 +28,4 @@ Desenvolvimento do site da GTRR
 - [ ] Projetos
 	- [ ] Andamento
 	- [ ] Finalizados
+- [ ] DNS

@@ -1,4 +1,10 @@
 <%*
+const prompt = tp.system.prompt;
+const suggester = tp.system.suggester;
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const dv = this.app.plugins.plugins['dataview'].api;
+const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks;
+
 let title = tp.file.title;
 const re = /[^\w\s()']/g;
 if(title.startsWith("Untitled") || title.startsWith("Sem título")){
@@ -6,11 +12,6 @@ if(title.startsWith("Untitled") || title.startsWith("Sem título")){
 	await tp.file.rename(title.replace(re, '_'))
 }
 
-const prompt = tp.system.prompt;
-const suggester = tp.system.suggester;
-const {update} = this.app.plugins.plugins["metaedit"].api;
-const dv = this.app.plugins.plugins['dataview'].api;
-const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks;
 
 function parseDateWithNLDates(date){
 	return app.plugins.plugins['nldates-obsidian'].parseDate(date).moment.format("YYYY-MM-DD")
@@ -30,7 +31,7 @@ let priority = await suggester(
 	"Prioridade"
 ) || "Low";
 
-let until = parseDateWithNLDates(await prompt("Until") || "today");
+let until = parseDateWithNLDates(await prompt("Until") || "");
 
 let project = await suggester(
 	["Personal", "GTRR", "Other"],
