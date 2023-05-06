@@ -6,7 +6,7 @@ const dv = this.app.plugins.plugins['dataview'].api;
 const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks;
 
 let title = tp.file.title;
-const re = /[^\w\s()']/g;
+const re = /[*:"\\|<>/?]/g;
 if(title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await prompt("Título da tarefa")
 	await tp.file.rename(title.replace(re, '_'))

@@ -1,9 +1,8 @@
 <%*
 let title = tp.file.title;
-const re = /[^\w\s()']/g;
+const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await tp.system.prompt("Título do vídeo: ");
-	await tp.file.rename(title.replace(re, "_"));
 }
 
 let videoId = await tp.system.prompt("Link");
@@ -13,7 +12,7 @@ if(videoId.indexOf('v=') !== -1){
 	videoId = videoId.split('.be/')[1]
 }
 
-await tp.file.move("Youtube/" + title.replace(re, "_"))
+await tp.file.move("Youtube/" + title.replace(re, "_"));
 %>---
 
 title: "<% title %>"

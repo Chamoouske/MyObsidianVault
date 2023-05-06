@@ -1,9 +1,9 @@
 <%*
 let title = tp.file.title;
-const re = /[^\w\s()']/g;
+const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await tp.system.prompt("File name: ");
-	await tp.file.rename(title.replace(re, '_'));
+	await tp.file.move('Guias de Estudo/Kanbans/' + title.replace(re, '_'))
 }
 %>---
 

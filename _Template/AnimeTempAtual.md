@@ -1,10 +1,10 @@
 <%*
 let title = tp.file.title;
-const re = /[^\w\s()']/g;
+const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = await tp.system.prompt("Nome do Anime: ");
-	await tp.file.rename(title.replace(re, '_'));
 }
+await tp.file.move('Animes/TemporadaAtual/' + title.replace(re, '_'));
 
 const date = new Date(tp.file.creation_date());
 const month = date.getMonth() + 1;
@@ -56,6 +56,15 @@ banner: <% banner %>
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 
+async function moveNoteToHistorico(){
+	await app.plugins.plugins['templater-obsidian'].templater.current_functions_object.file.move(`Animes/Histórico/<% title.replace(re, '_') %>`)
+}
+
+async function defer(key, value, file){
+	await update(key, value, file)
+	await moveNoteToHistorico()
+}
+
 dv.header(3, "Último episódio assistido: `$= dv.current()?.last_episode`");
 createButton({
 	app,
@@ -86,7 +95,7 @@ createButton({
 	el: this.container,
 	args: {name: dv.current()?.dropped ? "Reassistir" : "Drop"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'dropped', !dv.current()?.dropped,
 			dv.current()?.file.path
@@ -98,20 +107,21 @@ createButton({
 	el: this.container,
 	args: {name: "Finished"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'finished', !dv.current()?.finished,
 			dv.current()?.file.path
 		]
 	}
 })
-```
 
-```button
-name Jogar pro Histórico
-type prepend template
-action MoveToHistóricoInAnime
-templater true
-color purple
+createButton({
+	app,
+	el: this.container,
+	args: {name: 'Mover para Histórico'},
+	clickOverride: {
+		click: moveNoteToHistorico,
+		params: []
+	}
+})
 ```
-^button-sdyp
