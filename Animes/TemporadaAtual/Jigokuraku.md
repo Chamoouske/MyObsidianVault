@@ -3,7 +3,7 @@
 tag: animes Spring-2023
 name: Jigokuraku
 on_air: Saturday
-last_episode: 4
+last_episode: 6
 season: Spring-2023
 dropped: false
 finished: false

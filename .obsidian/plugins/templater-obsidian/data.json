@@ -24,7 +24,7 @@
     },
     {
       "folder": "Youtube",
-      "template": "_Template/AddIndicaçãoYoutube.md"
+      "template": "_Template/VideosYoutube.md"
     },
     {
       "folder": "Guias de Estudo/Kanbans",
