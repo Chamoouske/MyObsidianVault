@@ -14,7 +14,6 @@ Incomplete: 7
 Desenvolvimento do site da GTRR
 
 ## Tasks
-
 - [x] Homepage
 - [x] Primeiros Passos
 - [ ] Sobre

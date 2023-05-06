@@ -1,51 +1,14 @@
-<%*
-let title = tp.file.title;
-const re = /[*:"\\|<>/?]/g;
-if (title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = await tp.system.prompt("Nome do Anime: ");
-}
-await tp.file.move('Animes/TemporadaAtual/' + title.replace(re, '_'));
+---
 
-const date = new Date(tp.file.creation_date());
-const month = date.getMonth() + 1;
-let season;
-switch(month){
-	case 1:
-	case 2:
-	case 3:
-		season = 'Winter-' + date.getFullYear();
-		break;
-	case 4:
-	case 5:
-	case 6:
-		season = 'Spring-' + date.getFullYear();
-		break;
-	case 7:
-	case 8:
-	case 9:
-		season = 'Summer-' + date.getFullYear();
-		break;
-	case 10:
-	case 11:
-	case 12:
-		season = 'Fall-' + date.getFullYear();
-		break;
-}
-let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], false, "Dia do lançamento: ")
-
-let lastEpisode = await tp.system.prompt("Último ep assistido: ") || 0;
-let banner = await tp.system.prompt("Link de um banner: ") || '';
-%>---
-
-tag: animes <% season %>
-name: <% title %>
-on_air: <% on_air %>
-last_episode: <% lastEpisode %>
-season: <% season %>
+tag: animes Spring-2023
+name: Otonari ni Ginga
+on_air: Saturday
+last_episode: 1
+season: Spring-2023
 dropped: false
 finished: false
-created_at: <% tp.file.creation_date() %>
-banner: "<% banner %>"
+created_at: 2023-05-06 15:27
+banner: ""
 banner_y: 0
 
 ---
@@ -53,14 +16,14 @@ banner_y: 0
 
 ## Resumo
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=<% title.replaceAll(' ', '+') %>&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Otonari+ni+Ginga&lang=Portuguese)
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Otonari ni Ginga`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
