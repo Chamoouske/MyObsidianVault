@@ -8,12 +8,11 @@ const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks
 let title = tp.file.title;
 const re = /[*:"\\|<>/?]/g;
 if(title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = await prompt("Título da tarefa")
-	await tp.file.rename(title.replace(re, '_'))
+	title = await prompt("Título da tarefa");
 }
 
-
 function parseDateWithNLDates(date){
+	if(!date) return ''
 	return app.plugins.plugins['nldates-obsidian'].parseDate(date).moment.format("YYYY-MM-DD")
 }
 
@@ -40,7 +39,7 @@ let project = await suggester(
 	"Projeto"
 ) || "Personal";
 
-await tp.file.move("Tasks/" + title.replace(re, '_'))
+await tp.file.move(`Tasks/${project}/${title.replace(re, '_')}`);
 %>---
 
 status: <% status %>

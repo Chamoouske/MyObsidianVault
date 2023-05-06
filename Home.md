@@ -84,12 +84,12 @@ async function setDueDate(path){
 }
 
 const pages = dv.pages('"Tasks"');
-for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project)){
-	dv.header(4, group.key)
+for(let group of ['GTRR', 'Personal', 'Other']){
+	dv.header(4, group)
 	dv.table(
 		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
-		group.rows.sort(t=>((t.Complete / t.Total || 0) * 100))
-			.where(t=>!(t.status=='Completed'))
+		pages.sort(t=>((t.Complete / t.Total || 0) * 100))
+			.where(t=>!(t.status=='Completed') && t.project == group)
 			.map(t => {
 				const daysRemaining = (new Date(t.until) - new Date()) / (1000 * 60 * 60 * 24);
 				let color;
