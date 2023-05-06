@@ -9,6 +9,7 @@ dropped: false
 finished: false
 created_at: 2023-04-27 15:30
 banner: "https://images6.alphacoders.com/446/446231.jpg"
+banner_y: 0.5
 
 ---
 ## Gênero

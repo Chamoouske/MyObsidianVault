@@ -9,6 +9,7 @@ dropped: false
 finished: false
 created_at: 2023-04-27 14:57
 banner: 
+banner_y: 0
 
 ---
 ## Gênero

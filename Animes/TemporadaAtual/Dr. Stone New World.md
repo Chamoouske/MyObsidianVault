@@ -8,7 +8,8 @@ season: Spring-2023
 dropped: false
 finished: false
 created_at: 2023-04-27 13:50
-banner: 
+banner: "https://images6.alphacoders.com/102/1027254.jpg"
+banner_y: 0.552
 
 ---
 ## Gênero
