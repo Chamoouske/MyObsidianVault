@@ -28,7 +28,11 @@
     },
     {
       "folder": "Guias de Estudo/Kanbans",
-      "template": "_Template/Guia_estudos.md"
+      "template": "_Template/KanbanGuiaEstudos.md"
+    },
+    {
+      "folder": "Guias de Estudo/Assuntos",
+      "template": "_Template/GuiaEstudos.md"
     }
   ],
   "syntax_highlighting": true,

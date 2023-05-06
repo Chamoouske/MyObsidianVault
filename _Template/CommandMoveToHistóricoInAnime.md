@@ -1,1 +1,0 @@
-<% tp.file.move("Animes/Histórico/" + tp.file.title) %>
