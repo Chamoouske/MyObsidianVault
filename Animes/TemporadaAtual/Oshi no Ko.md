@@ -1,4 +1,5 @@
 ---
+
 tag: animes Spring-2023
 name: Oshi no Ko
 on_air: Wednesday
@@ -7,6 +8,9 @@ season: Spring-2023
 dropped: false
 finished: false
 created_at: 2023-04-27 15:32
+banner: "https://images2.alphacoders.com/131/1311144.jpeg"
+banner_y: 0.356
+
 ---
 ## Gênero
 
@@ -15,14 +19,17 @@ created_at: 2023-04-27 15:32
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
+const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await app.plugins.plugins['templater-obsidian'].templater.current_functions_object.file.move(`Animes/Histórico/<% title.replace(re, '_') %>`)
+	await move(`Animes/Histórico/Oshi no Ko`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
-	await update(key, value, file)
-	await moveNoteToHistorico()
+	await update(key, value, file);
+	if((key === 'dropped' && value) || (key === 'finished' && value)){
+		await moveNoteToHistorico();
+	}
 }
 
 dv.header(3, "Último episódio assistido: `$= dv.current()?.last_episode`");

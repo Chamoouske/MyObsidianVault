@@ -136,11 +136,12 @@ dv.header(2, "Tudo");
 
 for(let group of pages.groupBy(a=>a.season)){
 	dv.header(3, group.key)
-	dv.table(['Nome', 'Episódios'],
+	dv.table(['Nome', 'Episódios', 'Dropped'],
 		 group.rows.sort(a=>a.name)
 			 .map(anime=>[
 				anime.file.link,
-				anime.last_episode
+				anime.last_episode,
+				anime.dropped ? "Yes" : "No"
 			]
 	))
 }
