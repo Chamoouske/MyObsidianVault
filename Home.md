@@ -198,17 +198,41 @@ FROM "Ajuda" and #Ajuda
 ```
 
 ## Guia de Estudos
-```dataview
-LIST
-FROM "Guias de Estudo" and #guia/estudo
-```
 ```button
 name Novo Guia da Estudos
-type note(Guias de Estudo/Untitled) template
+type note(Untitled) template
 action Guia_estudos
 templater true
 ```
+```dataviewjs
+function createDivPercentage(percent){
+	let style = `
+		width:100%;
+		border:1px solid green;
+		text-align:center;
+		border-radius:0.7rem;
+		background-image:linear-gradient(to right, rgb(0,130,0,1) ${percent<100?percent-10:percent}%,rgb(0,130,0,0) ${percent<100?percent+20:0}%);`;
+	return `<div style="${style}">${percent}%</div>`
+}
+const pages = dv.pages('"Guias de Estudo" AND !#kanban');
 
+for(let group of pages.groupBy(t=>t.subject)){
+	dv.header(4, group.key);
+	dv.table(
+		['Subject', 'Progress', 'Incompleted'],
+		group.rows.sort(t=>t.file.link)
+			.map(item => {
+				const tasks = item.file.tasks;
+				const completedTasks = item.file.tasks.where(t=>t.completed).length
+				return [
+					item.file.link,
+					createDivPercentage((completedTasks * 100 / tasks.length || 0).toFixed(2)),
+					tasks.length - completedTasks
+				]
+			})
+	)
+}
+```
 ## Roteiros
 ```dataview
 LIST

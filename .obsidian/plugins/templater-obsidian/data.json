@@ -25,6 +25,10 @@
     {
       "folder": "Youtube",
       "template": "_Template/AddIndicaçãoYoutube.md"
+    },
+    {
+      "folder": "Guias de Estudo/Kanbans",
+      "template": "_Template/Guia_estudos.md"
     }
   ],
   "syntax_highlighting": true,
