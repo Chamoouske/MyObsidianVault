@@ -16,7 +16,7 @@
   "folder_templates": [
     {
       "folder": "Tasks",
-      "template": "_Template/NewMainTaskGTRR.md"
+      "template": "_Template/Tasks.md"
     },
     {
       "folder": "Animes",
