@@ -31,7 +31,7 @@ switch(month){
 		season = 'Fall-' + date.getFullYear();
 		break;
 }
-let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"], ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"], false, "Dia do lançamento: ")
+let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], false, "Dia do lançamento: ")
 
 let lastEpisode = await tp.system.prompt("Último ep assistido: ") || 0;
 let banner = await tp.system.prompt("Link de um banner: ") || '';
@@ -45,7 +45,8 @@ season: <% season %>
 dropped: false
 finished: false
 created_at: <% tp.file.creation_date() %>
-banner: <% banner %>
+banner: "<% banner %>"
+banner_y: 0
 
 ---
 ## Gênero
@@ -55,14 +56,17 @@ banner: <% banner %>
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
+const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await app.plugins.plugins['templater-obsidian'].templater.current_functions_object.file.move(`Animes/Histórico/<% title.replace(re, '_') %>`)
+	await move(`Animes/Histórico/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
-	await update(key, value, file)
-	await moveNoteToHistorico()
+	await update(key, value, file);
+	if((key === 'dropped' && value) || (key === 'finished' && value)){
+		await moveNoteToHistorico();
+	}
 }
 
 dv.header(3, "Último episódio assistido: `$= dv.current()?.last_episode`");
