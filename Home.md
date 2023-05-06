@@ -39,6 +39,7 @@ dv.table(['Nome', 'Último EP', '', ''],
 		]
 ))
 ```
+
 ## Tasks
 ```button
 name Add Task
@@ -99,7 +100,9 @@ for(let group of pages.where(t=>!(t.status=='Completed')).groupBy(t=>t.project))
 				}else{
 					color = "green";
 				}
-				const progress = ((t.Complete / t.Total || 0) * 100)
+				const tasks = t.file.tasks;
+				const completed = tasks.where(t=>t.completed)
+				const progress = ((completed.length / tasks.length || 0) * 100)
 				return [
 					t.file.link,
 					t.status,
@@ -234,6 +237,7 @@ for(let group of pages.groupBy(t=>t.subject)){
 	)
 }
 ```
+
 ## Roteiros
 ```dataview
 LIST
