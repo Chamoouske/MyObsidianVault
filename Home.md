@@ -219,7 +219,7 @@ const pages = dv.pages('"Guias de Estudo" AND !#kanban');
 for(let group of pages.groupBy(t=>t.subject)){
 	dv.header(4, group.key);
 	dv.table(
-		['Subject', 'Progress', 'Incompleted'],
+		['Content', 'Progress', 'N Tasks', 'Incompleted'],
 		group.rows.sort(t=>t.file.link)
 			.map(item => {
 				const tasks = item.file.tasks;
@@ -227,6 +227,7 @@ for(let group of pages.groupBy(t=>t.subject)){
 				return [
 					item.file.link,
 					createDivPercentage((completedTasks * 100 / tasks.length || 0).toFixed(2)),
+					tasks.length,
 					tasks.length - completedTasks
 				]
 			})
