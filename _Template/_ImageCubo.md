@@ -1,2 +1,2 @@
 
-	![F2L](<% await tp.system.prompt('Link Image:') %>)
+	![OLL](<% await tp.system.prompt('Link Image:') %>)
