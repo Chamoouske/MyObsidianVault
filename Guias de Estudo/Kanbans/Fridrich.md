@@ -15,7 +15,6 @@ kanban-plugin: basic
 
 ## Revisar
 
-- [ ] [[F2L]]<br>[[F2L#CASOS FÁCEIS]]
 
 
 ## Tudo certo
