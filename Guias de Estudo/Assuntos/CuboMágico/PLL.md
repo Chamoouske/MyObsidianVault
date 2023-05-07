@@ -1,0 +1,8 @@
+---
+
+subject: CuboMágico
+
+---
+# PLL
+
+- [ ] 
