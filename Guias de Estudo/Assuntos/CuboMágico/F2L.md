@@ -15,6 +15,20 @@ subject: CuboMágico
 	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-04-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
 
 ## CANTO NA PARTE DE BAIXO E MEIO NA CAMADA DE CIMA
+- [x] U R U’ R’ U’ F’ U F
+	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-05-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
+- [x] U’ L’ U L U F U’ F’
+	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-06-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
+- [x] L’ U L U’ L’ U L
+	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-07-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
+- [x] R U R’ U’ R U R’
+	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-08-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
+- [x] R U’ R’ U R U’ R’
+	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-09-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
+- [x] L’ U’ L U L’ U’ L
+	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-10-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
+
+## CANTO NA CAMADA DE CIMA E MEIO EM POSIÇÃO
 - [x] R U R’ U’ R U R’ U’ R U R’
 	![F2L](https://www.blog.oncube.com.br/wp-content/webp-express/webp-images/uploads/elementor/thumbs/F2L-11-pktlfos4u88eartw5pb7t7argcl0co7o8v1fucrjb0.png.webp)
 - [ ] R U’ R’ y L’ U2 L
