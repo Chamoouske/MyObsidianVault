@@ -16,7 +16,7 @@
   "folder_templates": [
     {
       "folder": "Tasks",
-      "template": "_Template/NewMainTaskGTRR.md"
+      "template": "_Template/Tasks.md"
     },
     {
       "folder": "Animes",
@@ -24,7 +24,15 @@
     },
     {
       "folder": "Youtube",
-      "template": "_Template/AddIndicaçãoYoutube.md"
+      "template": "_Template/VideosYoutube.md"
+    },
+    {
+      "folder": "Guias de Estudo/Kanbans",
+      "template": "_Template/KanbanGuiaEstudos.md"
+    },
+    {
+      "folder": "Guias de Estudo/Assuntos",
+      "template": "_Template/GuiaEstudos.md"
     }
   ],
   "syntax_highlighting": true,

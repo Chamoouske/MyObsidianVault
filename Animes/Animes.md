@@ -58,7 +58,7 @@ createButton({
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
-let pages= dv.pages(`#${dv.current().anime_season}`);
+let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.current().anime_season}`);
 
 
 dv.header(2, 'Não dropados')
@@ -136,11 +136,12 @@ dv.header(2, "Tudo");
 
 for(let group of pages.groupBy(a=>a.season)){
 	dv.header(3, group.key)
-	dv.table(['Nome', 'Episódios'],
+	dv.table(['Nome', 'Episódios', 'Dropped'],
 		 group.rows.sort(a=>a.name)
 			 .map(anime=>[
 				anime.file.link,
-				anime.last_episode
+				anime.last_episode,
+				anime.dropped ? "Yes" : "No"
 			]
 	))
 }

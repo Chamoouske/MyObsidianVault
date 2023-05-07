@@ -1,15 +1,14 @@
 ---
 
 tag: animes Spring-2023
-name: My Home Hero
-on_air: Sunday
-last_episode: 5
+name: Isekai de Cheat Skill wo Te ni Shita Ore wa
+on_air: Tuesday
+last_episode: 3
 season: Spring-2023
-dropped: false
+dropped: true
 finished: false
-created_at: 2023-04-27 15:28
-banner: ""
-banner_y: 0
+created_at: 2023-04-27 15:30
+banner: 
 
 ---
 ## Gênero
@@ -22,7 +21,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/My Home Hero`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Isekai de Cheat Skill wo Te ni Shita Ore wa`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

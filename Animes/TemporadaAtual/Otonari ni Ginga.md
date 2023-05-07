@@ -1,13 +1,13 @@
 ---
 
 tag: animes Spring-2023
-name: My Home Hero
-on_air: Sunday
+name: Otonari ni Ginga
+on_air: Saturday
 last_episode: 5
 season: Spring-2023
 dropped: false
 finished: false
-created_at: 2023-04-27 15:28
+created_at: 2023-05-06 15:27
 banner: ""
 banner_y: 0
 
@@ -16,13 +16,14 @@ banner_y: 0
 
 ## Resumo
 
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Otonari+ni+Ginga&lang=Portuguese)
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/My Home Hero`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Otonari ni Ginga`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

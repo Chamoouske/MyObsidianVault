@@ -1,15 +1,14 @@
 ---
 
 tag: animes Spring-2023
-name: My Home Hero
-on_air: Sunday
-last_episode: 5
+name: Rokudou no Onna-tachi
+on_air: Saturday
+last_episode: 2
 season: Spring-2023
-dropped: false
+dropped: true
 finished: false
-created_at: 2023-04-27 15:28
-banner: ""
-banner_y: 0
+created_at: 2023-05-06 09:53
+banner: 
 
 ---
 ## Gênero
@@ -21,8 +20,8 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
-async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/My Home Hero`, {...dv.current().file, extension: 'md'})
+async function moveNoteToHistorico(file){
+	await move(`Animes/Histórico/Rokudou no Onna-tachi`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
