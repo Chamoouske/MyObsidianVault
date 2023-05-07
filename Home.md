@@ -13,7 +13,7 @@ templater true
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
-let pages= dv.pages(`#${dv.pages('"Animes/Animes"')[0].anime_season}`);
+let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0].anime_season}`);
 
 const today = new Date().toLocaleString('en', { weekday: 'long' });
 
