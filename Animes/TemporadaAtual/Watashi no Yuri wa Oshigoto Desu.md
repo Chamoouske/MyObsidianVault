@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Watashi no Yuri wa Oshigoto Desu
 on_air: Thursday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 13:48
 banner: ""
 banner_y: 0
-
 ---
 ## Gênero
 

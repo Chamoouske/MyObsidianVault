@@ -1,16 +1,14 @@
 ---
-
 tag: animes Spring-2023
 name: Oshi no Ko
 on_air: Wednesday
-last_episode: 4
+last_episode: 5
 season: Spring-2023
 dropped: false
 finished: false
 created_at: 2023-04-27 15:32
 banner: "https://images2.alphacoders.com/131/1311144.jpeg"
 banner_y: 0.356
-
 ---
 ## Gênero
 

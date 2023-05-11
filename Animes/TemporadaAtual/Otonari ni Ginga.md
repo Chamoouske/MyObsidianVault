@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Otonari ni Ginga
 on_air: Saturday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-05-06 15:27
 banner: ""
 banner_y: 0
-
 ---
 ## Gênero
 

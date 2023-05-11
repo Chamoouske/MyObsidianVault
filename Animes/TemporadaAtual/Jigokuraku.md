@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Jigokuraku
 on_air: Saturday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-05-02 15:00
 banner: "https://images7.alphacoders.com/130/1309070.jpg"
 banner_y: 0.52
-
 ---
 ## Gênero
 

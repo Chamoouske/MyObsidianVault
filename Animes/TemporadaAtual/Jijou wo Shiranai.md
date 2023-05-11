@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Jijou wo Shiranai
 on_air: Sunday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 15:26
 banner: 
 banner_y: 0
-
 ---
 ## Gênero
 

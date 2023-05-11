@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Skip to Loafer
 on_air: Tuesday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 15:31
 banner: "https://images3.alphacoders.com/130/1309318.jpeg"
 banner_y: 0.14
-
 ---
 ## Gênero
 

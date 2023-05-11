@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Isekai Shoukan wa Nidome desu
 on_air: Saturday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 15:23
 banner: 
 banner_y: 0
-
 ---
 ## Gênero
 

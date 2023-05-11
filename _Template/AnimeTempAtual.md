@@ -36,7 +36,6 @@ let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday",
 let lastEpisode = await tp.system.prompt("Último ep assistido: ") || 0;
 let banner = await tp.system.prompt("Link de um banner: ") || '';
 %>---
-
 tag: animes <% season %>
 name: <% title %>
 on_air: <% on_air %>
@@ -47,7 +46,6 @@ finished: false
 created_at: <% tp.file.creation_date() %>
 banner: "<% banner %>"
 banner_y: 0
-
 ---
 ## Gênero
 

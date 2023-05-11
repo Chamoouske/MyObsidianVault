@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Kaminaki Sekai no Kamisama Katsudou
 on_air: Wednesday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 14:57
 banner: 
 banner_y: 0
-
 ---
 ## Gênero
 

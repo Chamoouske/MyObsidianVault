@@ -1,15 +1,13 @@
 ---
-
 tag: animes Spring-2023
 name: Kono Subarashii Sekai ni Bakuen wo
 on_air: Wednesday
-last_episode: 5
+last_episode: 6
 season: Spring-2023
 dropped: false
 finished: false
 created_at: 2023-04-27 15:34
 banner: "https://images4.alphacoders.com/721/721593.png"
-
 banner_y: 0.42
 ---
 ## Gênero

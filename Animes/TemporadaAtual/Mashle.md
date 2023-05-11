@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Mashle
 on_air: Friday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-05-03 09:54
 banner: "https://images7.alphacoders.com/113/1134380.png"
 banner_y: 0.18
-
 ---
 ## Gênero
 

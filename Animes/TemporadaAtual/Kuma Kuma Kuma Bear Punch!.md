@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Kuma Kuma Kuma Bear Punch!
 on_air: Monday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 15:28
 banner: "https://images6.alphacoders.com/120/1209935.jpg"
 banner_y: 0.176
-
 ---
 ## Gênero
 

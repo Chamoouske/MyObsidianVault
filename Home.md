@@ -1,6 +1,6 @@
 ---
 banner: "https://images5.alphacoders.com/750/750261.png"
-banner_y: 0.328
+banner_y: 0.332
 banner_x: 0.5
 ---
 

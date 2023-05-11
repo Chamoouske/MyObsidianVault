@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Tonikaku kawaii 2
 on_air: Friday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 15:18
 banner: "https://images4.alphacoders.com/110/1107773.jpg"
 banner_y: 0.376
-
 ---
 ## Gênero
 

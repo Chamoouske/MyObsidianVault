@@ -1,5 +1,4 @@
 ---
-
 tag: animes Spring-2023
 name: Mahou Tsukai no Yome 2
 on_air: Thursday
@@ -10,7 +9,6 @@ finished: false
 created_at: 2023-04-27 13:52
 banner: "https://images3.alphacoders.com/880/880728.jpg"
 banner_y: 0.184
-
 ---
 ## Gênero
 
