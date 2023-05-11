@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: Watashi no Yuri wa Oshigoto Desu
 on_air: Thursday
-last_episode: 5
+last_episode: 6
 season: Spring-2023
 dropped: false
 finished: false
