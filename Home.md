@@ -45,7 +45,7 @@ dv.table(['Nome', 'Último EP', '', ''],
 ```button
 name Add Task
 type note(Untitled) template
-action NewMainTaskGTRR
+action Tasks
 templater true
 ```
 ```dataviewjs
@@ -144,7 +144,7 @@ for(let group of ['GTRR', 'Personal', 'Other']){
 dv.header(4, "All Tasks")
 dv.table(
 	['Task', 'Project', 'Status', 'Priority', 'Progress'],
-	pages.sort(t=>((t.Complete / t.Total || 0) * 100))
+	pages.sort(t=>(-(t.Complete / t.Total || 0) * 100))
 		.map(t => {
 				const progress = ((t.Complete / t.Total || 0) * 100)
 				updatePercentTasks(t)
