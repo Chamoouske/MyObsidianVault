@@ -14,7 +14,7 @@ templater true
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
-let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0].anime_season}`);
+let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0].anime_season}`);
 
 const today = new Date().toLocaleString('en', { weekday: 'long' });
 
@@ -34,6 +34,40 @@ dv.table(['Nome', 'Último EP', '', ''],
 					params: [
 						'last_episode', anime.last_episode + 1,
 						anime.file.path
+					]
+				}
+			})
+		]
+))
+```
+
+## Filmes
+```button
+name Add Filme
+type note(Untitled, split) template
+action NewFilme
+templater true
+```
+```dataviewjs
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const {createButton} = app.plugins.plugins["buttons"];
+let pages = await dv.pages(`"Filmes"`);
+
+dv.table(['Título', 'Indicou', ''],
+	 pages.where(item => !item.Assistido)
+		 .sort(a=>a.Titulo)
+		 .map(filme=>[
+			filme.file.link,
+			filme['Indicado-por'],
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "Assistido"},
+				clickOverride: {
+					click: update,
+					params: [
+						'Assistido', true,
+						filme.file.path
 					]
 				}
 			})
