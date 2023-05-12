@@ -14,11 +14,9 @@ if(videoId.indexOf('v=') !== -1){
 
 await tp.file.move("Youtube/" + title.replace(re, "_"));
 %>---
-
 title: "<% title %>"
 url: "https://www.youtube.com/watch?v=<% videoId %>"
 watched: false
-
 ---
 ## Vídeo
 <% tp.file.cursor() %>

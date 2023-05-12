@@ -1,6 +1,6 @@
 ---
 
-title: "How to Learn a Language_ INPUT  (Why most methods don't work)"
+title: "How to Learn a Language: INPUT  (Why most methods don't work)"
 url: "https://www.youtube.com/watch?v=J_EQDtpYSNM"
 watched: false
 
