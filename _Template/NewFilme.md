@@ -16,5 +16,6 @@ const indicou = await tp.system.suggester(
 Titulo: <% title %>
 Indicado-por: <% indicou %>
 Assistido: false
+Added: <% tp.date.now() %>
 ---
 ## Descrição

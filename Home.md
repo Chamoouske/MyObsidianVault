@@ -53,12 +53,13 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 let pages = await dv.pages(`"Filmes"`);
 
-dv.table(['Título', 'Indicou', ''],
+dv.table(['Título', 'Indicou', 'Adicionado', ''],
 	 pages.where(item => !item.Assistido)
 		 .sort(a=>a.Titulo)
 		 .map(filme=>[
 			filme.file.link,
 			filme['Indicado-por'],
+			filme.Added,
 			createButton({
 				app,
 				el: this.container,
