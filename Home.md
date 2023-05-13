@@ -124,7 +124,7 @@ for(let group of ['GTRR', 'Personal', 'Other']){
 	dv.header(4, group)
 	dv.table(
 		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
-		pages.sort(t=>((t.Complete / t.Total || 0) * 100))
+		pages.sort(t=>-((t.Complete / t.Total || 0) * 100))
 			.where(t=>!(t.status=='Completed') && t.project == group)
 			.map(t => {
 				const daysRemaining = (new Date(t.until) - new Date()) / (1000 * 60 * 60 * 24);
