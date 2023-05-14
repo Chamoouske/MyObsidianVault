@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: Yamada-kun to Lv999
 on_air: Saturday
-last_episode: 6
+last_episode: 7
 season: Spring-2023
 dropped: false
 finished: false

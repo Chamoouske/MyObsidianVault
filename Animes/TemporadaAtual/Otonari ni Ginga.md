@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: Otonari ni Ginga
 on_air: Saturday
-last_episode: 5
+last_episode: 6
 season: Spring-2023
 dropped: false
 finished: false
