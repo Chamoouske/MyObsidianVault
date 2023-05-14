@@ -55,7 +55,7 @@ let pages = await dv.pages(`"Filmes"`);
 
 dv.table(['Título', 'Indicou', 'Adicionado', ''],
 	 pages.where(item => !item.Assistido)
-		 .sort(a=>a.Titulo)
+		 .sort(a=>a.Added)
 		 .map(filme=>[
 			filme.file.link,
 			filme['Indicado-por'],
