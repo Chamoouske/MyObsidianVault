@@ -6,10 +6,8 @@ if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	await tp.file.move('Guias de Estudo/Kanbans/' + title.replace(re, '_'))
 }
 %>---
-
 tag: kanban <% await title %>
 kanban-plugin: basic
-
 ---
 
 ## Estudar

@@ -41,7 +41,6 @@ let project = await suggester(
 
 await tp.file.move(`Tasks/${project}/${title.replace(re, '_')}`);
 %>---
-
 status: <% status %>
 priority: <% priority %>
 until: <% until %>
@@ -50,7 +49,6 @@ project: <% project %>
 Total: <% await tasks.length %>
 Complete: <% await tasks.where(t=>t.completed).length %>
 Incomplete: <% await tasks.where(t=>!t.completed).length %>
-
 ---
 ## Description
 

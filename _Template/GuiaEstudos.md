@@ -10,9 +10,7 @@ const subject = await tp.system.prompt("Subject: ") || 'Others';
 
 await tp.file.move(`Guias de Estudo/Assuntos/${subject.replace(re, '_')}/${title.replace(re, '_')}`)
 %>---
-
 subject: <% subject %>
-
 ---
 # <% title %>
 
