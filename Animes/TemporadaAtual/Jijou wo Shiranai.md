@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: Jijou wo Shiranai
 on_air: Sunday
-last_episode: 6
+last_episode: 7
 season: Spring-2023
 dropped: false
 finished: false
