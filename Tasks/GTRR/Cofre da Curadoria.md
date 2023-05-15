@@ -1,6 +1,6 @@
 ---
 status: In Progress
-priority: Midium
+priority: Moderate
 until: 2023-05-15
 project: GTRR
 

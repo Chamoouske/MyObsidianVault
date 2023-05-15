@@ -24,8 +24,8 @@ let status = await suggester(
 ) || "To Do";
 
 let priority = await suggester(
-	["Low", "Midium", "High", "Imediate"],
-	["Low", "Midium", "High", "Imediate"],
+	["Low", "Moderate", "High", "Imediate"],
+	["Low", "Moderate", "High", "Imediate"],
 	false,
 	"Prioridade"
 ) || "Low";
