@@ -1,8 +1,8 @@
 ---
 tag: animes Spring-2023
 name: Dead Mount Death Play
-on_air: Tuesday
-last_episode: 5
+on_air: Monday
+last_episode: 6
 season: Spring-2023
 dropped: false
 finished: false

@@ -2,7 +2,7 @@
 tag: animes Spring-2023
 name: Kuma Kuma Kuma Bear Punch!
 on_air: Monday
-last_episode: 6
+last_episode: 7
 season: Spring-2023
 dropped: false
 finished: false
