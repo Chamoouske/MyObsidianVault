@@ -1,14 +1,12 @@
 ---
-
 status: In Progress
 priority: High
 until: 
 project: GTRR
 
 Total: 14
-Complete: 7
-Incomplete: 7
-
+Complete: 8
+Incomplete: 6
 ---
 ## Description
 Desenvolvimento do site da GTRR

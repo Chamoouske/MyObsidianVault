@@ -1,5 +1,4 @@
 ---
-
 status: In Progress
 priority: Low
 until: 
@@ -8,7 +7,6 @@ project: Personal
 Total: 80
 Complete: 5
 Incomplete: 75
-
 ---
 ## Description
 Criação de vídeos sobre Design Patterns com aprofundamento em _OOP_, informando as descrições de cada Design Pattern junto de pelo menos um exemplo.
