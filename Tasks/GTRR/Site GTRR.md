@@ -27,4 +27,4 @@ Desenvolvimento do site da GTRR
 - [ ] Projetos
 	- [ ] Andamento
 	- [ ] Finalizados
-- [ ] DNS
+- [x] DNS
