@@ -4,8 +4,8 @@ name: Boku no Kokoro no Yabai Yatsu
 
 on_air: Saturday
 season: Spring-2023
-last_episode: 7
-last_watch: 2023-05-17
+last_episode: 8
+last_watch: 2023-05-20
 genre: 
  - "#Comedy"
  - "#Slice_of_Life"
