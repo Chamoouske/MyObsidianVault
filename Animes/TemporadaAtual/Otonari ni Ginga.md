@@ -4,8 +4,8 @@ name: Otonari ni Ginga
 
 on_air: Saturday
 season: Spring-2023
-last_episode: 6
-last_watch: 2023-05-02
+last_episode: 7
+last_watch: 2023-05-20
 genre: 
  - "#Comedy"
  - "#Romance"
