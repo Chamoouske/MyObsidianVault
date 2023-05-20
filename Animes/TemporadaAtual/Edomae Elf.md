@@ -1,27 +1,28 @@
 ---
 tag: animes Spring-2023
-name: Watashi no Yuri wa Oshigoto Desu
+name: Edomae Elf
 
-on_air: Thursday
+on_air: Friday
 season: Spring-2023
-last_episode: 7
-last_watch: 2023-05-18
-genre: 
+last_episode: 3
+last_watch: 2023-05-01
+genre:
  - "#Comedy"
- - "#Romance"
+ - "#Slice_of_Life"
+ - "#Supernatural"
 
 dropped: false
 finished: false
 
-created_at: 2023-05-11
+created_at: 2023-05-20
 
 banner: ""
 banner_y: 0
 ---
-## Sinópse
-Worried about her reputation, Hime covers shifts for a cafe manager she accidentally injures to maintain her picture-perfect princess image. But this cafe has a peculiar theme—private school. To put on her best barista schoolgirl act, she’ll be trained by the most graceful girl there, Mitsuki. Under her guidance, Hime’s feelings start to brew, but there’s just one problem—Mitsuki can’t stand her!
+## Resumo
+Takamimi Shrine has an unusual resident – Elda, an ancient elf who’s obsessed with video games! The shrine’s teenage attendant, Koito Koganei, keeps this reclusive otaku well supplied with energy drinks and junk food. Even though she loves 100%-ing her games, Elda has duties to attend to, and Koganei is bound and determined to make this otaku elf fulfill them! It’ll just take an offering or two to bribe—um, we mean convince Elda to put down her new game…
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Watashi+no+Yuri+wa+Oshigoto+Desu&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Edomae+Elf&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +30,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Watashi no Yuri wa Oshigoto Desu`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Edomae Elf`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

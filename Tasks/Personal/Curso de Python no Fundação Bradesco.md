@@ -5,8 +5,8 @@ until: 2023-07-12
 project: Personal
 
 Total: 4
-Complete: 2
-Incomplete: 2
+Complete: 3
+Incomplete: 1
 ---
 ## Description
 Curso de desenvolvimento de projetos Python com estrutura de dados
@@ -14,5 +14,5 @@ Curso de desenvolvimento de projetos Python com estrutura de dados
 ## Tasks
 - [x] Ambiente de Desenvolvimento
 - [x] Estrutura de dados
-- [ ] SQL
+- [x] SQL
 - [ ] Python e SQLite

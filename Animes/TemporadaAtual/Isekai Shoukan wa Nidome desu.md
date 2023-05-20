@@ -1,18 +1,28 @@
 ---
 tag: animes Spring-2023
 name: Isekai Shoukan wa Nidome desu
+
 on_air: Saturday
-last_episode: 6
 season: Spring-2023
+last_episode: 6
+last_watch: 2023-05-02
+genre: 
+ - "#Adventure"
+ - "#Fantasy"
+ - "#Comedy"
+
 dropped: false
 finished: false
-created_at: 2023-04-27 15:23
-banner: 
+
+created_at: 2023-05-11
+
+banner: ""
 banner_y: 0
 ---
-## Gênero
+## Sinópse
+There was once a hero who was summoned to another world, and he saved that world. However, the man was caught in a "trap" and was forcibly returned to his original world. On top of that, he had to start over as a baby… This is the story of a crazy journey in another world where a former hero who was reincarnated into a slightly gloomy high school student is "resummoned" back to that same world! There's a lot of room to work with when it's the second time, huh
 
-## Resumo
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Isekai+Shoukan+wa+Nidome+desu&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -27,6 +37,16 @@ async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
 		await moveNoteToHistorico();
+	}else if (key === 'last_episode'){
+		const date = new Date();
+		let year = `${date.getFullYear()}`;
+		let month = `${date.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${date.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
+
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
 	}
 }
 
@@ -36,7 +56,7 @@ createButton({
 	el: this.container,
 	args: {name: "+1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode + 1,
 			dv.current()?.file.path
@@ -48,7 +68,7 @@ createButton({
 	el: this.container,
 	args: {name: "-1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode - 1,
 			dv.current()?.file.path

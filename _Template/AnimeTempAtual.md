@@ -34,24 +34,47 @@ switch(month){
 let on_air = await tp.system.suggester(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], false, "Dia do lançamento: ")
 
 let lastEpisode = await tp.system.prompt("Último ep assistido: ") || 0;
+
 let banner = await tp.system.prompt("Link de um banner: ") || '';
+
+const linkWallpapers = `[Wallpapers](https://wall.alphacoders.com/search.php?search=${title.replaceAll(' ', '+')}&lang=Portuguese)`;
+
+let genres = await tp.system.prompt('Gêneros (separados por ","):') || '';
+if (genres) {
+	genres = genres.split(',');
+	let aux = ''
+	for (let genre of genres){
+		genre = genre.replace(genre[0], genre[0].toUpperCase());
+		aux += `
+ - "#${genre.trim().replaceAll(' ', '_')}"`;
+	}
+	genres = aux;
+}
+
+let lastWatch = tp.file.last_modified_date('YYYY-MM-DD');
 %>---
 tag: animes <% season %>
 name: <% title %>
+
 on_air: <% on_air %>
-last_episode: <% lastEpisode %>
 season: <% season %>
+last_episode: <% lastEpisode %>
+last_watch: <% lastWatch %>
+genre: <% genres %>
+
 dropped: false
 finished: false
-created_at: <% tp.file.creation_date() %>
+
+created_at: <% tp.file.creation_date('YYYY-MM-DD') %>
+
 banner: "<% banner %>"
 banner_y: 0
 ---
-## Gênero
+## Sinópse
 
-## Resumo
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=<% title.replaceAll(' ', '+') %>&lang=Portuguese)
+## <% linkWallpapers %>
+
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
@@ -65,6 +88,16 @@ async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
 		await moveNoteToHistorico();
+	}else if (key === 'last_episode'){
+		const date = new Date();
+		let year = `${date.getFullYear()}`;
+		let month = `${date.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${date.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
+
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
 	}
 }
 
@@ -74,7 +107,7 @@ createButton({
 	el: this.container,
 	args: {name: "+1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode + 1,
 			dv.current()?.file.path
@@ -86,7 +119,7 @@ createButton({
 	el: this.container,
 	args: {name: "-1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode - 1,
 			dv.current()?.file.path

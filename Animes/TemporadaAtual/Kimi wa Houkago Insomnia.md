@@ -1,18 +1,27 @@
 ---
 tag: animes Spring-2023
 name: Kimi wa Houkago Insomnia
+
 on_air: Monday
-last_episode: 6
 season: Spring-2023
+last_episode: 6
+last_watch: 2023-05-15
+genre: 
+ - "#Romance"
+ - "#Slice_of_life"
+
 dropped: false
 finished: false
-created_at: 2023-04-27 15:30
-banner: "https://images6.alphacoders.com/446/446231.jpg"
-banner_y: 0.5
----
-## Gênero
 
-## Resumo
+created_at: 2023-05-11
+
+banner: "https://images6.alphacoders.com/446/446231.jpg"
+banner_y: 0.524
+---
+## Sinópse
+
+
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kimi+wa+Houkago+Insomnia&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -27,6 +36,16 @@ async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
 		await moveNoteToHistorico();
+	}else if (key === 'last_episode'){
+		const date = new Date();
+		let year = `${date.getFullYear()}`;
+		let month = `${date.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${date.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
+
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
 	}
 }
 
@@ -36,7 +55,7 @@ createButton({
 	el: this.container,
 	args: {name: "+1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode + 1,
 			dv.current()?.file.path
@@ -48,7 +67,7 @@ createButton({
 	el: this.container,
 	args: {name: "-1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode - 1,
 			dv.current()?.file.path

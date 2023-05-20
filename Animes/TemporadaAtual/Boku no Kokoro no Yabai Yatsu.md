@@ -1,27 +1,28 @@
 ---
 tag: animes Spring-2023
-name: Watashi no Yuri wa Oshigoto Desu
+name: Boku no Kokoro no Yabai Yatsu
 
-on_air: Thursday
+on_air: Saturday
 season: Spring-2023
 last_episode: 7
-last_watch: 2023-05-18
+last_watch: 2023-05-17
 genre: 
  - "#Comedy"
+ - "#Slice_of_Life"
  - "#Romance"
 
 dropped: false
 finished: false
 
-created_at: 2023-05-11
+created_at: 2023-05-16
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
-Worried about her reputation, Hime covers shifts for a cafe manager she accidentally injures to maintain her picture-perfect princess image. But this cafe has a peculiar theme—private school. To put on her best barista schoolgirl act, she’ll be trained by the most graceful girl there, Mitsuki. Under her guidance, Hime’s feelings start to brew, but there’s just one problem—Mitsuki can’t stand her!
+Fascinated by murder and all things macabre, Kyoutarou daydreams of acting out his twisted fantasies on his unsuspecting classmates — but an encounter with Anna Yamada, the gorgeous class idol, lights a spark in the darkness of his heart. It’s a classic tale of an antisocial boy falling for a popular girl, but neither are who they appear to be at first glance. Will Kyoutarou and Anna defy their expectations of each other — and of themselves?
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Watashi+no+Yuri+wa+Oshigoto+Desu&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Boku+no+Kokoro+no+Yabai+Yatsu&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +30,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Watashi no Yuri wa Oshigoto Desu`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Boku no Kokoro no Yabai Yatsu`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

@@ -2,20 +2,15 @@
 let title = tp.file.title;
 const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = await tp.system.prompt("Nome do filme: ");
-	await tp.file.move('Filmes/' + title.replace(re, '_'))
+	title = await tp.system.prompt("Nome do livro: ");
+	await tp.file.move('Livros/' + title.replace(re, '_'))
 }
 
-const indicou = await tp.system.suggester(
-	["Eu", "Conje"],
-	["Eu", "Conje"],
-	false,
-	"Quem indicou:"
-)
+const idioma = await tp.system.prompt("Idioma:") || '';
 %>---
 Titulo: <% title %>
-Indicado-por: <% indicou %>
-Assistido: false
+Idioma: <% idioma %>
+Lido: false
 Added: <% tp.date.now() %>
 ---
 ```dataviewjs
@@ -25,15 +20,15 @@ const { createButton } = app.plugins.plugins["buttons"];
 createButton({
 	app,
 	el: this.container,
-	args: {name: !dv.current()?.Assistido ? "Assistido" : "Não assistido"},
+	args: {name: !dv.current()?.Lido ? "Lido" : "Não lido"},
 	clickOverride: {
 		click: update,
 		params: [
-			'Assistido',
-			!dv.current()?.Assistido,
+			'Lido',
+			!dv.current()?.Lido,
 			dv.current().file.path
 		]
 	}
 })
 ```
-## Sinópse
+## Descrição

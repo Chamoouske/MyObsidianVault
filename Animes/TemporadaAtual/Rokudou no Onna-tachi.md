@@ -1,16 +1,16 @@
 ---
 tag: animes Spring-2023
-name: Watashi no Yuri wa Oshigoto Desu
+name: Rokudou no Onna-tachi
 
-on_air: Thursday
+on_air: Saturday
 season: Spring-2023
-last_episode: 7
-last_watch: 2023-05-18
+last_episode: 3
+last_watch: 2023-05-11
 genre: 
+ - "#Action"
  - "#Comedy"
- - "#Romance"
 
-dropped: false
+dropped: true
 finished: false
 
 created_at: 2023-05-11
@@ -19,9 +19,9 @@ banner: ""
 banner_y: 0
 ---
 ## Sinópse
-Worried about her reputation, Hime covers shifts for a cafe manager she accidentally injures to maintain her picture-perfect princess image. But this cafe has a peculiar theme—private school. To put on her best barista schoolgirl act, she’ll be trained by the most graceful girl there, Mitsuki. Under her guidance, Hime’s feelings start to brew, but there’s just one problem—Mitsuki can’t stand her!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Watashi+no+Yuri+wa+Oshigoto+Desu&lang=Portuguese)
+
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Rokudou+no+Onna-tachi&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Watashi no Yuri wa Oshigoto Desu`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Rokudou no Onna-tachi`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

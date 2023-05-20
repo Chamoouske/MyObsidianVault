@@ -1,18 +1,27 @@
 ---
 tag: animes Spring-2023
 name: Tonikaku kawaii 2
+
 on_air: Friday
-last_episode: 6
 season: Spring-2023
+last_episode: 7
+last_watch: 2023-05-19
+genre: 
+ - "#Comedy"
+ - "#Romance"
+
 dropped: false
 finished: false
-created_at: 2023-04-27 15:18
-banner: "https://images4.alphacoders.com/110/1107773.jpg"
-banner_y: 0.376
----
-## Gênero
 
-## Resumo
+created_at: 2023-05-11
+
+banner: "https://images4.alphacoders.com/110/1107773.jpg"
+banner_y: 0
+---
+## Sinópse
+The second season of _Tonikaku Kawaii_. The sweet story of Nasa and Tsukasa continues! After surviving some awkward first nights together, dealing with doubters, and recovering from their apartment fire, it's clear the fate of these lovers was written in the stars. Now, they're ready to settle back into domestic bliss and finally plan their wedding ceremony! But with plenty of new friends on the way, what will their big day look like?!
+
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Tonikaku+kawaii+2&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -27,6 +36,16 @@ async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
 		await moveNoteToHistorico();
+	}else if (key === 'last_episode'){
+		const date = new Date();
+		let year = `${date.getFullYear()}`;
+		let month = `${date.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${date.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
+
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
 	}
 }
 
@@ -36,7 +55,7 @@ createButton({
 	el: this.container,
 	args: {name: "+1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode + 1,
 			dv.current()?.file.path
@@ -48,7 +67,7 @@ createButton({
 	el: this.container,
 	args: {name: "-1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode - 1,
 			dv.current()?.file.path

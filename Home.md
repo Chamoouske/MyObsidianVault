@@ -7,44 +7,73 @@ banner_x: 0.5
 ## [[Animes]]
 ```button
 name Add Anime
-type note(Animes/TemporadaAtual/Untitled, split) template
+type note(Animes/TemporadaAtual/Untitled) template
 action AnimeTempAtual
 templater true
 ```
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
-let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0].anime_season}`);
+let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0]?.anime_season}`);
 
-const today = new Date().toLocaleString('en', { weekday: 'long' });
+let now = new Date();
+function equalDates(date){
+	date = new Date(date);
+	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+}
+async function defer(key, value, file){
+	await update(key, value, file);
+	if (key === 'last_episode'){
+		const date = new Date();
+		let year = `${date.getFullYear()}`;
+		let month = `${date.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${date.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
 
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
+	}
+}
+
+let year = `${now.getFullYear()}`;
+let month = `${now.getMonth() + 1}`;
+if (month.length < 2) month = `0${month}`;
+let day = `${now.getDate()}`;
+if (day.length < 2) day = `0${day}`;
+
+const today = now.toLocaleString('en', { weekday: 'long' });
 dv.header(4, 'Today')
-dv.table(['Nome', 'Último EP', '', ''],
-	 pages.where(item => !item.dropped && !item.finished && item.on_air==today)
+dv.table(['Nome', 'Último EP', "Gêneros", ''],
+	 pages.where(item => !item.dropped && !item.finished && item.on_air==today && !equalDates(item.last_watch))
 		 .sort(a=>a.last_episode)
-		 .map(anime=>[
-			anime.file.link,
-			anime.last_episode,
-			createButton({
-				app,
-				el: this.container,
-				args: {name: "+1 ep"},
-				clickOverride: {
-					click: update,
-					params: [
-						'last_episode', anime.last_episode + 1,
-						anime.file.path
-					]
-				}
-			})
-		]
-))
+		 .map(anime=>{
+			 return [
+				anime.file.link,
+				anime.last_episode,
+				anime.genre,
+				createButton({
+					app,
+					el: this.container,
+					args: {name: "+1 ep"},
+					clickOverride: {
+						click: defer,
+						params: [
+							'last_episode', anime.last_episode + 1,
+							anime.file.path
+						]
+					}
+				})
+			]
+		}
+	)
+)
 ```
 
 ## Filmes
 ```button
 name Add Filme
-type note(Untitled, split) template
+type note(Untitled) template
 action NewFilme
 templater true
 ```
@@ -68,6 +97,40 @@ dv.table(['Título', 'Indicou', 'Adicionado', ''],
 					click: update,
 					params: [
 						'Assistido', true,
+						filme.file.path
+					]
+				}
+			})
+		]
+))
+```
+
+## Livros
+```button
+name Add Livro
+type note(Untitled) template
+action NewLivro
+templater true
+```
+```dataviewjs
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const {createButton} = app.plugins.plugins["buttons"];
+let pages = await dv.pages(`"Livros"`);
+
+dv.table(['Título', 'Indicou',  ''],
+	 pages.where(item => !item.Lido)
+		 .sort(a=>a.Added)
+		 .map(filme=>[
+			filme.file.link,
+			filme.Added,
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "Lido"},
+				clickOverride: {
+					click: update,
+					params: [
+						'Lido', true,
 						filme.file.path
 					]
 				}

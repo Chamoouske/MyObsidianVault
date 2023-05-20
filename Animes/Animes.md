@@ -61,13 +61,14 @@ let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.current().anime_season}`)
 dv.header(2, 'Não dropados')
 for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']){
 	dv.header(3, group)
-	dv.table(['Nome', 'Último EP', '', ''],
+	dv.table(['Nome', 'Último EP', 'Assistido', ''],
 		 pages.where(item => !item.dropped && !item.finished && item.on_air==group)
-			 .sort(a=>a.last_episode)
+			 .sort(a=>a.name)
 			 .map(anime=>[
 				anime.file.link,
 				anime.last_episode,
-				createButton({
+				anime.last_watch,
+				[createButton({
 					app,
 					el: this.container,
 					args: {name: anime.dropped ? "Reassistir" : "Drop"},
@@ -90,7 +91,7 @@ for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 							anime.file.path
 						]
 					}
-				})
+				})]
 			]
 	))
 }
@@ -127,17 +128,19 @@ dv.table(['Nome', 'Lançamento', 'Último EP', ''],
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
-let pages = dv.pages(`#animes`);
+let pages = dv.pages(`"Animes" AND !"Animes/Animes"`);
 
 dv.header(2, "Tudo");
 
 for(let group of pages.groupBy(a=>a.season)){
 	dv.header(3, group.key)
-	dv.table(['Nome', 'Episódios', 'Dropped'],
-		 group.rows.sort(a=>a.name)
+	dv.table(['Nome', 'Episódios', 'Gêneros', 'Dropped'],
+		 group.rows
+			 .sort(a=>a.name)
 			 .map(anime=>[
 				anime.file.link,
 				anime.last_episode,
+				anime.genre,
 				anime.dropped ? "Yes" : "No"
 			]
 	))

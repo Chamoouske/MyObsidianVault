@@ -1,18 +1,29 @@
 ---
 tag: animes Spring-2023
 name: Tengoku Daimakyou
+
 on_air: Saturday
-last_episode: 7
 season: Spring-2023
+last_episode: 8
+last_watch: 2023-05-20
+genre: 
+ - "#Mystery"
+ - "#Sci-Fi"
+ - "#Adventure"
+ - "#Thriller"
+
 dropped: false
 finished: false
-created_at: 2023-04-27 15:20
+
+created_at: 2023-05-11
+
 banner: ""
 banner_y: 0
 ---
-## Gênero
+## Sinópse
+In the year 2024, the world has collapsed. Grotesque monsters lurk amongst the ruins of Japan, while remaining people scrape together what they can to survive. Kiruko, an odd-job girl in Nakano, accepts a mysterious woman's dying wish to take a boy named Maru to a place called Heaven.
 
-## Resumo
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Tengoku+Daimakyou&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -27,6 +38,16 @@ async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
 		await moveNoteToHistorico();
+	}else if (key === 'last_episode'){
+		const dt = new Date(Date.now());
+		let year = `${dt.getFullYear()}`;
+		let month = `${dt.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${dt.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
+
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
 	}
 }
 
@@ -36,7 +57,7 @@ createButton({
 	el: this.container,
 	args: {name: "+1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode + 1,
 			dv.current()?.file.path
@@ -48,7 +69,7 @@ createButton({
 	el: this.container,
 	args: {name: "-1 ep"},
 	clickOverride: {
-		click: update,
+		click: defer,
 		params: [
 			'last_episode', dv.current()?.last_episode - 1,
 			dv.current()?.file.path
