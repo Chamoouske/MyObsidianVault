@@ -4,8 +4,8 @@ name: Jijou wo Shiranai
 
 on_air: Sunday
 season: Spring-2023
-last_episode: 7
-last_watch: 2023-05-14
+last_episode: 8
+last_watch: 2023-05-21
 genre: 
  - "#Comedy"
  - "#Slice_of_Life"
