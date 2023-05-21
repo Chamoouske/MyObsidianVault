@@ -4,8 +4,8 @@ name: Kimetsu no Yaiba 3
 
 on_air: Sunday
 season: Spring-2023
-last_episode: 6
-last_watch: 2023-05-14
+last_episode: 7
+last_watch: 2023-05-21
 genre: 
  - "#Action"
  - "#Adventure"
