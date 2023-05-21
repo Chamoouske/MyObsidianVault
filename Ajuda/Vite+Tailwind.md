@@ -18,6 +18,20 @@ npm create vite@latest tiktok-feed -- --template react-ts
 yarn add -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
+No `tailwind.config.js`:
+```js
+/** @type {import('tailwindcss').Config} */ 
+module.exports = {
+	content: [
+		"./index.html",
+		"./src/**/*.{js,ts,jsx,tsx}",
+	],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
+}
+```
 Usar o passo a passo do site oficial do [Tailwind](https://tailwindcss.com/docs/guides/vite)
 
 ## Alguns comandos de cmd pra criar pastas
