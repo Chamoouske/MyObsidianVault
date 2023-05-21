@@ -16,7 +16,7 @@ finished: false
 created_at: 2023-05-11
 
 banner: "https://images4.alphacoders.com/110/1107773.jpg"
-banner_y: 0
+banner_y: 0.34
 ---
 ## Sinópse
 The second season of _Tonikaku Kawaii_. The sweet story of Nasa and Tsukasa continues! After surviving some awkward first nights together, dealing with doubters, and recovering from their apartment fire, it's clear the fate of these lovers was written in the stars. Now, they're ready to settle back into domestic bliss and finally plan their wedding ceremony! But with plenty of new friends on the way, what will their big day look like?!

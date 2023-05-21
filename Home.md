@@ -1,12 +1,8 @@
----
-banner: "https://images5.alphacoders.com/750/750261.png"
----
+
 ---
 banner: "https://images5.alphacoders.com/750/750261.png"
 banner_y: 0.332
-banner_x: 0.5
 ---
-
 ## [[Animes]]
 ```button
 name Add Anime
@@ -122,7 +118,7 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 let pages = await dv.pages(`"Livros"`);
 
-dv.table(['Título', 'Indicou',  ''],
+dv.table(['Título', 'Adicionado',  ''],
 	 pages.where(item => !item.Lido)
 		 .sort(a=>a.Added)
 		 .map(filme=>[
