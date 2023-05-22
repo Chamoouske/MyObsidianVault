@@ -37,7 +37,7 @@ async function defer(key, value, file){
 		let day = `${date.getDate()}`;
 		if (day.length < 2) day = `0${day}`;
 
-		const newDate = `${year}-${month}-${day}`;
+		const newDate = this.date.now();
 		await update('last_watch', newDate, file);
 	}
 }
