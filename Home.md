@@ -17,14 +17,10 @@ const {DateTime} = dv.luxon;
 
 let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0]?.anime_season}`);
 
-let now = new Date(new Date().setHours(0, 0, 0));
+let now = new Date(new Date().setHours(0, 0, 0, 0));
 function equalDates(date){
 	date = new Date(`${date.year}-${date.month}-${date.day}`);
-	console.log([now, date])
-	console.log([now.getTime(), date.getTime()])
-	console.log([`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`, `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`])
-	console.log('==============================')
-	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+	return now.getTime() === date.getTime()
 }
 async function defer(key, value, file){
 	await update(key, value, file);
