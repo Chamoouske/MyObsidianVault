@@ -17,8 +17,7 @@ const {DateTime} = dv.luxon;
 
 let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0]?.anime_season}`);
 
-let now = new Date();
-now = new Date(`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`);
+let now = new Date(new Date().setHours(0, 0, 0));
 function equalDates(date){
 	date = new Date(`${date.year}-${date.month}-${date.day}`);
 	console.log([now, date])
