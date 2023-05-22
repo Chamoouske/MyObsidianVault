@@ -13,6 +13,8 @@ templater true
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
+const {DateTime} = dv.luxon;
+
 let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0]?.anime_season}`);
 
 let now = new Date();
@@ -20,8 +22,8 @@ function equalDates(date){
 	console.log(`-----------------------------------`);
 	console.log(date);
 	date = new Date(date);
-	console.log(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`);
-	console.log(`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`);
+	const dateNow = DateTime.fromObject({year: date.getFullYear(), month: date.getMonth()+1, day: date.getDate()})
+	console.log(dateNow);
 	console.log(`-----------------------------------`);
 	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
 }
