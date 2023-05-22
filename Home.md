@@ -20,20 +20,17 @@ let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Ani
 let now = new Date(new Date().setHours(0, 0, 0, 0));
 function equalDates(date){
 	date = new Date(`${date.year}-${date.month}-${date.day}`);
-	return now.getTime() === date.getTime()
+	return now.getTime() === date.getTime();
 }
 async function defer(key, value, file){
 	await update(key, value, file);
 	if (key === 'last_episode'){
-		const date = new Date();
-		let year = `${date.getFullYear()}`;
-		let month = `${date.getMonth() + 1}`;
+		let month = `${now.getMonth() + 1}`;
 		if (month.length < 2) month = `0${month}`;
-		let day = `${date.getDate()}`;
+		let day = `${now.getDate()}`;
 		if (day.length < 2) day = `0${day}`;
-
-		const newDate = this.date.now();
-		await update('last_watch', newDate, file);
+		
+		await update('last_watch', `${now.getFullYear()}-${month}-${day}`, file);
 	}
 }
 
