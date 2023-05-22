@@ -22,7 +22,7 @@ function equalDates(date){
 	console.log(`-----------------------------------`);
 	console.log(date);
 	date = new Date(date);
-	const dateNow = DateTime.fromObject({year: date.getFullYear(), month: date.getMonth()+1, day: date.getDate()})
+	const dateNow = DateTime.fromObject({year: now.getFullYear(), month: now.getMonth()+1, day: now.getDate()})
 	console.log(dateNow);
 	console.log(`-----------------------------------`);
 	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
