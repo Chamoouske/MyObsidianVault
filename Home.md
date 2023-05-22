@@ -17,8 +17,9 @@ let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Ani
 
 let now = new Date();
 function equalDates(date){
-	console.log(date);
 	date = new Date(date);
+	console.log(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`);
+	console.log(`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`);
 	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
 }
 async function defer(key, value, file){
@@ -48,7 +49,6 @@ dv.table(['Nome', 'Último EP', "Gêneros", ''],
 	 pages.where(item => !item.dropped && !item.finished && item.on_air==today && !equalDates(item.last_watch))
 		 .sort(a=>a.last_episode)
 		 .map(anime=>{
-			 console.log(anime.last_watch)
 			 return [
 				anime.file.link,
 				anime.last_episode,
