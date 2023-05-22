@@ -18,11 +18,13 @@ const {DateTime} = dv.luxon;
 let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0]?.anime_season}`);
 
 let now = new Date();
+now = new Date(`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`);
 function equalDates(date){
-	date = new Date(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`);
+	date = new Date(`${date.year}-${date.month}-${date.day}`);
+	console.log([now, date])
 	console.log([now.getTime(), date.getTime()])
 	console.log([`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`, `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`])
-	console.log('====================')
+	console.log('==============================')
 	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
 }
 async function defer(key, value, file){
