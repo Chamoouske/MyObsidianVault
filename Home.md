@@ -19,7 +19,10 @@ let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Ani
 
 let now = new Date();
 function equalDates(date){
-	date = new Date(date);
+	date = new Date(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`);
+	console.log([now.getTime(), date.getTime()])
+	console.log([`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`, `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`])
+	console.log('====================')
 	return `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}` === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
 }
 async function defer(key, value, file){
