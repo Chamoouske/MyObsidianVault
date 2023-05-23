@@ -48,7 +48,7 @@ let day = `${now.getDate()}`;
 if (day.length < 2) day = `0${day}`;
 
 const today = now.toLocaleString('en', { weekday: 'long' });
-dv.header(4, 'Today')
+dv.header(2, 'Today')
 dv.table(['Nome', 'Último EP', "Gêneros", ''],
 	 pages.where(item => !item.dropped && !item.finished && item.on_air==today && !equalDates(item.last_watch))
 		 .sort(a=>a.name)
@@ -202,7 +202,7 @@ async function setDueDate(path){
 
 const pages = dv.pages('"Tasks"');
 for(let group of ['GTRR', 'Personal', 'Other']){
-	dv.header(4, group)
+	dv.header(2, group)
 	dv.table(
 		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
 		pages.sort(t=>-((t.Complete / t.Total || 0) * 100))
@@ -247,7 +247,7 @@ for(let group of ['GTRR', 'Personal', 'Other']){
 	)
 }
 
-dv.header(4, "All Tasks")
+dv.header(2, "All Tasks")
 dv.table(
 	['Task', 'Project', 'Status', 'Progress'],
 	pages.sort(t=>(-(t.Complete / t.Total || 0) * 100))
@@ -336,7 +336,7 @@ createButton({
 const pages = dv.pages('"Guias de Estudo" AND !#kanban');
 
 for(let group of pages.groupBy(t=>t.subject)){
-	dv.header(4, group.key);
+	dv.header(2, group.key);
 	dv.table(
 		['Content', 'Progress', 'N Tasks', 'Incompleted'],
 		group.rows.sort(t=>t.file.link)
