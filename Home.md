@@ -90,7 +90,7 @@ createButton({
 	clickOverride: {
 		click: createNewNoteTemplater,
 		params: [
-			findTFileTemplater('NewProjeto'),
+			findTFileTemplater('Projeto'),
 			'Untitled',
 			true
 		]
