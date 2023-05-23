@@ -56,7 +56,28 @@ createButton({
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.current().anime_season}`);
+const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
+async function moveNoteToHistorico(){
+	await move(`Animes/Histórico/Edomae Elf`, {...file, extension: 'md'})
+}
+
+async function defer(key, value, file){
+	await update(key, value, file.path);
+	if((key === 'dropped' && value) || (key === 'finished' && value)){
+		await moveNoteToHistorico(file);
+	}else if (key === 'last_episode'){
+		const date = new Date();
+		let year = `${date.getFullYear()}`;
+		let month = `${date.getMonth() + 1}`;
+		if (month.length < 2) month = `0${month}`;
+		let day = `${date.getDate()}`;
+		if (day.length < 2) day = `0${day}`;
+
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file.path);
+	}
+}
 
 dv.header(2, 'Não dropados')
 for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']){
@@ -68,30 +89,32 @@ for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 				anime.file.link,
 				anime.last_episode,
 				anime.last_watch,
-				[createButton({
-					app,
-					el: this.container,
-					args: {name: anime.dropped ? "Reassistir" : "Drop"},
-					clickOverride: {
-						click: update,
-						params: [
-							'dropped', !anime.dropped,
-							anime.file.path
-						]
-					}
-				}),
-				createButton({
-					app,
-					el: this.container,
-					args: {name: "+1 ep"},
-					clickOverride: {
-						click: update,
-						params: [
-							'last_episode', anime.last_episode + 1,
-							anime.file.path
-						]
-					}
-				})]
+				[
+					createButton({
+						app,
+						el: this.container,
+						args: {name: anime.dropped ? "Reassistir" : "Drop"},
+						clickOverride: {
+							click: defer,
+							params: [
+								'dropped', !anime.dropped,
+								anime.file
+							]
+						}
+					}),
+					createButton({
+						app,
+						el: this.container,
+						args: {name: "+1 ep"},
+						clickOverride: {
+							click: defer,
+							params: [
+								'last_episode', anime.last_episode + 1,
+								anime.file
+							]
+						}
+					})
+				]
 			]
 	))
 }
