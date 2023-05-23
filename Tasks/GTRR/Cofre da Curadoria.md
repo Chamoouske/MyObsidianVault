@@ -11,6 +11,9 @@ Incomplete: 0
 ## Description
 Criar o cofre da Curadoria no Obsidian e GitHub
 
+## Histórico
+- Reunião dia 25/05/2023
+
 ## Tasks
 - [x] Criar o cofre
 - [x] Verificar as informações que precisa pros templates
