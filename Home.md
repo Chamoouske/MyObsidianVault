@@ -192,19 +192,6 @@ function createDivPercentage(percent){
 	return `<div style="${style}">${percent}%</div>`
 }
 
-async function updatePercentTasks(file){
-	const tasks = file.file.tasks;
-	const completedTasks = tasks.where(t=>t.completed).length;
-	const incompletedTasks = tasks.where(t=>!t.completed).length;
-	
-	if(tasks.length != file.Total)
-		await update('Total', tasks.length, file.file.path);
-	if(completedTasks != file.Complete)
-		await update('Complete', completedTasks, file.file.path);
-	if(incompletedTasks != file.Incomplete)
-		await update('Incomplete', incompletedTasks, file.file.path);
-}
-
 async function setDueDate(path){
 	const date = await prompt('Set Due Date');
 	if(date){
@@ -221,15 +208,6 @@ for(let group of ['GTRR', 'Personal', 'Other']){
 		pages.sort(t=>-((t.Complete / t.Total || 0) * 100))
 			.where(t=>!(t.status=='Completed') && t.project == group)
 			.map(t => {
-				const daysRemaining = (new Date(t.until) - new Date()) / (1000 * 60 * 60 * 24);
-				let color;
-				if(daysRemaining < 1){
-					color = "red";
-				}else if(daysRemaining < 4){
-					color = "purple";
-				}else{
-					color = "green";
-				}
 				const tasks = t.file.tasks;
 				const completed = tasks.where(t=>t.completed)
 				const progress = ((completed.length / tasks.length || 0) * 100)
@@ -253,8 +231,7 @@ for(let group of ['GTRR', 'Personal', 'Other']){
 						app,
 						el: this.container,
 						args: {
-							name: t.status == "To Do" ? "In Progress" : " Complete ",
-							color: t.until ? color : "green"
+							name: t.status == "To Do" ? "In Progress" : " Complete "
 						},
 						clickOverride: {
 							click: update,
@@ -272,16 +249,14 @@ for(let group of ['GTRR', 'Personal', 'Other']){
 
 dv.header(4, "All Tasks")
 dv.table(
-	['Task', 'Project', 'Status', 'Priority', 'Progress'],
+	['Task', 'Project', 'Status', 'Progress'],
 	pages.sort(t=>(-(t.Complete / t.Total || 0) * 100))
 		.map(t => {
 				const progress = ((t.Complete / t.Total || 0) * 100)
-				updatePercentTasks(t)
 				return [
 					t.file.link,
 					t.project,
 					t.status,
-					t.priority,
 					createDivPercentage(progress.toFixed(2))
 				]
 			}
