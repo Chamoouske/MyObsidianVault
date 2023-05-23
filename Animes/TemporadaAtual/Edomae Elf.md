@@ -4,8 +4,8 @@ name: Edomae Elf
 
 on_air: Friday
 season: Spring-2023
-last_episode: 5
-last_watch: 2023-05-22
+last_episode: 6
+last_watch: 2023-05-23
 genre:
  - "#Comedy"
  - "#Slice_of_Life"
