@@ -4,15 +4,23 @@ banner: "https://images5.alphacoders.com/750/750261.png"
 banner_y: 0.36
 ---
 # Temporada Atual
-```button
-name Add Anime
-type note(Animes/TemporadaAtual/Untitled, split) template
-action AnimeTempAtual
-templater true
-```
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
+const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
+const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
+
+createButton({
+	app,
+	el: this.container,
+	args: {name: "Novo Anime"},
+	clickOverride: {
+		click: createNewNoteTemplater,
+		params: [
+			findTFileTemplater('AnimeTempAtual'), 'Untitled', true
+		]
+	}
+})
 
 const date = new Date(Date.now())
 let temp;
@@ -51,10 +59,7 @@ createButton({
 		]
 	}
 })
-```
-```dataviewjs
-const {update} = this.app.plugins.plugins["metaedit"].api;
-const {createButton} = app.plugins.plugins["buttons"];
+
 let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.current().anime_season}`);
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 

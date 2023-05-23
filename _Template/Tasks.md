@@ -54,4 +54,4 @@ Incomplete: <% await tasks.where(t=>!t.completed).length %>
 
 
 ## Tasks
-- [ ]  <% tp.file.cursor() %>
+- [ ] 
