@@ -44,7 +44,7 @@ const today = now.toLocaleString('en', { weekday: 'long' });
 dv.header(4, 'Today')
 dv.table(['Nome', 'Último EP', "Gêneros", ''],
 	 pages.where(item => !item.dropped && !item.finished && item.on_air==today && !equalDates(item.last_watch))
-		 .sort(a=>a.last_episode)
+		 .sort(a=>a.name)
 		 .map(anime=>{
 			 return [
 				anime.file.link,
