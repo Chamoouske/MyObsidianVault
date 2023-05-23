@@ -3,7 +3,7 @@
 banner: "https://images5.alphacoders.com/750/750261.png"
 banner_y: 0.36
 ---
-## [[Animes]]
+# [[Animes]]
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
@@ -76,7 +76,7 @@ dv.table(['Nome', 'Último EP', "Gêneros", ''],
 )
 ```
 
-## Filmes
+# Filmes
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
@@ -120,7 +120,7 @@ dv.table(['Título', 'Indicou', 'Adicionado', ''],
 ))
 ```
 
-## Livros
+# Livros
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
@@ -162,7 +162,7 @@ dv.table(['Título', 'Adicionado',  ''],
 ))
 ```
 
-## Tasks
+# Tasks
 ```dataviewjs
 const {createButton} = app.plugins.plugins['buttons'];
 const {update} = this.app.plugins.plugins['metaedit'].api;
@@ -289,16 +289,24 @@ dv.table(
 )
 ```
 
-## Vídeos
-```button
-name Add Vídeo
-type note(Untitled) template
-action AddIndicaçãoYoutube
-templater true
-```
+# Vídeos
 ```dataviewjs
 const {createButton} = app.plugins.plugins['buttons'];
 const {update} = this.app.plugins.plugins['metaedit'].api;
+const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
+const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
+
+createButton({
+	app,
+	el: this.container,
+	args: {name: "Nova Vìdeo"},
+	clickOverride: {
+		click: createNewNoteTemplater,
+		params: [
+			findTFileTemplater('VideosYoutube'), 'Untitled', false
+		]
+	}
+})
 
 dv.table(
 	['Title', 'Link', ''],
@@ -324,19 +332,7 @@ dv.table(
 )
 ```
 
-## Guias de Ajuda
-```dataview
-LIST
-FROM "Ajuda" and #Ajuda
-```
-
-## Guia de Estudos
-```button
-name Novo Guia da Estudos
-type note(Untitled) template
-action Guia_estudos
-templater true
-```
+# Guia de Estudos
 ```dataviewjs
 function createDivPercentage(percent){
 	let style = `
@@ -347,6 +343,21 @@ function createDivPercentage(percent){
 		background-image:linear-gradient(to right, rgb(0,130,0,1) ${percent<100?percent-10:percent}%,rgb(0,130,0,0) ${percent<100?percent+20:0}%);`;
 	return `<div style="${style}">${percent}%</div>`
 }
+const {createButton} = app.plugins.plugins['buttons'];
+const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
+const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
+
+createButton({
+	app,
+	el: this.container,
+	args: {name: "Nova Guia de Estudos"},
+	clickOverride: {
+		click: createNewNoteTemplater,
+		params: [
+			findTFileTemplater('GuiaEstudos'), 'Untitled', false
+		]
+	}
+})
 const pages = dv.pages('"Guias de Estudo" AND !#kanban');
 
 for(let group of pages.groupBy(t=>t.subject)){
@@ -368,7 +379,13 @@ for(let group of pages.groupBy(t=>t.subject)){
 }
 ```
 
-## Roteiros
+# Guias de Ajuda
+```dataview
+LIST
+FROM "Ajuda" and #Ajuda
+```
+
+# Roteiros
 ```dataview
 LIST
 FROM "Roteiros" and #roteiros
