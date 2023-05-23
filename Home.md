@@ -68,75 +68,6 @@ dv.table(['Nome', 'Último EP', "Gêneros", ''],
 )
 ```
 
-## Filmes
-```button
-name Add Filme
-type note(Untitled) template
-action NewFilme
-templater true
-```
-```dataviewjs
-const {update} = this.app.plugins.plugins["metaedit"].api;
-const {createButton} = app.plugins.plugins["buttons"];
-let pages = await dv.pages(`"Filmes"`);
-
-dv.table(['Título', 'Indicou', 'Adicionado', ''],
-	 pages.where(item => !item.Assistido)
-		 .sort(a=>a.Added)
-		 .map(filme=>[
-			filme.file.link,
-			filme['Indicado-por'],
-			filme.Added,
-			createButton({
-				app,
-				el: this.container,
-				args: {name: "Assistido"},
-				clickOverride: {
-					click: update,
-					params: [
-						'Assistido', true,
-						filme.file.path
-					]
-				}
-			})
-		]
-))
-```
-
-## Livros
-```button
-name Add Livro
-type note(Untitled) template
-action NewLivro
-templater true
-```
-```dataviewjs
-const {update} = this.app.plugins.plugins["metaedit"].api;
-const {createButton} = app.plugins.plugins["buttons"];
-let pages = await dv.pages(`"Livros"`);
-
-dv.table(['Título', 'Adicionado',  ''],
-	 pages.where(item => !item.Lido)
-		 .sort(a=>a.Added)
-		 .map(filme=>[
-			filme.file.link,
-			filme.Added,
-			createButton({
-				app,
-				el: this.container,
-				args: {name: "Lido"},
-				clickOverride: {
-					click: update,
-					params: [
-						'Lido', true,
-						filme.file.path
-					]
-				}
-			})
-		]
-))
-```
-
 ## Tasks
 ```button
 name Add Task
@@ -254,6 +185,104 @@ dv.table(
 			}
 		)
 )
+```
+
+## Projetos
+```dataviewjs
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const {createButton} = app.plugins.plugins["buttons"];
+let pages = await dv.pages(`"Projetos" AND !#Requisitos`);
+
+dv.table(['Arquivo', 'Adicionado', 'Status', ''],
+	 pages.where(item => !item.Assistido)
+		 .sort(a=>a.Added)
+		 .map(project=>[
+			project.file.link,
+			project.Added,
+			project.Status,
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "Assistido"},
+				clickOverride: {
+					click: update,
+					params: [
+						'Assistido', true,
+						project.file.path
+					]
+				}
+			})
+		]
+))
+```
+
+## Filmes
+```button
+name Add Filme
+type note(Untitled) template
+action NewFilme
+templater true
+```
+```dataviewjs
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const {createButton} = app.plugins.plugins["buttons"];
+let pages = await dv.pages(`"Filmes"`);
+
+dv.table(['Título', 'Indicou', 'Adicionado', ''],
+	 pages.where(item => !item.Assistido)
+		 .sort(a=>a.Added)
+		 .map(filme=>[
+			filme.file.link,
+			filme['Indicado-por'],
+			filme.Added,
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "Assistido"},
+				clickOverride: {
+					click: update,
+					params: [
+						'Assistido', true,
+						filme.file.path
+					]
+				}
+			})
+		]
+))
+```
+
+## Livros
+```button
+name Add Livro
+type note(Untitled) template
+action NewLivro
+templater true
+```
+```dataviewjs
+const {update} = this.app.plugins.plugins["metaedit"].api;
+const {createButton} = app.plugins.plugins["buttons"];
+let pages = await dv.pages(`"Livros"`);
+
+dv.table(['Título', 'Adicionado',  ''],
+	 pages.where(item => !item.Lido)
+		 .sort(a=>a.Added)
+		 .map(filme=>[
+			filme.file.link,
+			filme.Added,
+			createButton({
+				app,
+				el: this.container,
+				args: {name: "Lido"},
+				clickOverride: {
+					click: update,
+					params: [
+						'Lido', true,
+						filme.file.path
+					]
+				}
+			})
+		]
+))
 ```
 
 ## Vídeos
