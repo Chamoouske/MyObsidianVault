@@ -76,51 +76,6 @@ dv.table(['Nome', 'Último EP', "Gêneros", ''],
 )
 ```
 
-## Projetos
-```dataviewjs
-const {update} = this.app.plugins.plugins["metaedit"].api;
-const {createButton} = app.plugins.plugins["buttons"];
-const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
-const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
-
-createButton({
-	app,
-	el: this.container,
-	args: {name: "Novo Projeto"},
-	clickOverride: {
-		click: createNewNoteTemplater,
-		params: [
-			findTFileTemplater('Projeto'),
-			'Untitled',
-			true
-		]
-	}
-})
-
-let pages = await dv.pages(`"Projetos" AND !#Requisitos`);
-dv.table(['Arquivo', 'Adicionado', 'Status', ''],
-	 pages.where(item => !item.Assistido)
-		 .sort(a=>a.Added)
-		 .map(project=>[
-			project.file.link,
-			project.Added,
-			project.Status,
-			createButton({
-				app,
-				el: this.container,
-				args: {name: "Assistido"},
-				clickOverride: {
-					click: update,
-					params: [
-						'Assistido', true,
-						project.file.path
-					]
-				}
-			})
-		]
-))
-```
-
 ## Filmes
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
