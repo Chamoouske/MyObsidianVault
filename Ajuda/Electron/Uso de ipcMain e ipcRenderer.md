@@ -28,7 +28,7 @@ No `preload.js` adicione o seguinte código:
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld(
-	"electronAPI", {
+	"nomeAPI", {
 		readFile: async () => {
 			return ipcRenderer.invoke('read-file', { filename: 'file.txt' });
 		},
@@ -38,4 +38,8 @@ contextBridge.exposeInMainWorld(
 		}
 	}
 );
+```
+Para acessar os arquivos no _front-end_, tem que seguir o exemplo:
+```js
+await window.nomeAPI.readFile()
 ```
