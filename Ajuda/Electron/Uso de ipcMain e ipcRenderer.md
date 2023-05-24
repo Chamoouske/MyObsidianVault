@@ -3,7 +3,7 @@ No `main.js` seguir o exemplo código:
 const { ipcMain } = require('electron');
 
 function writeFile(filename, inData){
-	const fullPath = path.join(electron.app.getPath('userData'), "\\", fileName);
+	const path = electron.app.getPath('userData');
 	fs.writeFile(fullPath, inData, (err)=>{
 		if(err) throw err;
 	});
