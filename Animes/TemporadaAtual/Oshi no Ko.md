@@ -4,8 +4,8 @@ name: Oshi no Ko
 
 on_air: Wednesday
 season: Spring-2023
-last_episode: 6
-last_watch: 2023-05-17
+last_episode: 7
+last_watch: 2023-05-24
 genre: 
  - "#Drama"
  - "#Mystery"
