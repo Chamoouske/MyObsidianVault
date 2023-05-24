@@ -12,24 +12,30 @@ function writeFile(filename, inData){
 async function readFile(filename){
 	const path = electron.app.getPath('userData');
 	const buf = await fs.promises.readFile(`${path}/${filename}`);
-	return buf
+	return buf;
 }
 
-ipcMain.on('write-user-data', async (event, args) => {
+ipcMain.handle('write-file', async (event, args) => {
 	writeFile(args.filename, args.inData);
 })
 
-ipcMain.handle('read-user-data', async (event, args) => {
+ipcMain.handle('read-file', async (event, args) => {
 	return await readFile(args.filename);
 })
 ```
-No _processo de renderização_ adicione o seguinte código (Nesse caso, **não tem retorno** do evento chamado):
+No `preload.js` adicione o seguinte código:
 ```js
-const { ipcRenderer } = require('electron');
-ipcRenderer.sendSync('write-user-data', {filename, inData});
-```
-No caso de eventos que **necessita de retorno**, utiliza-se:
-```js
-const { ipcRenderer } = require('electron');
-ipcRenderer.invoke('read-user-data', {filename}).then(res => doSomething());
+const { contextBridge, ipcRenderer } = require("electron");
+
+contextBridge.exposeInMainWorld(
+	"electronAPI", {
+		readFile: async () => {
+			return ipcRenderer.invoke('read-file', { filename: 'file.txt' });
+		},
+		writeFile: async (data) => {
+			return ipcRenderer.invoke('write-file', { filename: 'file.txt', data: data });
+		},
+		}
+	}
+);
 ```
