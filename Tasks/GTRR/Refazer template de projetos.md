@@ -1,12 +1,12 @@
 ---
-status: Completed
+status: To Do
 priority: Moderate
-until: 2023-06-10
+until: 
 project: GTRR
 
-Total: 5
-Complete: 5
-Incomplete: 0
+Total: 2
+Complete: 0
+Incomplete: 2
 ---
 ```dataviewjs
 const {update} = this.app.plugins.plugins['metaedit'].api;
@@ -25,14 +25,8 @@ const {update} = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ## Description
-Criar o cofre da Curadoria no Obsidian e GitHub
-
-## Histórico
-- Reunião dia 25/05/2023
+Refazer os templates de projetos usados no cofre da GTRR
 
 ## Tasks
-- [x] Criar o cofre
-- [x] Verificar as informações que precisa pros templates
-- [x] Criar os templates que serão usados
-- [x] Configurar os plugins do obsidian
-- [x] Disponibilizar o repositório do cofre
+- [ ] Refazer o template do Imperialismos
+- [ ] Refazer o template do Soberana
