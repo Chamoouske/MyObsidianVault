@@ -2,7 +2,7 @@
 status: To Do
 priority: Low
 until: 
-project: Other
+project: GTRR
 
 Total: 4
 Complete: 0
@@ -25,7 +25,7 @@ const {update} = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ## Descrição
-
+Estudar e criar temas baseados no guia de estilos da GTRR
 
 ## Tasks
 - [ ] Estudar como criar temas do Obsidian
