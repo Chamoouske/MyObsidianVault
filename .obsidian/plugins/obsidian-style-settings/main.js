@@ -3737,9 +3737,18 @@ class CSSSettingsManager {
             Object.keys(config).forEach((settingId) => {
                 const setting = config[settingId];
                 if (setting.type === SettingType.CLASS_TOGGLE) {
-                    if (this.getSetting(section, settingId)) {
-                        document.body.classList.remove(setting.id);
-                    }
+                    document.body.classList.remove(setting.id);
+                }
+                else if (setting.type === SettingType.CLASS_SELECT) {
+                    const multiToggle = setting;
+                    multiToggle.options.forEach((v) => {
+                        if (typeof v === 'string') {
+                            document.body.classList.remove(v);
+                        }
+                        else {
+                            document.body.classList.remove(v.value);
+                        }
+                    });
                 }
             });
         });
@@ -3819,16 +3828,22 @@ class CSSSettingsManager {
     setSetting(sectionId, settingId, value) {
         this.settings[`${sectionId}@@${settingId}`] = value;
         this.save();
+        this.removeClasses();
+        this.initClasses();
     }
     setSettings(settings) {
         Object.keys(settings).forEach((id) => {
             this.settings[id] = settings[id];
         });
+        this.removeClasses();
+        this.initClasses();
         return this.save();
     }
     clearSetting(sectionId, settingId) {
         delete this.settings[`${sectionId}@@${settingId}`];
         this.save();
+        this.removeClasses();
+        this.initClasses();
     }
     clearSection(sectionId) {
         Object.keys(this.settings).forEach((key) => {
@@ -3838,6 +3853,8 @@ class CSSSettingsManager {
             }
         });
         this.save();
+        this.removeClasses();
+        this.initClasses();
     }
     export(section, config) {
         new ExportModal(this.plugin.app, this.plugin, section, config).open();
@@ -8630,12 +8647,6 @@ class ClassToggleSettingComponent extends AbstractSettingComponent {
             toggle.setValue(value !== undefined ? !!value : !!this.setting.default);
             toggle.onChange((value) => {
                 this.settingsManager.setSetting(this.sectionId, this.setting.id, value);
-                if (value) {
-                    document.body.classList.add(this.setting.id);
-                }
-                else {
-                    document.body.classList.remove(this.setting.id);
-                }
             });
             this.toggleComponent = toggle;
         });
@@ -8644,12 +8655,6 @@ class ClassToggleSettingComponent extends AbstractSettingComponent {
             b.onClick(() => {
                 const value = !!this.setting.default;
                 this.toggleComponent.setValue(value);
-                if (value) {
-                    document.body.classList.add(this.setting.id);
-                }
-                else {
-                    document.body.classList.remove(this.setting.id);
-                }
                 this.settingsManager.clearSetting(this.sectionId, this.setting.id);
             });
             b.setTooltip(resetTooltip);
@@ -8689,12 +8694,6 @@ class ClassMultiToggleSettingComponent extends AbstractSettingComponent {
             dropdown.setValue(prevValue);
             dropdown.onChange((value) => {
                 this.settingsManager.setSetting(this.sectionId, this.setting.id, value);
-                if (value !== 'none') {
-                    document.body.classList.add(value);
-                }
-                if (prevValue) {
-                    document.body.classList.remove(prevValue);
-                }
                 prevValue = value;
             });
             this.dropdownComponent = dropdown;
@@ -8702,14 +8701,7 @@ class ClassMultiToggleSettingComponent extends AbstractSettingComponent {
         this.settingEl.addExtraButton((b) => {
             b.setIcon('reset');
             b.onClick(() => {
-                const value = this.setting.default || 'none';
                 this.dropdownComponent.setValue(this.setting.default || 'none');
-                if (value !== 'none') {
-                    document.body.classList.add(value);
-                }
-                if (prevValue) {
-                    document.body.classList.remove(prevValue);
-                }
                 this.settingsManager.clearSetting(this.sectionId, this.setting.id);
             });
             b.setTooltip(resetTooltip);
@@ -9427,7 +9419,6 @@ class SettingsMarkup extends obsidian.Component {
     setSettings(settings, errorList) {
         this.settings = settings;
         this.errorList = errorList;
-        this.plugin.settingsManager.setConfig(settings);
         if (this.containerEl.parentNode) {
             this.generate(settings);
         }
@@ -9659,6 +9650,13 @@ class CSSSettingsPlugin extends obsidian.Plugin {
             this.darkEl = document.body.createDiv('theme-dark style-settings-ref');
             document.body.classList.add('css-settings-manager');
             this.parseCSS();
+            this.app.workspace.onLayoutReady(() => {
+                if (this.settingsList) {
+                    this.app.workspace.getLeavesOfType(viewType).forEach((leaf) => {
+                        leaf.view.setSettings(this.settingsList, this.errorList);
+                    });
+                }
+            });
         });
     }
     getCSSVar(id) {
@@ -9669,15 +9667,16 @@ class CSSSettingsPlugin extends obsidian.Plugin {
     }
     parseCSS() {
         clearTimeout(this.debounceTimer);
-        this.settingsList = [];
-        this.errorList = [];
-        // remove registered theme commands (sadly undocumented API)
-        for (const command of this.commandList) {
-            // @ts-ignore
-            this.app.commands.removeCommand(command.id);
-        }
-        this.commandList = [];
         this.debounceTimer = activeWindow.setTimeout(() => {
+            this.settingsList = [];
+            this.errorList = [];
+            // remove registered theme commands (sadly undocumented API)
+            for (const command of this.commandList) {
+                // @ts-ignore
+                this.app.commands.removeCommand(command.id);
+            }
+            this.commandList = [];
+            this.settingsManager.removeClasses();
             const styleSheets = document.styleSheets;
             for (let i = 0, len = styleSheets.length; i < len; i++) {
                 const sheet = styleSheets.item(i);
@@ -9689,6 +9688,7 @@ class CSSSettingsPlugin extends obsidian.Plugin {
             this.app.workspace.getLeavesOfType(viewType).forEach((leaf) => {
                 leaf.view.setSettings(this.settingsList, this.errorList);
             });
+            this.settingsManager.setConfig(this.settingsList);
             this.settingsManager.initClasses();
             this.registerSettingCommands();
         }, 100);
@@ -9809,12 +9809,6 @@ class CSSSettingsPlugin extends obsidian.Plugin {
             callback: () => {
                 const value = !this.settingsManager.getSetting(section.id, setting.id);
                 this.settingsManager.setSetting(section.id, setting.id, value);
-                if (value) {
-                    document.body.classList.add(setting.id);
-                }
-                else {
-                    document.body.classList.remove(setting.id);
-                }
                 this.settingsTab.settingsMarkup.rerender();
                 for (const leaf of this.app.workspace.getLeavesOfType(viewType)) {
                     leaf.view.settingsMarkup.rerender();

@@ -66,7 +66,7 @@ const {update} = this.app.plugins.plugins['metaedit'].api;
 		await update('Incomplete', incompletedTasks, dv.current().file.path);
 })()
 ```
-## Description
+## Descrição
 
 
 ## Tasks
