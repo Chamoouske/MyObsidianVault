@@ -4,8 +4,8 @@ name: Kawaisugi Crisis
 
 on_air: Friday
 season: Spring-2023
-last_episode: 6
-last_watch: 2023-05-12
+last_episode: 8
+last_watch: 2023-05-26
 genre: 
  - "#Comedy"
  - "#Sci-Fi"

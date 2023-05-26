@@ -4,8 +4,8 @@ name: Tonikaku kawaii 2
 
 on_air: Friday
 season: Spring-2023
-last_episode: 7
-last_watch: 2023-05-19
+last_episode: 8
+last_watch: 2023-05-26
 genre: 
  - "#Comedy"
  - "#Romance"
