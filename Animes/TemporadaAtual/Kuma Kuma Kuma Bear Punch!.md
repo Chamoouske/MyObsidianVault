@@ -4,8 +4,8 @@ name: Kuma Kuma Kuma Bear Punch!
 
 on_air: Monday
 season: Spring-2023
-last_episode: 8
-last_watch: 2023-05-22
+last_episode: 9
+last_watch: 2023-05-29
 genre: 
  - "#Adventure"
  - "#Comedy"
