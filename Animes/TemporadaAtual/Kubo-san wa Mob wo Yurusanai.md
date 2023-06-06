@@ -4,8 +4,8 @@ name: Kubo-san wa Mob wo Yurusanai
 
 on_air: Tuesday
 season: Spring-2023
-last_episode: 9
-last_watch: 2023-05-31
+last_episode: 10
+last_watch: 2023-06-06
 genre: 
  - "#Comedy"
  - "#Romance"
