@@ -4,8 +4,8 @@ name: Kimi wa Houkago Insomnia
 
 on_air: Monday
 season: Spring-2023
-last_episode: 8
-last_watch: 2023-05-29
+last_episode: 9
+last_watch: 2023-06-06
 genre: 
  - "#Romance"
  - "#Slice_of_life"
