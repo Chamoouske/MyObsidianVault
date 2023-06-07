@@ -4,8 +4,8 @@ name: Kaminaki Sekai no Kamisama Katsudou
 
 on_air: Wednesday
 season: Spring-2023
-last_episode: 8
-last_watch: 2023-05-31
+last_episode: 9
+last_watch: 2023-06-07
 genre: 
  - "#Action"
  - "#Comedy"

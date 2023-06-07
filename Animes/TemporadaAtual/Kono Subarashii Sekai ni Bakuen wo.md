@@ -4,8 +4,8 @@ name: Kono Subarashii Sekai ni Bakuen wo
 
 on_air: Wednesday
 season: Spring-2023
-last_episode: 9
-last_watch: 2023-05-31
+last_episode: 10
+last_watch: 2023-06-07
 genre: 
  - "#Adventure"
  - "#Comedy"
