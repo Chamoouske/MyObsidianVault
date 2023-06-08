@@ -4,8 +4,8 @@ name: Mahou Tsukai no Yome 2
 
 on_air: Thursday
 season: Spring-2023
-last_episode: 9
-last_watch: 2023-06-01
+last_episode: 10
+last_watch: 2023-06-08
 genre: 
  - "#Drama"
  - "#Fantasy"
