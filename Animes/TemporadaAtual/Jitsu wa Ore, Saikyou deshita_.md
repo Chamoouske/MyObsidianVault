@@ -4,8 +4,8 @@ name: Jitsu wa Ore, Saikyou deshita?
 
 on_air: Saturday
 season: Summer-2023
-last_episode: 0
-last_watch: 2023-06-30
+last_episode: 1
+last_watch: 2023-07-01
 genre: 
  - "#Comedy"
  - "#Ecchi"
