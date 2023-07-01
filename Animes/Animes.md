@@ -81,12 +81,13 @@ async function defer(key, value, file){
 dv.header(2, 'Não dropados')
 for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']){
 	dv.header(3, group)
-	dv.table(['Nome', 'Último EP', 'Assistido', ''],
+	dv.table(['Nome', 'Último EP', 'Gêneros', 'Assistido', ''],
 		 pages.where(item => !item.dropped && !item.finished && item.on_air==group)
 			 .sort(a=>a.name)
 			 .map(anime=>[
 				anime.file.link,
 				anime.last_episode,
+				anime.genre,
 				anime.last_watch,
 				[
 					createButton({
@@ -97,6 +98,18 @@ for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 							click: defer,
 							params: [
 								'dropped', !anime.dropped,
+								anime.file
+							]
+						}
+					}),
+					createButton({
+						app,
+						el: this.container,
+						args: {name: "Finalizar"},
+						clickOverride: {
+							click: defer,
+							params: [
+								'finished', !anime.finished,
 								anime.file
 							]
 						}

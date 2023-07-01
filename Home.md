@@ -20,7 +20,7 @@ createButton({
 	}
 })
 
-let pages = await dv.pages(`"Animes/TemporadaAtual" AND #${dv.pages('"Animes/Animes"')[0]?.anime_season}`);
+let pages = await dv.pages(`"Animes/TemporadaAtual"`);
 
 let now = new Date(new Date().setHours(0, 0, 0, 0));
 function equalDates(date){
