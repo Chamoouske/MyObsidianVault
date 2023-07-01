@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Watashi no Yuri wa Oshigoto Desu
+name: Skip to Loafer
 
-on_air: Thursday
+on_air: Tuesday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-08
+last_episode: 12
+last_watch: 2023-07-01
 genre: 
  - "#Comedy"
  - "#Romance"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: ""
-banner_y: 0
+banner: "https://images3.alphacoders.com/130/1309318.jpeg"
+banner_y: 0.148
 ---
 ## Sinópse
-Worried about her reputation, Hime covers shifts for a cafe manager she accidentally injures to maintain her picture-perfect princess image. But this cafe has a peculiar theme—private school. To put on her best barista schoolgirl act, she’ll be trained by the most graceful girl there, Mitsuki. Under her guidance, Hime’s feelings start to brew, but there’s just one problem—Mitsuki can’t stand her!
+This country girl is ready for the big city! Well, at least she thought she was. Mitsumi’s dream is to attend a prestigious school and make the world a better place. But when she finally gets to Tokyo, it turns out she isn’t exactly prepared for city life. Luckily, she runs into Shima, a sweet and handsome classmate who becomes her first friend! Can she make it in Tokyo with Shima by her side?
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Watashi+no+Yuri+wa+Oshigoto+Desu&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Skip+to+Loafer&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Watashi no Yuri wa Oshigoto Desu`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Skip to Loafer`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

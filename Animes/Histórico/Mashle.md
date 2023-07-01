@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Kubo-san wa Mob wo Yurusanai
+name: Mashle
 
-on_air: Tuesday
+on_air: Friday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-06
+last_episode: 12
+last_watch: 2023-06-05
 genre: 
+ - "#Action"
  - "#Comedy"
- - "#Romance"
 
 dropped: false
-finished: false
+finished: true
 
-created_at: 2023-05-16
+created_at: 2023-05-11
 
-banner: ""
-banner_y: 0
+banner: "https://images7.alphacoders.com/113/1134380.png"
+banner_y: 0.24
 ---
 ## Sinópse
+This is a world of magic. This is a world in which magic is casually used by everyone. In a deep, dark forest in this world of magic, there is a boy who is singlemindedly working out. His name is Mash Burnedead, and he has a secret. He can’t use magic. All he wanted was to live a quiet life with his family, but people suddenly start trying to kill him one day and he somehow finds himself enrolled in Magic School. There, he sets his sights on becoming a “Divine Visionary,” the elite of the elite. Will his ripped muscles work against the best and brightest of the wizarding world? The curtain rises on this off-kilter magical fantasy in which the power of being jacked crushes any spell!
 
-
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kubo-san+wa+Mob+wo+Yurusanai&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Mashle&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kubo-san wa Mob wo Yurusanai`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Mashle`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

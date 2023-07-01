@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Kimi wa Houkago Insomnia
+name: Dr. Stone New World
 
-on_air: Monday
+on_air: Thursday
 season: Spring-2023
-last_episode: 9
-last_watch: 2023-06-06
+last_episode: 12
+last_watch: 2023-06-08
 genre: 
- - "#Romance"
- - "#Slice_of_life"
+ - "#Action"
+ - "#Adventure"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images6.alphacoders.com/446/446231.jpg"
-banner_y: 0.524
+banner: "https://images6.alphacoders.com/102/1027254.jpg"
+banner_y: 0.552
 ---
 ## Sinópse
+The third season of _Dr. STONE_. Senku and the Kingdom of Science sail to new lands to uncover more scientific secrets!
 
-
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kimi+wa+Houkago+Insomnia&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Dr.+Stone+New+World&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kimi wa Houkago Insomnia`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Dr. Stone New World`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

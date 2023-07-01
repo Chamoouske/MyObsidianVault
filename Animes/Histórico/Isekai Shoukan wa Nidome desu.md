@@ -1,27 +1,28 @@
 ---
 tag: animes Spring-2023
-name: Mahou Tsukai no Yome 2
+name: Isekai Shoukan wa Nidome desu
 
-on_air: Thursday
+on_air: Saturday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-08
+last_episode: 9
+last_watch: 2023-06-05
 genre: 
- - "#Drama"
+ - "#Adventure"
  - "#Fantasy"
+ - "#Comedy"
 
-dropped: false
+dropped: true
 finished: false
 
 created_at: 2023-05-11
 
-banner: "https://images3.alphacoders.com/880/880728.jpg"
-banner_y: 0.164
+banner: ""
+banner_y: 0
 ---
 ## Sinópse
-The second season of _Mahoutsukai no Yome_. Chise was able to accept Elias and herself, if not necessarily everything about her situation. After Cartaphilus fell back into a slumber that would not last forever, Chise was able to go back to her regular life. Then she receives an invitation from a mutual aid organization for mages called the College. Under the British Library exists a secret society of mages. Encounters and interactions with people are about to open some new doors. This is a story about saving yourself to save another.
+There was once a hero who was summoned to another world, and he saved that world. However, the man was caught in a "trap" and was forcibly returned to his original world. On top of that, he had to start over as a baby… This is the story of a crazy journey in another world where a former hero who was reincarnated into a slightly gloomy high school student is "resummoned" back to that same world! There's a lot of room to work with when it's the second time, huh
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Mahou+Tsukai+no+Yome+2&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Isekai+Shoukan+wa+Nidome+desu&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +30,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Mahou Tsukai no Yome 2`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Isekai Shoukan wa Nidome desu`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

@@ -1,11 +1,11 @@
 ---
 tag: animes Spring-2023
-name: Mashle
+name: Kaminaki Sekai no Kamisama Katsudou
 
-on_air: Friday
+on_air: Wednesday
 season: Spring-2023
-last_episode: 8
-last_watch: 2023-06-05
+last_episode: 11
+last_watch: 2023-07-01
 genre: 
  - "#Action"
  - "#Comedy"
@@ -15,13 +15,13 @@ finished: false
 
 created_at: 2023-05-11
 
-banner: "https://images7.alphacoders.com/113/1134380.png"
-banner_y: 0.24
+banner: ""
+banner_y: 0
 ---
 ## Sinópse
-This is a world of magic. This is a world in which magic is casually used by everyone. In a deep, dark forest in this world of magic, there is a boy who is singlemindedly working out. His name is Mash Burnedead, and he has a secret. He can’t use magic. All he wanted was to live a quiet life with his family, but people suddenly start trying to kill him one day and he somehow finds himself enrolled in Magic School. There, he sets his sights on becoming a “Divine Visionary,” the elite of the elite. Will his ripped muscles work against the best and brightest of the wizarding world? The curtain rises on this off-kilter magical fantasy in which the power of being jacked crushes any spell!
+As heir to a cult leader, Yukito centers his life around the mysterious goddess Mitama. But everything changes after he’s killed during a ritual gone wrong. To his surprise, Yukito is reborn into a world with no concept of god! And in this world, life and death are decided by the Imperial State. As Yukito fights to protect his new village, someone from his past life lends a helping hand.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Mashle&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kaminaki+Sekai+no+Kamisama+Katsudou&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Mashle`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
@@ -44,8 +44,7 @@ async function defer(key, value, file){
 		let day = `${date.getDate()}`;
 		if (day.length < 2) day = `0${day}`;
 
-		const newDate = `${year}-${month}-${day}`;
-		await update('last_watch', newDate, file);
+		await update('last_watch', `${year}-${month}-${day}`, file);
 	}
 }
 

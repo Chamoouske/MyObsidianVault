@@ -1,5 +1,5 @@
 ---
-anime_season: Spring-2023
+anime_season: Summer-2023
 banner: "https://images5.alphacoders.com/750/750261.png"
 banner_y: 0.36
 ---

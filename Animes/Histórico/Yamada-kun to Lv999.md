@@ -1,29 +1,28 @@
 ---
 tag: animes Spring-2023
-name: Jigokuraku
+name: Yamada-kun to Lv999
 
 on_air: Saturday
 season: Spring-2023
-last_episode: 9
+last_episode: 13
 last_watch: 2023-06-05
 genre: 
- - "#Action"
- - "#Adventure"
- - "#Mystery"
- - "#Supernatural"
+ - "#Comedy"
+ - "#Drama"
+ - "#Romance"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images7.alphacoders.com/130/1309070.jpg"
-banner_y: 0.50
+banner: ""
+banner_y: 0
 ---
 ## Sinópse
-The Edo period is nearing its end. Gabimaru, a shinobi formerly known as the strongest in Iwagakure who is now a death row convict, is told that he will be acquitted and set free if he can bring back the Elixir of Life from an island that is rumored to be the Buddhist pure land Sukhavati. In hopes of reuniting with his beloved wife, Gabimaru heads to the island along with the executioner Yamada Asaemon Sagiri. Upon arriving there, they encounter other death row convicts in search of the Elixir of Life... as well as a host of unknown creatures, eerie manmade statues, and the hermits who rule the island. Can Gabimaru find the Elixir of Life on this mysterious island and make it back home alive?
+Akane Kinoshita, a female college student, faces the absolute worst situation when she ends up breaking up with her boyfriend after he has an affair with a woman he met playing an online game. While relieving her stress by rampaging through the open hunting grounds of an online game, Akane spills everything about her heartbreak to “Yamada”, a player she met by chance who happens to be in the same guild. “I don't care,” is his curt reply. But when Akane gets a makeover and joins an offline event to get back at her ex-boyfriend, she hears those dreadful words again. And that was Akane's fateful encounter with “Yamada”!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Jigokuraku&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Yamada-kun+to+Lv999&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -31,14 +30,14 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Jigokuraku`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Yamada-kun to Lv999`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
 		await moveNoteToHistorico();
-	} else if (key === 'last_episode'){
+	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
 		let month = `${date.getMonth() + 1}`;

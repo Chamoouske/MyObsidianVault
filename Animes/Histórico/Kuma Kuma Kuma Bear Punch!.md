@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Skip to Loafer
+name: Kuma Kuma Kuma Bear Punch!
 
-on_air: Tuesday
+on_air: Monday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-06
+last_episode: 12
+last_watch: 2023-06-05
 genre: 
+ - "#Adventure"
  - "#Comedy"
- - "#Romance"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images3.alphacoders.com/130/1309318.jpeg"
-banner_y: 0.148
+banner: "https://images6.alphacoders.com/120/1209935.jpg"
+banner_y: 0.28
 ---
 ## Sinópse
-This country girl is ready for the big city! Well, at least she thought she was. Mitsumi’s dream is to attend a prestigious school and make the world a better place. But when she finally gets to Tokyo, it turns out she isn’t exactly prepared for city life. Luckily, she runs into Shima, a sweet and handsome classmate who becomes her first friend! Can she make it in Tokyo with Shima by her side?
+The second season of _Kuma Kuma Kuma Bear_. Yuna finds new friends and adventures in the world of her favorite MMO!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Skip+to+Loafer&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kuma+Kuma+Kuma+Bear+Punch!&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Skip to Loafer`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Kuma Kuma Kuma Bear Punch!`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

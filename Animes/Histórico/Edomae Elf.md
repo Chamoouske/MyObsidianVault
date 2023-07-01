@@ -1,27 +1,28 @@
 ---
 tag: animes Spring-2023
-name: Kono Subarashii Sekai ni Bakuen wo
+name: Edomae Elf
 
-on_air: Wednesday
+on_air: Friday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-07
-genre: 
- - "#Adventure"
+last_episode: 9
+last_watch: 2023-06-05
+genre:
  - "#Comedy"
+ - "#Slice_of_Life"
+ - "#Supernatural"
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-05-11
+created_at: 2023-05-20
 
-banner: "https://images4.alphacoders.com/721/721593.png"
-banner_y: 0.42
+banner: ""
+banner_y: 0
 ---
-## Sinópse
-This feisty young wizard will stop at nothing to master the spell that saved her life: Explosion! Megumin, the “Greatest Genius of the Crimson Magic Clan,” has chosen to devote her studies to the powerful offensive magic used by her mysterious savior. Then one day, her little sister finds a black kitten in the woods. But this cat isn’t just a new furry friend—she’s the key to awakening a Dark God!
+## Resumo
+Takamimi Shrine has an unusual resident – Elda, an ancient elf who’s obsessed with video games! The shrine’s teenage attendant, Koito Koganei, keeps this reclusive otaku well supplied with energy drinks and junk food. Even though she loves 100%-ing her games, Elda has duties to attend to, and Koganei is bound and determined to make this otaku elf fulfill them! It’ll just take an offering or two to bribe—um, we mean convince Elda to put down her new game…
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kono+Subarashii+Sekai+ni+Bakuen+wo&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Edomae+Elf&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +30,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kono Subarashii Sekai ni Bakuen wo`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Edomae Elf`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

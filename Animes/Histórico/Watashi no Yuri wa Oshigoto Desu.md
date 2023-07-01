@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Kuma Kuma Kuma Bear Punch!
+name: Watashi no Yuri wa Oshigoto Desu
 
-on_air: Monday
+on_air: Thursday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-05
+last_episode: 12
+last_watch: 2023-06-08
 genre: 
- - "#Adventure"
  - "#Comedy"
+ - "#Romance"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images6.alphacoders.com/120/1209935.jpg"
-banner_y: 0.28
+banner: ""
+banner_y: 0
 ---
 ## Sinópse
-The second season of _Kuma Kuma Kuma Bear_. Yuna finds new friends and adventures in the world of her favorite MMO!
+Worried about her reputation, Hime covers shifts for a cafe manager she accidentally injures to maintain her picture-perfect princess image. But this cafe has a peculiar theme—private school. To put on her best barista schoolgirl act, she’ll be trained by the most graceful girl there, Mitsuki. Under her guidance, Hime’s feelings start to brew, but there’s just one problem—Mitsuki can’t stand her!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kuma+Kuma+Kuma+Bear+Punch!&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Watashi+no+Yuri+wa+Oshigoto+Desu&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kuma Kuma Kuma Bear Punch!`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Watashi no Yuri wa Oshigoto Desu`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

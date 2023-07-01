@@ -1,28 +1,28 @@
 ---
 tag: animes Spring-2023
-name: Yamada-kun to Lv999
+name: Boku no Kokoro no Yabai Yatsu
 
 on_air: Saturday
 season: Spring-2023
-last_episode: 10
+last_episode: 12
 last_watch: 2023-06-05
 genre: 
  - "#Comedy"
- - "#Drama"
+ - "#Slice_of_Life"
  - "#Romance"
 
 dropped: false
-finished: false
+finished: true
 
-created_at: 2023-05-11
+created_at: 2023-05-16
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
-Akane Kinoshita, a female college student, faces the absolute worst situation when she ends up breaking up with her boyfriend after he has an affair with a woman he met playing an online game. While relieving her stress by rampaging through the open hunting grounds of an online game, Akane spills everything about her heartbreak to “Yamada”, a player she met by chance who happens to be in the same guild. “I don't care,” is his curt reply. But when Akane gets a makeover and joins an offline event to get back at her ex-boyfriend, she hears those dreadful words again. And that was Akane's fateful encounter with “Yamada”!
+Fascinated by murder and all things macabre, Kyoutarou daydreams of acting out his twisted fantasies on his unsuspecting classmates — but an encounter with Anna Yamada, the gorgeous class idol, lights a spark in the darkness of his heart. It’s a classic tale of an antisocial boy falling for a popular girl, but neither are who they appear to be at first glance. Will Kyoutarou and Anna defy their expectations of each other — and of themselves?
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Yamada-kun+to+Lv999&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Boku+no+Kokoro+no+Yabai+Yatsu&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -30,7 +30,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Yamada-kun to Lv999`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Boku no Kokoro no Yabai Yatsu`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

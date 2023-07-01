@@ -1,17 +1,18 @@
 ---
 tag: animes Spring-2023
-name: Dead Mount Death Play
+name: My Home Hero
 
-on_air: Monday
+on_air: Sunday
 season: Spring-2023
-last_episode: 9
+last_episode: 12
 last_watch: 2023-06-05
 genre: 
+ - "#Thriller"
+ - "#Drama"
  - "#Action"
- - "#Fantasy"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
@@ -19,9 +20,9 @@ banner: ""
 banner_y: 0
 ---
 ## Sinópse
-As a legendary hero nears victory against a necromancer known as The Corpse God, things take an unexpected turn with the dark sorcerer’s final gambit—reincarnation magic. This last-ditch effort catches the brave fighter off guard, and now he’s a boy named Polka Shinoyama in a whole new world! The showdown between good and evil just got epic.
+After killing his daughter’s abusive yakuza boyfriend to save her, ordinary salaryman Tetsuo Tosu becomes embroiled in the dark criminal underworld. The wish for a simple life he and his wife Kasen had for their daughter has been reduced to a wish for survival. Though middle-aged and weak, he’ll put his life on the line using only his wits in order to protect his family.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Dead+Mount+Death+Play&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=My+Home+Hero&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +30,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Dead Mount Death Play`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/My Home Hero`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

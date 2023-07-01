@@ -1,28 +1,27 @@
 ---
 tag: animes Spring-2023
-name: My Home Hero
+name: Oshi no Ko
 
-on_air: Sunday
+on_air: Wednesday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-05
+last_episode: 7
+last_watch: 2023-05-24
 genre: 
- - "#Thriller"
  - "#Drama"
- - "#Action"
+ - "#Mystery"
 
-dropped: false
+dropped: true
 finished: false
 
 created_at: 2023-05-11
 
-banner: ""
-banner_y: 0
+banner: "https://images2.alphacoders.com/131/1311144.jpeg"
+banner_y: 0.436
 ---
 ## Sinópse
-After killing his daughter’s abusive yakuza boyfriend to save her, ordinary salaryman Tetsuo Tosu becomes embroiled in the dark criminal underworld. The wish for a simple life he and his wife Kasen had for their daughter has been reduced to a wish for survival. Though middle-aged and weak, he’ll put his life on the line using only his wits in order to protect his family.
+When a pregnant young starlet appears in Gorou Amemiya’s countryside medical clinic, the doctor takes it upon himself to safely (and secretly) deliver Ai Hoshino’s child so she can make a scandal-free return to the stage. But no good deed goes unpunished, and on the eve of her delivery, he finds himself slain at the hands of Ai’s deluded stalker — and subsequently reborn as Ai’s child, Aquamarine Hoshino! The glitz and glamor of showbiz hide the dark underbelly of the entertainment industry, threatening to dull the shine of his favorite star. Can he help his new mother rise to the top of the charts? And what will he do when unthinkable disaster strikes?
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=My+Home+Hero&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Oshi+no+Ko&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -30,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/My Home Hero`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Oshi no Ko`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

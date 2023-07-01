@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Tonikaku kawaii 2
+name: Mahou Tsukai no Yome 2
 
-on_air: Friday
+on_air: Thursday
 season: Spring-2023
-last_episode: 9
-last_watch: 2023-06-05
+last_episode: 12
+last_watch: 2023-06-08
 genre: 
- - "#Comedy"
- - "#Romance"
+ - "#Drama"
+ - "#Fantasy"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images4.alphacoders.com/110/1107773.jpg"
-banner_y: 0.34
+banner: "https://images3.alphacoders.com/880/880728.jpg"
+banner_y: 0.164
 ---
 ## Sinópse
-The second season of _Tonikaku Kawaii_. The sweet story of Nasa and Tsukasa continues! After surviving some awkward first nights together, dealing with doubters, and recovering from their apartment fire, it's clear the fate of these lovers was written in the stars. Now, they're ready to settle back into domestic bliss and finally plan their wedding ceremony! But with plenty of new friends on the way, what will their big day look like?!
+The second season of _Mahoutsukai no Yome_. Chise was able to accept Elias and herself, if not necessarily everything about her situation. After Cartaphilus fell back into a slumber that would not last forever, Chise was able to go back to her regular life. Then she receives an invitation from a mutual aid organization for mages called the College. Under the British Library exists a secret society of mages. Encounters and interactions with people are about to open some new doors. This is a story about saving yourself to save another.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Tonikaku+kawaii+2&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Mahou+Tsukai+no+Yome+2&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Tonikaku kawaii 2`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Mahou Tsukai no Yome 2`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

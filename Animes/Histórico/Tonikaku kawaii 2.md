@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Kawaisugi Crisis
+name: Tonikaku kawaii 2
 
 on_air: Friday
 season: Spring-2023
-last_episode: 8
-last_watch: 2023-05-26
+last_episode: 9
+last_watch: 2023-06-05
 genre: 
  - "#Comedy"
- - "#Sci-Fi"
+ - "#Romance"
 
-dropped: false
+dropped: true
 finished: false
 
 created_at: 2023-05-11
 
-banner: "https://images2.alphacoders.com/131/1312300.jpeg"
-banner_y: 0.36
+banner: "https://images4.alphacoders.com/110/1107773.jpg"
+banner_y: 0.34
 ---
 ## Sinópse
-Invading alien Liza Luna wants nothing more than to destroy planet Earth... after she gets in a little sightseeing, first. But her travels soon take her into a cat café, where the furry felines inside invade her heart just as surely as Liza invaded Earth! Destroying the world won’t be so easy now that she’s discovered the joys of kitty cats...
+The second season of _Tonikaku Kawaii_. The sweet story of Nasa and Tsukasa continues! After surviving some awkward first nights together, dealing with doubters, and recovering from their apartment fire, it's clear the fate of these lovers was written in the stars. Now, they're ready to settle back into domestic bliss and finally plan their wedding ceremony! But with plenty of new friends on the way, what will their big day look like?!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kawaisugi+Crisis&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Tonikaku+kawaii+2&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kawaisugi Crisis`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Tonikaku kawaii 2`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

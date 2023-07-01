@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Oshi no Ko
+name: Dead Mount Death Play
 
-on_air: Wednesday
+on_air: Monday
 season: Spring-2023
-last_episode: 7
-last_watch: 2023-05-24
+last_episode: 12
+last_watch: 2023-06-05
 genre: 
- - "#Drama"
- - "#Mystery"
+ - "#Action"
+ - "#Fantasy"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images2.alphacoders.com/131/1311144.jpeg"
-banner_y: 0.436
+banner: ""
+banner_y: 0
 ---
 ## Sinópse
-When a pregnant young starlet appears in Gorou Amemiya’s countryside medical clinic, the doctor takes it upon himself to safely (and secretly) deliver Ai Hoshino’s child so she can make a scandal-free return to the stage. But no good deed goes unpunished, and on the eve of her delivery, he finds himself slain at the hands of Ai’s deluded stalker — and subsequently reborn as Ai’s child, Aquamarine Hoshino! The glitz and glamor of showbiz hide the dark underbelly of the entertainment industry, threatening to dull the shine of his favorite star. Can he help his new mother rise to the top of the charts? And what will he do when unthinkable disaster strikes?
+As a legendary hero nears victory against a necromancer known as The Corpse God, things take an unexpected turn with the dark sorcerer’s final gambit—reincarnation magic. This last-ditch effort catches the brave fighter off guard, and now he’s a boy named Polka Shinoyama in a whole new world! The showdown between good and evil just got epic.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Oshi+no+Ko&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Dead+Mount+Death+Play&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Oshi no Ko`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Dead Mount Death Play`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Kaminaki Sekai no Kamisama Katsudou
+name: Kono Subarashii Sekai ni Bakuen wo
 
 on_air: Wednesday
 season: Spring-2023
-last_episode: 9
-last_watch: 2023-06-07
+last_episode: 12
+last_watch: 2023-07-01
 genre: 
- - "#Action"
+ - "#Adventure"
  - "#Comedy"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: ""
-banner_y: 0
+banner: "https://images4.alphacoders.com/721/721593.png"
+banner_y: 0.42
 ---
 ## Sinópse
-As heir to a cult leader, Yukito centers his life around the mysterious goddess Mitama. But everything changes after he’s killed during a ritual gone wrong. To his surprise, Yukito is reborn into a world with no concept of god! And in this world, life and death are decided by the Imperial State. As Yukito fights to protect his new village, someone from his past life lends a helping hand.
+This feisty young wizard will stop at nothing to master the spell that saved her life: Explosion! Megumin, the “Greatest Genius of the Crimson Magic Clan,” has chosen to devote her studies to the powerful offensive magic used by her mysterious savior. Then one day, her little sister finds a black kitten in the woods. But this cat isn’t just a new furry friend—she’s the key to awakening a Dark God!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kaminaki+Sekai+no+Kamisama+Katsudou&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kono+Subarashii+Sekai+ni+Bakuen+wo&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Kono Subarashii Sekai ni Bakuen wo`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
@@ -44,7 +44,8 @@ async function defer(key, value, file){
 		let day = `${date.getDate()}`;
 		if (day.length < 2) day = `0${day}`;
 
-		await update('last_watch', `${year}-${month}-${day}`, file);
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
 	}
 }
 

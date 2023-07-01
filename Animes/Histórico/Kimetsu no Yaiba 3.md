@@ -1,28 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Isekai Shoukan wa Nidome desu
+name: Kimetsu no Yaiba 3
 
-on_air: Saturday
+on_air: Sunday
 season: Spring-2023
-last_episode: 9
+last_episode: 11
 last_watch: 2023-06-05
 genre: 
+ - "#Action"
  - "#Adventure"
- - "#Fantasy"
- - "#Comedy"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: ""
-banner_y: 0
+banner: "https://images4.alphacoders.com/105/1055056.png"
+banner_y: 0.54
 ---
 ## Sinópse
-There was once a hero who was summoned to another world, and he saved that world. However, the man was caught in a "trap" and was forcibly returned to his original world. On top of that, he had to start over as a baby… This is the story of a crazy journey in another world where a former hero who was reincarnated into a slightly gloomy high school student is "resummoned" back to that same world! There's a lot of room to work with when it's the second time, huh
+Adaptation of the Swordsmith Village Arc. Tanjiro’s journey leads him to the Swordsmith Village, where he reunites with two Hashira, members of the Demon Slayer Corps’ highest-ranking swordsmen - Mist Hashira Muichiro Tokito and Love Hashira Mitsuri Kanroji. With the shadows of demons lurking near, a new battle begins for Tanjiro and his comrades.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Isekai+Shoukan+wa+Nidome+desu&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kimetsu+no+Yaiba+3&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -30,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Isekai Shoukan wa Nidome desu`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Kimetsu no Yaiba 3`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){

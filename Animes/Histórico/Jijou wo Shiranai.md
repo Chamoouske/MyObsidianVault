@@ -1,27 +1,27 @@
 ---
 tag: animes Spring-2023
-name: Dr. Stone New World
+name: Jijou wo Shiranai
 
-on_air: Thursday
+on_air: Sunday
 season: Spring-2023
-last_episode: 10
-last_watch: 2023-06-08
+last_episode: 12
+last_watch: 2023-06-05
 genre: 
- - "#Action"
- - "#Adventure"
+ - "#Comedy"
+ - "#Slice_of_Life"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
-banner: "https://images6.alphacoders.com/102/1027254.jpg"
-banner_y: 0.552
+banner: ""
+banner_y: 0
 ---
 ## Sinópse
-The third season of _Dr. STONE_. Senku and the Kingdom of Science sail to new lands to uncover more scientific secrets!
+Fifth grader Nishimura isn’t too proud of her “Grim Reaper” moniker given by her bullying schoolmates, but the new kid loves it. The once lonely target of everyone’s ridicule starts to get out of her shell with the help of her new cheerful yet airheaded friend, Takada. Together they’ll embark on a sweet and touching journey of summer fun and friendship!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Dr.+Stone+New+World&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Jijou+wo+Shiranai&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -29,7 +29,7 @@ const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Dr. Stone New World`, {...dv.current().file, extension: 'md'})
+	await move(`Animes/Histórico/Jijou wo Shiranai`, {...dv.current().file, extension: 'md'})
 }
 
 async function defer(key, value, file){
