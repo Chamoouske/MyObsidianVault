@@ -80,14 +80,14 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
-async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'})
+async function moveNoteToHistorico(path){
+	await move(path)
 }
 
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await moveNoteToHistorico();
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -98,6 +98,8 @@ async function defer(key, value, file){
 
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
+	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
+		await move(`Animes/TemporadaAtual/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'})
 	}
 }
 
@@ -148,16 +150,6 @@ createButton({
 			'finished', !dv.current()?.finished,
 			dv.current()?.file.path
 		]
-	}
-})
-
-createButton({
-	app,
-	el: this.container,
-	args: {name: 'Mover para Histórico'},
-	clickOverride: {
-		click: moveNoteToHistorico,
-		params: []
 	}
 })
 ```

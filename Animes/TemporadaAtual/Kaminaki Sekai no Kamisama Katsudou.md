@@ -20,7 +20,6 @@ banner_y: 0
 ---
 ## Sinópse
 As heir to a cult leader, Yukito centers his life around the mysterious goddess Mitama. But everything changes after he’s killed during a ritual gone wrong. To his surprise, Yukito is reborn into a world with no concept of god! And in this world, life and death are decided by the Imperial State. As Yukito fights to protect his new village, someone from his past life lends a helping hand.
-
 ## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kaminaki+Sekai+no+Kamisama+Katsudou&lang=Portuguese)
 
 ```dataviewjs
@@ -28,14 +27,14 @@ const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
 const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
-async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'})
+async function moveNoteToHistorico(path){
+	await move(path)
 }
 
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await moveNoteToHistorico();
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -44,7 +43,10 @@ async function defer(key, value, file){
 		let day = `${date.getDate()}`;
 		if (day.length < 2) day = `0${day}`;
 
-		await update('last_watch', `${year}-${month}-${day}`, file);
+		const newDate = `${year}-${month}-${day}`;
+		await update('last_watch', newDate, file);
+	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
+		await move(`Animes/TemporadaAtual/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'})
 	}
 }
 
@@ -95,16 +97,6 @@ createButton({
 			'finished', !dv.current()?.finished,
 			dv.current()?.file.path
 		]
-	}
-})
-
-createButton({
-	app,
-	el: this.container,
-	args: {name: 'Mover para Histórico'},
-	clickOverride: {
-		click: moveNoteToHistorico,
-		params: []
 	}
 })
 ```

@@ -1,14 +1,13 @@
 ---
-anime_season: Summer-2023
-banner: "https://images5.alphacoders.com/750/750261.png"
-banner_y: 0.36
 ---
 # Temporada Atual
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
+
 const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
 const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
+const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
 
 createButton({
 	app,
@@ -60,17 +59,12 @@ createButton({
 	}
 })
 
-let pages= dv.pages(`"Animes/TemporadaAtual" AND #${dv.current().anime_season}`);
-const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
-
-async function moveNoteToHistorico(){
-	await move(`Animes/Histórico/Edomae Elf`, {...file, extension: 'md'})
-}
+let pages= dv.pages(`"Animes/TemporadaAtual"`);
 
 async function defer(key, value, file){
 	await update(key, value, file.path);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await moveNoteToHistorico(file);
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/${file.name}`, {...file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -128,7 +122,15 @@ for(let group of ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
 const {createButton} = app.plugins.plugins["buttons"];
-let pages= dv.pages(`#${dv.current().anime_season}`);
+
+const move = this.app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('move');
+
+let pages= dv.pages(`"Animes/Histórico/Dropped"`);
+
+async function defer(key, value, file){
+	await update(key, value, file.path);
+	await move(`Animes/TemporadaAtual/${file.name}`, {...file, extension: 'md'});
+}
 
 dv.header(2, "Dropados");
 dv.table(['Nome', 'Lançamento', 'Último EP', ''],
@@ -142,10 +144,10 @@ dv.table(['Nome', 'Lançamento', 'Último EP', ''],
 				el: this.container,
 				args: {name: anime.dropped ? "Reassistir" : "Drop"},
 				clickOverride: {
-					click: update,
+					click: defer,
 					params: [
 						'dropped', !anime.dropped,
-						anime.file.path
+						anime.file
 					]
 				}
 			})
