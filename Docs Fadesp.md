@@ -1,8 +1,8 @@
 - [x] 1 foto 3x4
 - [x] Carteira de trabalho
 - [x] Identidade
-- [ ] Titulo
-- [ ] cpf
+- [x] Titulo
+- [x] cpf
 - [ ] Reservista
 - [x] PIS
 - [ ] Comprovante de residência
