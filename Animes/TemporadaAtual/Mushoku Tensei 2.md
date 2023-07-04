@@ -5,7 +5,7 @@ name: Mushoku Tensei 2
 on_air: Sunday
 season: Summer-2023
 last_episode: 0
-last_watch: 2023-06-30
+last_watch: 2023-07-04
 genre: 
  - "#Adventure"
  - "#Drama"
