@@ -1,6 +1,6 @@
 - [x] 1 foto 3x4
 - [x] Carteira de trabalho
-- [ ] Identidade
+- [x] Identidade
 - [ ] Titulo
 - [ ] cpf
 - [ ] Reservista
