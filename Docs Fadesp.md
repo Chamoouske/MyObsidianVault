@@ -6,6 +6,6 @@
 - [x] Reservista
 - [x] PIS
 - [ ] Comprovante de residência
-- [ ] Comprovante de votação da última eleição
+- [x] Comprovante de votação da última eleição
 - [ ] Certificado de nível superior
 - [ ] Comprovante de vacinação COVID 19
