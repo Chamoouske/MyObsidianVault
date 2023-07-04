@@ -4,7 +4,7 @@ name: Okashi na Tensei
 
 on_air: Monday
 season: Summer-2023
-last_episode: 1
+last_episode: 2
 last_watch: 2023-07-04
 genre: 
  - "#Action"
