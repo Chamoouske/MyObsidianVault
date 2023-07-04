@@ -2,9 +2,9 @@
 let title = tp.file.title;
 const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = await tp.system.prompt("Nome do Anime: ");
+	title = (await tp.system.prompt("Nome do Anime: ")).replace(re, '_');
 }
-await tp.file.move('Animes/TemporadaAtual/' + title.replace(re, '_'));
+await tp.file.move('Animes/TemporadaAtual/' + title);
 
 const date = new Date(tp.file.creation_date());
 const month = date.getMonth() + 1;
