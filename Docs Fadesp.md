@@ -1,0 +1,11 @@
+- [ ] 1 foto 3x4
+- [x] Carteira de trabalho
+- [ ] Identidade
+- [ ] Titulo
+- [ ] cpf
+- [ ] Reservista
+- [x] PIS
+- [ ] Comprovante de residência
+- [ ] Comprovante de votação da última eleição
+- [ ] Certificado de nível superior
+- [ ] Comprovante de vacinação COVID 19
