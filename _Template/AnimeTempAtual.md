@@ -87,7 +87,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/<% title.replace(re, '_') %>`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
