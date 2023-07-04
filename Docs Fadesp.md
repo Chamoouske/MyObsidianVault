@@ -3,7 +3,7 @@
 - [x] Identidade
 - [x] Titulo
 - [x] cpf
-- [ ] Reservista
+- [x] Reservista
 - [x] PIS
 - [ ] Comprovante de residência
 - [ ] Comprovante de votação da última eleição
