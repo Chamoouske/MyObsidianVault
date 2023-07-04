@@ -4,9 +4,11 @@ name: Suki na Ko ga Megane wo Wasureta
 
 on_air: Tuesday
 season: Summer-2023
-last_episode: 0
-last_watch: 2023-06-30
+last_episode: 1
+last_watch: 2023-07-04
 genre: 
+ - "#Comedy"
+ - "#Romance"
 
 dropped: false
 finished: false
@@ -17,7 +19,9 @@ banner: ""
 banner_y: 0
 ---
 ## Sinópse
-
+With the new school year comes a new homeroom, new classmates, and a new desk for the timid Komura. But any trepidation he might've felt quickly dissipates when he catches sight of Mie, his new seat neighbor. Apt to quietly blurt out the most random things, the quirky Mie wears thick glasses that accentuate her lovely eyes, making Komura’s heart skip a beat!  
+  
+Unfortunately, Mie is pathologically forgetful and can never seem to remember to bring her glasses to class. It's not all bad, though! Her resulting squinty, mean-girl face sends Komura’s heart into overdrive too! While Komura is keen to help out and share his textbooks with Mie, will his heart give out from the almost daily strain of being up close and personal with his crush?!
 
 ## [Wallpapers](https://wall.alphacoders.com/search.php?search=Suki+na+Ko+ga+Megane+wo+Wasureta&lang=Portuguese)
 
