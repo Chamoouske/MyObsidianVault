@@ -7,5 +7,5 @@
 - [x] PIS
 - [ ] Comprovante de residência
 - [x] Comprovante de votação da última eleição
-- [ ] Certificado de nível superior
+- [x] Certificado de nível superior
 - [ ] Comprovante de vacinação COVID 19
