@@ -11,7 +11,7 @@ genre:
  - "#Slice_of_life"
 
 dropped: false
-finished: false
+finished: true
 
 created_at: 2023-05-11
 
