@@ -21,44 +21,6 @@ createButton({
 	}
 })
 
-const date = new Date(Date.now())
-let temp;
-switch(date.getMonth() + 1){
-	case 1:
-	case 2:
-	case 3:
-		temp = 'Winter-' + date.getFullYear();
-		break;
-	case 4:
-	case 5:
-	case 6:
-		temp = 'Spring-' + date.getFullYear();
-		break;
-	case 7:
-	case 8:
-	case 9:
-		temp = 'Summer-' + date.getFullYear();
-		break;
-	case 10:
-	case 12:
-	case 12:
-		temp = 'Fall-' + date.getFullYear();
-		break;
-}
-
-createButton({
-	app,
-	el: this.container,
-	args: {name: "Update Season"},
-	clickOverride: {
-		click: update,
-		params: [
-			'anime_season', temp,
-			dv.current().file.path
-		]
-	}
-})
-
 let pages= dv.pages(`"Animes/TemporadaAtual"`);
 
 async function defer(key, value, file){
