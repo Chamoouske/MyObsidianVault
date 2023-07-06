@@ -4,8 +4,8 @@ name: Undead Girl Murder Farce
 
 on_air: Thursday
 season: Summer-2023
-last_episode: 0
-last_watch: 2023-07-05
+last_episode: 1
+last_watch: 2023-07-06
 genre: 
 
 dropped: false
