@@ -4,8 +4,8 @@ name: Jidou Hanbaiki ni Umarekawatta
 
 on_air: Wednesday
 season: Summer-2023
-last_episode: 0
-last_watch: 2023-07-05
+last_episode: 1
+last_watch: 2023-07-06
 genre: 
 
 dropped: false
