@@ -4,8 +4,8 @@ name: Liar Liar
 
 on_air: Saturday
 season: Summer-2023
-last_episode: 1
-last_watch: 2023-07-07
+last_episode: 2
+last_watch: 2023-07-08
 genre: 
 
 dropped: false
