@@ -2,7 +2,7 @@
 tag: animes Summer-2023
 name: Yumemiru Danshi wa Genjitsushugisha
 
-on_air: Monday
+on_air: Tuesday
 season: Summer-2023
 last_episode: 1
 last_watch: 2023-07-04
