@@ -4,8 +4,8 @@ name: Yumemiru Danshi wa Genjitsushugisha
 
 on_air: Tuesday
 season: Summer-2023
-last_episode: 1
-last_watch: 2023-07-04
+last_episode: 2
+last_watch: 2023-07-11
 genre: 
  - "#Comedy"
  - "#Romance"
