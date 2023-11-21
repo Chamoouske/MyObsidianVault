@@ -1,29 +1,25 @@
 ---
 tag: animes Summer-2023
-name: Suki na Ko ga Megane wo Wasureta
+name: Jidou Hanbaiki ni Umarekawatta
 
-on_air: Tuesday
+on_air: Wednesday
 season: Summer-2023
-last_episode: 2
-last_watch: 2023-07-11
+last_episode: 1
+last_watch: 2023-07-06
 genre: 
- - "#Comedy"
- - "#Romance"
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-07-04
+created_at: 2023-07-06
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
-With the new school year comes a new homeroom, new classmates, and a new desk for the timid Komura. But any trepidation he might've felt quickly dissipates when he catches sight of Mie, his new seat neighbor. Apt to quietly blurt out the most random things, the quirky Mie wears thick glasses that accentuate her lovely eyes, making Komura’s heart skip a beat!  
-  
-Unfortunately, Mie is pathologically forgetful and can never seem to remember to bring her glasses to class. It's not all bad, though! Her resulting squinty, mean-girl face sends Komura’s heart into overdrive too! While Komura is keen to help out and share his textbooks with Mie, will his heart give out from the almost daily strain of being up close and personal with his crush?!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Suki+na+Ko+ga+Megane+wo+Wasureta&lang=Portuguese)
+
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Jidou+Hanbaiki+ni+Umarekawatta&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -37,7 +33,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Suki na Ko ga Megane wo Wasureta`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Jidou Hanbaiki ni Umarekawatta`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -49,7 +45,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Suki na Ko ga Megane wo Wasureta`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Jidou Hanbaiki ni Umarekawatta`, {...dv.current().file, extension: 'md'})
 	}
 }
 

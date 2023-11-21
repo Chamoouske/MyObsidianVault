@@ -1,25 +1,30 @@
 ---
 tag: animes Summer-2023
-name: Dark Gathering
+name: Mushoku Tensei 2
 
 on_air: Sunday
 season: Summer-2023
 last_episode: 1
 last_watch: 2023-07-09
 genre: 
+ - "#Adventure"
+ - "#Drama"
+ - "#Ecchi"
+ - "#Fantasy"
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-07-09
+created_at: 2023-07-02
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
+The second season of _Mushoku Tensei: Isekai Ittara Honki Dasu_.  
+Rudeus heads north with new friends and powers in search of adventure and those he once knew.
 
-
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Dark+Gathering&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Mushoku+Tensei+2&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -33,7 +38,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Dark Gathering`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Mushoku Tensei 2`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -45,7 +50,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Dark Gathering`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Mushoku Tensei 2`, {...dv.current().file, extension: 'md'})
 	}
 }
 

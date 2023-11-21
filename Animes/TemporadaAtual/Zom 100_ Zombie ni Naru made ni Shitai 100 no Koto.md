@@ -4,8 +4,8 @@ name: Zom 100_ Zombie ni Naru made ni Shitai 100 no Koto
 
 on_air: Sunday
 season: Summer-2023
-last_episode: 1
-last_watch: 2023-07-09
+last_episode: 5
+last_watch: 2023-11-21
 genre: 
 
 dropped: false

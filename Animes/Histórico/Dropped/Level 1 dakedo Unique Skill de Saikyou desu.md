@@ -1,26 +1,25 @@
 ---
 tag: animes Summer-2023
-name: Ayaka
+name: Level 1 dakedo Unique Skill de Saikyou desu
 
 on_air: Saturday
 season: Summer-2023
-last_episode: 2
+last_episode: 1
 last_watch: 2023-07-08
 genre: 
- - "#Action"
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-07-01
+created_at: 2023-07-08
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
-The story follows Yukito Yanagi, an orphan who one day encounters an eccentric disciple of his father's. The strange man takes him to his birthplace on Ayakajima, made up of seven islands where mysterious beings called "Mitama" and dragons are rumored to reside. There, Yukito meets his father's two other disciples, who protect the harmony of Ayakajima… which soon threatens to collapse.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Ayaka&lang=Portuguese)
+
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Level+1+dakedo+Unique+Skill+de+Saikyou+desu&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -34,7 +33,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Ayaka`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Level 1 dakedo Unique Skill de Saikyou desu`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -46,7 +45,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Ayaka`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Level 1 dakedo Unique Skill de Saikyou desu`, {...dv.current().file, extension: 'md'})
 	}
 }
 

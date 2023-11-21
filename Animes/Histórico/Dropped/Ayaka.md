@@ -1,18 +1,15 @@
 ---
 tag: animes Summer-2023
-name: Jitsu wa Ore, Saikyou deshita?
+name: Ayaka
 
 on_air: Saturday
 season: Summer-2023
 last_episode: 2
 last_watch: 2023-07-08
 genre: 
- - "#Comedy"
- - "#Ecchi"
- - "#Fantasy"
- - "#Romance"
+ - "#Action"
 
-dropped: false
+dropped: true
 finished: false
 
 created_at: 2023-07-01
@@ -21,9 +18,9 @@ banner: ""
 banner_y: 0
 ---
 ## Sinópse
-After being a shut-in, Haruto is reincarnated as a baby. And amazingly, that baby is a prince! However, he's abandoned in a forest on the day he's born because of his low magic level... What will be the fate of Haruto, who was inadvertently given 1000 times the normal amount of magic by the goddess of reincarnation without anyone noticing?!
+The story follows Yukito Yanagi, an orphan who one day encounters an eccentric disciple of his father's. The strange man takes him to his birthplace on Ayakajima, made up of seven islands where mysterious beings called "Mitama" and dragons are rumored to reside. There, Yukito meets his father's two other disciples, who protect the harmony of Ayakajima… which soon threatens to collapse.
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Jitsu+wa+Ore,+Saikyou+deshita?&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Ayaka&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -37,7 +34,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Jitsu wa Ore, Saikyou deshita_`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Ayaka`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -49,7 +46,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Jitsu wa Ore, Saikyou deshita_`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Ayaka`, {...dv.current().file, extension: 'md'})
 	}
 }
 

@@ -8,7 +8,7 @@ last_episode: 1
 last_watch: 2023-07-07
 genre: 
 
-dropped: false
+dropped: true
 finished: false
 
 created_at: 2023-07-07

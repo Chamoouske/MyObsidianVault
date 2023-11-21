@@ -1,25 +1,26 @@
 ---
-tag: animes Summer-2023
-name: Dekiru Neko wa Kyou mo Yuutsu
+tag: animes Spring-2023
+name: Kaminaki Sekai no Kamisama Katsudou
 
-on_air: Friday
-season: Summer-2023
-last_episode: 1
-last_watch: 2023-07-07
+on_air: Wednesday
+season: Spring-2023
+last_episode: 12
+last_watch: 2023-07-06
 genre: 
+ - "#Action"
+ - "#Comedy"
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-07-07
+created_at: 2023-05-11
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
-
-
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Dekiru+Neko+wa+Kyou+mo+Yuutsu&lang=Portuguese)
+As heir to a cult leader, Yukito centers his life around the mysterious goddess Mitama. But everything changes after he’s killed during a ritual gone wrong. To his surprise, Yukito is reborn into a world with no concept of god! And in this world, life and death are decided by the Imperial State. As Yukito fights to protect his new village, someone from his past life lends a helping hand.
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Kaminaki+Sekai+no+Kamisama+Katsudou&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -33,7 +34,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Dekiru Neko wa Kyou mo Yuutsu`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -45,7 +46,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Dekiru Neko wa Kyou mo Yuutsu`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Kaminaki Sekai no Kamisama Katsudou`, {...dv.current().file, extension: 'md'})
 	}
 }
 

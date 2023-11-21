@@ -33,8 +33,8 @@ let priority = await suggester(
 let until = parseDateWithNLDates(await prompt("Until") || "");
 
 let project = await suggester(
-	["Personal", "GTRR", "Other"],
-	["Personal", "GTRR", "Other"],
+	["Personal", "Other"],
+	["Personal", "Other"],
 	false,
 	"Projeto"
 ) || "Personal";

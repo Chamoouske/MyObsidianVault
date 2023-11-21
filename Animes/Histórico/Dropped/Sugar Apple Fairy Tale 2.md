@@ -1,28 +1,25 @@
 ---
 tag: animes Summer-2023
-name: Okashi na Tensei
+name: Sugar Apple Fairy Tale 2
 
-on_air: Monday
+on_air: Friday
 season: Summer-2023
-last_episode: 3
-last_watch: 2023-07-10
+last_episode: 1
+last_watch: 2023-07-07
 genre: 
- - "#Action"
- - "#Fantasy"
- - "#Slice_of_Life"
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-07-04
+created_at: 2023-07-07
 
 banner: ""
 banner_y: 0
 ---
 ## Sinópse
-A boy named Pastry is set to become the next lord of the destitute dominion of Morteln. He's known for having remarkable talent for his age... and it just so happens he was a genius pastry chef with a promising future in his previous life! He still retains his determination to make sweets that will make everyone smile, even after reincarnating as Pastry. But many challenges stand before him, including bandits attacking his domain, malicious and eccentric nobles, an unfortunate financial situation, and land so barren that even water is scarce. The only weapons he has to fight them with are his own ingenuity and love for making sweets. Can Pastry succeed in bringing happiness to the land?!
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Okashi+na+Tensei&lang=Portuguese)
+
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Sugar+Apple+Fairy+Tale+2&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -36,7 +33,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUppercase())}/Okashi na Tensei`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Sugar Apple Fairy Tale 2`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -48,7 +45,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Okashi na Tensei`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Sugar Apple Fairy Tale 2`, {...dv.current().file, extension: 'md'})
 	}
 }
 

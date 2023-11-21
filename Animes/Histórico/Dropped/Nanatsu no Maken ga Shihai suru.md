@@ -1,17 +1,17 @@
 ---
 tag: animes Summer-2023
-name: Liar Liar
+name: Nanatsu no Maken ga Shihai suru
 
-on_air: Saturday
+on_air: Friday
 season: Summer-2023
-last_episode: 2
-last_watch: 2023-07-08
+last_episode: 1
+last_watch: 2023-07-07
 genre: 
 
-dropped: false
+dropped: true
 finished: false
 
-created_at: 2023-07-08
+created_at: 2023-07-07
 
 banner: ""
 banner_y: 0
@@ -19,7 +19,7 @@ banner_y: 0
 ## Sinópse
 
 
-## [Wallpapers](https://wall.alphacoders.com/search.php?search=Liar+Liar&lang=Portuguese)
+## [Wallpapers](https://wall.alphacoders.com/search.php?search=Nanatsu+no+Maken+ga+Shihai+suru&lang=Portuguese)
 
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -33,7 +33,7 @@ async function moveNoteToHistorico(path){
 async function defer(key, value, file){
 	await update(key, value, file);
 	if((key === 'dropped' && value) || (key === 'finished' && value)){
-		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Liar Liar`, {...dv.current().file, extension: 'md'});
+		await move(`Animes/Histórico/${key.replace(key[0], key[0].toUpperCase())}/Nanatsu no Maken ga Shihai suru`, {...dv.current().file, extension: 'md'});
 	}else if (key === 'last_episode'){
 		const date = new Date();
 		let year = `${date.getFullYear()}`;
@@ -45,7 +45,7 @@ async function defer(key, value, file){
 		const newDate = `${year}-${month}-${day}`;
 		await update('last_watch', newDate, file);
 	}else if(!((key === 'dropped' && value) || (key === 'finished' && value))){
-		await move(`Animes/TemporadaAtual/Liar Liar`, {...dv.current().file, extension: 'md'})
+		await move(`Animes/TemporadaAtual/Nanatsu no Maken ga Shihai suru`, {...dv.current().file, extension: 'md'})
 	}
 }
 
