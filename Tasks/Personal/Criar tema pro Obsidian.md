@@ -2,7 +2,7 @@
 status: To Do
 priority: Low
 until: 
-project: GTRR
+project: Personal
 
 Total: 4
 Complete: 0

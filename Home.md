@@ -198,7 +198,7 @@ async function setDueDate(path){
 }
 
 const pages = dv.pages('"Tasks"');
-for(let group of ['GTRR', 'Personal', 'Other']){
+for(let group of ['Personal', 'Other']){
 	dv.header(2, group)
 	dv.table(
 		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
