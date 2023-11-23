@@ -10,6 +10,9 @@ parcela-sapato-supermoda: 6
 mochila-supermoda: 24
 parcela-mochila-supermoda: 2
 gastos-extras: 36.58
+gastos-vr: 0
+total-gastos-mes: 542
+total-gastos: 3187.58
 ---
 
 ```dataviewjs
@@ -31,12 +34,24 @@ totalDividas += parseFloat(dv.current()['sapato-supermoda'] || 0) * (dv.current(
 totalDividas += parseFloat(dv.current()['mochila-supermoda'] || 0) * (dv.current()['parcela-mochila-supermoda'] || 0);
 
 totalDividas += parseFloat(dv.current()['gastos-extras'] || 0);
+if (parseFloat(totalDividas) != parseFloat(dv.current()['total-gastos'] || 0))
+	await defer('total-gastos', totalDividas, dv.current().file.path);
+	
+let gastoMensal = 0;
+gastoMensal += parseFloat((dv.current()['parcela-sapato-supermoda'] || 0) > 0 ? dv.current()['sapato-supermoda'] : 0);
+gastoMensal += parseFloat((dv.current()['parcela-mochila-supermoda'] || 0) > 0 ? dv.current()['mochila-supermoda'] : 0);
+gastoMensal += parseFloat((dv.current()['parcela-celular'] || 0) > 0 ? dv.current()['celular'] : 0);
+gastoMensal += parseFloat((dv.current()['parcela-material-alcie'] || 0) > 0 ? dv.current()['material-alcie'] : 0);
+gastoMensal += parseFloat(dv.current()['spotify'] || 0);
+gastoMensal += parseFloat(dv.current()['google-storage'] || 0);
+if (parseFloat(gastoMensal) != parseFloat(dv.current()['total-gastos-mes'] || 0))
+	await defer('total-gastos-mes', gastoMensal, dv.current().file.path);
 
 dv.header(2, `Total dividas: R$${totalDividas}`);
-
 dv.header(2, `Spotify: R$${dv.current()['spotify']}`);
 dv.header(2, `Google Storage: R$${dv.current()['google-storage']}`);
 dv.header(2, `Gastos Extras: R$${dv.current()['gastos-extras']}`);
+dv.header(2, `Gastos VR: R$${dv.current()['gastos-vr']}`);
 
 dv.header(2, `Celular: R$${parseFloat(dv.current()['parcela-celular'] || 0) * parseFloat(dv.current()?.celular || 0)}`);
 createButton({
