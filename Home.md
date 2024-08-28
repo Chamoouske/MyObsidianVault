@@ -73,50 +73,6 @@ dv.table(['Nome', 'Último EP', "Gêneros", ''],
 )
 ```
 
-# Filmes
-```dataviewjs
-const {update} = this.app.plugins.plugins["metaedit"].api;
-const {createButton} = app.plugins.plugins["buttons"];
-
-const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
-const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
-
-createButton({
-	app,
-	el: this.container,
-	args: {name: "Novo Filme"},
-	clickOverride: {
-		click: createNewNoteTemplater,
-		params: [
-			findTFileTemplater('NewFilme'), 'Untitled', true
-		]
-	}
-})
-
-let pages = await dv.pages(`"Filmes"`);
-dv.table(['Título', 'Indicou', 'Adicionado', ''],
-	 pages.where(item => !item.Assistido)
-		 .sort(a=>a.Added)
-		 .map(filme=>[
-			filme.file.link,
-			filme['Indicado-por'],
-			filme.Added,
-			createButton({
-				app,
-				el: this.container,
-				args: {name: "Assistido"},
-				clickOverride: {
-					click: update,
-					params: [
-						'Assistido', true,
-						filme.file.path
-					]
-				}
-			})
-		]
-))
-```
-
 # Livros
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
@@ -159,7 +115,6 @@ dv.table(['Título', 'Adicionado',  ''],
 ))
 ```
 
-# Tasks
 ```dataviewjs
 const {createButton} = app.plugins.plugins['buttons'];
 const {update} = this.app.plugins.plugins['metaedit'].api;
@@ -168,6 +123,7 @@ const prompt = app.plugins.plugins['templater-obsidian'].templater.functions_gen
 const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
 const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
 
+dv.header(1, "Tasks");
 createButton({
 	app,
 	el: this.container,
@@ -244,22 +200,6 @@ for(let group of ['Personal', 'Other']){
 			})
 	)
 }
-
-dv.header(2, "All Tasks")
-dv.table(
-	['Task', 'Project', 'Status', 'Progress'],
-	pages.sort(t=>(-(t.Complete / t.Total || 0) * 100))
-		.map(t => {
-				const progress = ((t.Complete / t.Total || 0) * 100)
-				return [
-					t.file.link,
-					t.project,
-					t.status,
-					createDivPercentage(progress.toFixed(2))
-				]
-			}
-		)
-)
 ```
 
 # Vídeos
