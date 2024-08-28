@@ -27,4 +27,4 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-- [ ] 01- 
+1. [ ] <% tp.file.cursor() %>

@@ -2,6 +2,7 @@
 tags:
   - cursos/modulos
 completed: false
+
 ---
 
 ```dataviewjs
@@ -17,4 +18,12 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-- [ ] Aula
+1. [ ] [Introdução às classes aninhadas3m 46s](https://app.algaworks.com/aulas/4783/introducao-as-classes-aninhadas)
+2. [ ] [Classes aninhadas estáticas14m 14s](https://app.algaworks.com/aulas/4784/classes-aninhadas-estaticas)
+3. [ ] [Modificadores de acesso de classes aninhadas6m 36s](https://app.algaworks.com/aulas/4785/modificadores-de-acesso-de-classes-aninhadas)
+4. [ ] [Enum como membro estático de uma classe3m 13s](https://app.algaworks.com/aulas/4786/enum-como-membro-estatico-de-uma-classe)
+5. [ ] [Classes aninhadas não-estáticas14m 49s](https://app.algaworks.com/aulas/4787/classes-aninhadas-nao-estaticas)
+6. [ ] [Shadowing em classes aninhadas5m 9s](https://app.algaworks.com/aulas/4788/shadowing-em-classes-aninhadas)
+7. [ ] [Classes locais14m 57s](https://app.algaworks.com/aulas/4789/classes-locais)
+8. [ ] [Classes anônimas8m 13s](https://app.algaworks.com/aulas/4790/classes-anonimas)
+9. [ ] [Desafio: classes aninhadas3m 14s](https://app.algaworks.com/aulas/4791/desafio-classes-aninhadas)

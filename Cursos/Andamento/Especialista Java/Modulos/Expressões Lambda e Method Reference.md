@@ -2,6 +2,7 @@
 tags:
   - cursos/modulos
 completed: false
+
 ---
 
 ```dataviewjs
@@ -17,4 +18,20 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-- [ ] Aula
+1. [ ] [Introdução ao módulo8m 15s](https://app.algaworks.com/aulas/4792/introducao-ao-modulo)
+2. [ ] [Implementando Expressões Lambda9m 57s](https://app.algaworks.com/aulas/4793/implementando-expressoes-lambda)
+3. [ ] [Entendendo as interfaces funcionais3m 22s](https://app.algaworks.com/aulas/4794/entendendo-as-interfaces-funcionais)
+4. [ ] [Usando a interface @FunctionalInterface4m 59s](https://app.algaworks.com/aulas/4795/usando-a-interface-functionalinterface)
+5. [ ] [Boas práticas: prefira lambdas a classes anônimas10m 7s](https://app.algaworks.com/aulas/4796/boas-praticas-prefira-lambdas-a-classes-anonimas)
+6. [ ] [Boas práticas: torne as lambdas mais concisas8m 4s](https://app.algaworks.com/aulas/4797/boas-praticas-torne-as-lambdas-mais-concisas)
+7. [ ] [Implementando Comparator com lambda6m 46s](https://app.algaworks.com/aulas/4798/implementando-comparator-com-lambda)
+8. [ ] [Boas práticas: prefira interfaces funcionais padrão7m 44s](https://app.algaworks.com/aulas/4799/boas-praticas-prefira-interfaces-funcionais-padrao)
+9. [ ] [As 4 principais interfaces funcionais16m 0s](https://app.algaworks.com/aulas/4800/as-4-principais-interfaces-funcionais)
+10. [ ] [Interface funcional Predicate: removendo elementos de coleções15m 20s](https://app.algaworks.com/aulas/4801/interface-funcional-predicate-removendo-elementos-de-colecoes)
+11. [ ] [Interface funcional Consumer: iterando em coleções com forEach7m 59s](https://app.algaworks.com/aulas/4802/interface-funcional-consumer-iterando-em-colecoes-com-foreach)
+12. [ ] [Interface funcional Function: ordenando lista com Comparator.comparing16m 30s](https://app.algaworks.com/aulas/4803/interface-funcional-function-ordenando-lista-com-comparatorcomparing)
+13. [ ] [Usando Method References6m 55s](https://app.algaworks.com/aulas/4804/usando-method-references)
+14. [ ] [Referenciando métodos de uma instância particular6m 28s](https://app.algaworks.com/aulas/4805/referenciando-metodos-de-uma-instancia-particular)
+15. [ ] [Referenciando métodos estáticos2m 22s](https://app.algaworks.com/aulas/4806/referenciando-metodos-estaticos)
+16. [ ] [Referenciando construtores3m 29s](https://app.algaworks.com/aulas/4807/referenciando-construtores)
+17. [ ] [Desafio: expressões lambda e method reference3m 43s](https://app.algaworks.com/aulas/4808/desafio-expressoes-lambda-e-method-reference)

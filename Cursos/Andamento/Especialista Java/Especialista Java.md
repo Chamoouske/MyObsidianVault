@@ -5,8 +5,8 @@ url: https://app.algaworks.com/meus-cursos/especialista-java
 finalizado: false
 title: Especialista Java
 Total_Modulos: 35
-Modulos_Finalizados: 6
-Modulos_Faltantes: 29
+Modulos_Finalizados: 7
+Modulos_Faltantes: 28
 status: Andamento
 priority: High
 
@@ -43,7 +43,8 @@ function createDivPercentage(percent){
 const pages = await dv.pages(`"Cursos/Andamento/Especialista Java/Modulos"`);
 
 dv.table(['Módulo', 'Progress'],
-	pages.sort(t=>-((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
+	pages.sort(t => -((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
+		.filter(t => !t.completed)
 		.map(t => {
 			const tasks = t.file.tasks;
 			const completed = tasks.where(t=>t.completed)

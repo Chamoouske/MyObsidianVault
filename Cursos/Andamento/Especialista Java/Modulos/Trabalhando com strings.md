@@ -2,6 +2,7 @@
 tags:
   - cursos/modulos
 completed: false
+
 ---
 
 ```dataviewjs
@@ -17,4 +18,17 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-- [ ] Aula
+1. [ ] [Comparação de strings5m 1s](https://app.algaworks.com/aulas/4715/comparacao-de-strings)
+2. [ ] [Pool de strings2m 52s](https://app.algaworks.com/aulas/4716/pool-de-strings)
+3. [ ] [Validando o conteúdo de strings7m 53s](https://app.algaworks.com/aulas/4717/validando-o-conteudo-de-strings)
+4. [ ] [Extraindo trechos da String com indexOf e substring14m 20s](https://app.algaworks.com/aulas/4718/extraindo-trechos-da-string-com-indexof-e-substring)
+5. [ ] [Extraindo trechos da String com lastIndexOf e substring3m 36s](https://app.algaworks.com/aulas/4719/extraindo-trechos-da-string-com-lastindexof-e-substring)
+6. [ ] [Transformando strings11m 6s](https://app.algaworks.com/aulas/4720/transformando-strings)
+7. [ ] [Implementando algoritmos usando os métodos da classe String11m 55s](https://app.algaworks.com/aulas/4721/implementando-algoritmos-usando-os-metodos-da-classe-string)
+8. [ ] [Desafio: validação de e-mail8m 42s](https://app.algaworks.com/aulas/4722/desafio-validacao-de-e-mail)
+9. [ ] [Testando correspondências de strings com expressões regulares23m 36s](https://app.algaworks.com/aulas/4723/testando-correspondencias-de-strings-com-expressoes-regulares)
+10. [ ] [Web Scraping: buscando correspondências com Pattern e Matcher19m 24s](https://app.algaworks.com/aulas/4724/web-scraping-buscando-correspondencias-com-pattern-e-matcher)
+11. [ ] [Manipulando strings com expressões regulares6m 42s](https://app.algaworks.com/aulas/4725/manipulando-strings-com-expressoes-regulares)
+12. [ ] [Boas práticas: use StringBuilder para mais performance8m 39s](https://app.algaworks.com/aulas/4726/boas-praticas-use-stringbuilder-para-mais-performance)
+13. [ ] [Código mais limpo com Text blocks7m 48s](https://app.algaworks.com/aulas/4727/codigo-mais-limpo-com-text-blocks)
+14. [ ] [Desafio: Text blocks e expressões regulares1m 58s](https://app.algaworks.com/aulas/4728/desafio-text-blocks-e-expressoes-regulares)
