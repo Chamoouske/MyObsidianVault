@@ -18,7 +18,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Estrutura da memória da JVM15m 42s](https://app.algaworks.com/aulas/4479/estrutura-da-memoria-da-jvm)
+1. [x] [Estrutura da memória da JVM15m 42s](https://app.algaworks.com/aulas/4479/estrutura-da-memoria-da-jvm)
 2. [ ] [Call Stack, Stack Memory e Heap Memory10m 20s](https://app.algaworks.com/aulas/4480/call-stack-stack-memory-e-heap-memory)
 3. [ ] [Informações da Memória Heap com a Runtime API19m 17s](https://app.algaworks.com/aulas/4481/informacoes-da-memoria-heap-com-a-runtime-api)
 4. [ ] [Configurando a Memória Heap da JVM10m 3s](https://app.algaworks.com/aulas/4482/configurando-a-memoria-heap-da-jvm)
