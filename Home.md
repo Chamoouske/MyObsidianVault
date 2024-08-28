@@ -102,7 +102,7 @@ function createDivPercentage(percent){
 	return `<div style="${style}">${percent}%</div>`
 }
 
-const pages = dv.pages('#cursos');
+const pages = dv.pages('"Cursos" and -#cursos/modulos');
 dv.table(
 		['Curso', 'Status', 'Priority', 'Progress'],
 		pages.sort(t=>-((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
