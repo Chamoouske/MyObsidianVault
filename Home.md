@@ -1,5 +1,6 @@
 ---
 ---
+
 # [[Animes]]
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
