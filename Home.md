@@ -104,7 +104,7 @@ function createDivPercentage(percent){
 
 const pages = dv.pages('#cursos');
 dv.table(
-		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
+		['Curso', 'Status', 'Priority', 'Progress'],
 		pages.sort(t=>-((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
 			.map(t => {
 				const tasks = t.file.tasks;
@@ -114,22 +114,7 @@ dv.table(
 					t.file.link,
 					t.status,
 					t.priority,
-					createDivPercentage(progress.toFixed(2)),
-					createButton({
-						app,
-						el: this.container,
-						args: {
-							name: t.status == "To Do" ? "In Progress" : " Complete "
-						},
-						clickOverride: {
-							click: update,
-							params: [
-								'status',
-								t.status == "To Do" ? "In Progress" : "Completed",
-								t.file.path
-							]
-						}
-					})
+					createDivPercentage(progress.toFixed(2))
 				]
 			})
 	)

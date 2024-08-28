@@ -1,42 +1,16 @@
-<%*
-const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
-const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
-const suggester = tp.system.suggester;
-
-let title = tp.file.title;
-const re = /[*:"\\|<>/?]/g;
-if (title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = (await tp.system.prompt("Nome do Curso: ")).replace(re, '_');
-}
-
-const pathCurso = `Cursos/Andamento/${title}`;
-await tp.file.move(`${pathCurso}/${title}`);
-
-const status = "To Do";
-
-const prioridade = await suggester(
-	["Low", "Moderate", "High", "Imediate"],
-	["Low", "Moderate", "High", "Imediate"],
-	false,
-	"Prioridade"
-) || "Low";
-
-const totalModulos = await tp.system.prompt("Total de módulos: ") || 0;
-
-for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), `${pathCurso}/Modulos/Untitled`, false);
-%>---
+---
 tags:
   - cursos
-url: <% await tp.system.prompt("URL do Curso: ") || '' %>
+url: 
 finalizado: false
-title: <% title %>
-Total_Modulos: <% totalModulos %>
+title: Java
+Total_Modulos: 2
 Modulos_Finalizados: 0
-Modulos_Faltantes: <% totalModulos %>
-status: <% status %>
-priority: <% prioridade %>
+Modulos_Faltantes: 2
+status: To Do
+priority: Low
 ---
-<% tp.file.cursor() %>
+
 ---
 ```dataviewjs
 const {createButton} = app.plugins.plugins["buttons"];
@@ -50,7 +24,7 @@ createButton({
 	clickOverride: {
 		click: createNewNoteTemplater,
 		params: [
-			findTFileTemplater('ModuloCursos'), '<% pathCurso %>/Modulos/Untitled', true
+			findTFileTemplater('ModuloCursos'), 'Cursos/Andamento/Java/Modulos/Untitled', true
 		]
 	}
 });
@@ -65,7 +39,7 @@ function createDivPercentage(percent){
 	return `<div style="${style}">${percent}%</div>`
 }
 
-const pages = await dv.pages(`"<% pathCurso %>/Modulos"`);
+const pages = await dv.pages(`"Cursos/Andamento/Java/Modulos"`);
 
 dv.table(['Módulo', 'Progress'],
 	pages.sort(t=>-((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
