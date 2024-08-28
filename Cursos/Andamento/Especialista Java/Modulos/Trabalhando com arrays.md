@@ -35,6 +35,6 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 - [x] [Criando arrays multidimensionais](https://app.algaworks.com/aulas/4473/criando-arrays-multidimensionais)
 - [x] [Iterando em arrays multidimensionais](https://app.algaworks.com/aulas/4474/iterando-em-arrays-multidimensionais)
 - [x] [Lendo os parâmetros da linha de comando](https://app.algaworks.com/aulas/4475/lendo-os-parametros-da-linha-de-comando)
-- [ ] [Criando métodos com argumentos variáveis com Varargs](https://app.algaworks.com/aulas/4476/criando-metodos-com-argumentos-variaveis-com-varargs)
+- [x] [Criando métodos com argumentos variáveis com Varargs](https://app.algaworks.com/aulas/4476/criando-metodos-com-argumentos-variaveis-com-varargs)
 - [ ] [Boas práticas: use varargs com cuidado](https://app.algaworks.com/aulas/4477/boas-praticas-use-varargs-com-cuidado)
 - [ ] [Desafio: varargs](https://app.algaworks.com/aulas/4478/desafio-varargs)
