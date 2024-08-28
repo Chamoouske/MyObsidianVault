@@ -33,13 +33,10 @@
     {
       "folder": "Guias de Estudo/Assuntos",
       "template": "_Template/GuiaEstudos.md"
-    },
-    {
-      "folder": "Filmes",
-      "template": "_Template/NewFilme.md"
     }
   ],
   "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
     ""
   ],
