@@ -11,8 +11,9 @@ const pathCurso = `Cursos/Andamento/${title}`;
 await tp.file.move(`${pathCurso}/${title}`);
 
 const totalModulos = await tp.system.prompt("Total de módulos: ") || 0;
-
-for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModeloCursos'), 'Untitled', true);
+const v = findTFileTemplater('ModuloCursos');
+console.log(v);
+for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), 'Untitled', true);
 %>---
 tags:
   - cursos

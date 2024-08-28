@@ -33,10 +33,6 @@
     {
       "folder": "Guias de Estudo/Assuntos",
       "template": "_Template/GuiaEstudos.md"
-    },
-    {
-      "folder": "Cursos/Andamento",
-      "template": "_Template/Curso.md"
     }
   ],
   "syntax_highlighting": true,
