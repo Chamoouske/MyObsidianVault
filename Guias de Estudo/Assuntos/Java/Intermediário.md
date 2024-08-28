@@ -6,4 +6,4 @@ subject: Java
 - [x] Classes
 - [x] Heranças
 - [x] Interfaces
-- [ ] Design Patterns
+- [x] Design Patterns

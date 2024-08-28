@@ -1,20 +1,17 @@
 ---
 tag: animes Summer-2023
 name: Zom 100_ Zombie ni Naru made ni Shitai 100 no Koto
-
 on_air: Sunday
 season: Summer-2023
 last_episode: 5
 last_watch: 2023-11-21
 genre: 
-
-dropped: false
+dropped: true
 finished: false
-
 created_at: 2023-07-09
-
 banner: ""
 banner_y: 0
+
 ---
 ## Sinópse
 
