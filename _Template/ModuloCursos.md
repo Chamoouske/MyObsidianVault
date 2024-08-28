@@ -25,11 +25,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 	const incompletedTasks = tasksModulos.where(t=>!t.completed).length;
 	
 	if(tasksModulos.length != dv.current().total_aulas)
-		await update('Total_Modulos', tasksModulos.length, dv.current().file.path);
-	if(completedTasks != dv.current().Modulos_Finalizados)
-		await update('Modulos_Finalizados', completedTasks, dv.current().file.path);
-	if(incompletedTasks != dv.current().Modulos_Faltantes)
-		await update('Modulos_Faltantes', incompletedTasks, dv.current().file.path);
+		await update('total_aulas', tasksModulos.length, dv.current().file.path);
 	if(tasksModulos.length == dv.current().total_aulas && !dv.current().finalizado)
 		await update('finalizado', true, dv.current().file.path);
 })()

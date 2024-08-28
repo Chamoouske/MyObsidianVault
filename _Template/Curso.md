@@ -1,6 +1,7 @@
 <%*
 const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
 const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
+const suggester = tp.system.suggester;
 
 let title = tp.file.title;
 const re = /[*:"\\|<>/?]/g;
@@ -45,7 +46,7 @@ priority: <% prioridade %>
 ```dataviewjs
 const pages = await dv.pages(`"<% pathCurso %>/Modulos"`);
 
-dv.taskList(pages.file.tasks.filter(task=> task.children = []));
+dv.taskList(pages.file.tasks.filter(task => task.children = []).filter(task => !task.completed));
 ```
 ---
 ```dataviewjs

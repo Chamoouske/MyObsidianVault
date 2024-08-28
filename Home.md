@@ -105,11 +105,11 @@ function createDivPercentage(percent){
 const pages = dv.pages('#cursos');
 dv.table(
 		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
-		pages.sort(t=>-((t.Complete / t.Total || 0) * 100))
+		pages.sort(t=>-((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
 			.map(t => {
 				const tasks = t.file.tasks;
 				const completed = tasks.where(t=>t.completed)
-				const progress = ((completed.length / tasks.length || 0) * 100)
+				const progress = ((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100)
 				return [
 					t.file.link,
 					t.status,
