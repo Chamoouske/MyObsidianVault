@@ -5,7 +5,7 @@ const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.f
 let title = tp.file.title;
 const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
-	title = (await tp.system.prompt("Nome do Anime: ")).replace(re, '_');
+	title = (await tp.system.prompt("Nome do Curso: ")).replace(re, '_');
 }
 
 const pathCurso = `Cursos/Andamento/${title}`;
