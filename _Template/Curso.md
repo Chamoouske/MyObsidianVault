@@ -11,18 +11,34 @@ if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 const pathCurso = `Cursos/Andamento/${title}`;
 await tp.file.move(`${pathCurso}/${title}`);
 
+const status = await suggester(
+	["To Do", "In Progress", "Completed"],
+	["To Do", "In Progress", "Completed"],
+	false,
+	"Status"
+) || "To Do";
+
+const prioridade = await suggester(
+	["Low", "Moderate", "High", "Imediate"],
+	["Low", "Moderate", "High", "Imediate"],
+	false,
+	"Prioridade"
+) || "Low";
+
 const totalModulos = await tp.system.prompt("Total de módulos: ") || 0;
 
 for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), `${pathCurso}/Modulos/Untitled`, false);
 %>---
 tags:
   - cursos
-url: 
+url: <% await tp.system.prompt("URL do Curso: ") || '' %>
 finalizado: false
 title: <% title %>
 Total_Modulos: <% totalModulos %>
 Modulos_Finalizados: 0
 Modulos_Faltantes: 0
+status: <% status %>
+priority: <% prioridade %>
 ---
 <% tp.file.cursor() %>
 ---

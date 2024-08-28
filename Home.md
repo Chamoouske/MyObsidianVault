@@ -73,6 +73,68 @@ dv.table(['Nome', 'Último EP', "Gêneros", ''],
 )
 ```
 
+```dataviewjs
+const {createButton} = app.plugins.plugins["buttons"];
+const createNewNoteTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('create_new');
+const findTFileTemplater = app.plugins.plugins['templater-obsidian'].templater.functions_generator.internal_functions.modules_array[1].static_functions.get('find_tfile');
+
+dv.header(1, 'Cursos');
+
+createButton({
+	app,
+	el: this.container,
+	args: {name: "Novo Curso"},
+	clickOverride: {
+		click: createNewNoteTemplater,
+		params: [
+			findTFileTemplater('Curso'), 'Untitled', true
+		]
+	}
+});
+
+function createDivPercentage(percent){
+	let style = `
+		width:100%;
+		border:1px solid green;
+		text-align:center;
+		border-radius:0.7rem;
+		background-image:linear-gradient(to right, rgb(0,130,0,1) ${percent<100?percent-10:percent}%,rgb(0,130,0,0) ${percent<100?percent+20:0}%);`;
+	return `<div style="${style}">${percent}%</div>`
+}
+
+const pages = dv.pages('#cursos');
+dv.table(
+		['Task', 'Status', 'Priority', 'Due Date', 'Progress', ''],
+		pages.sort(t=>-((t.Complete / t.Total || 0) * 100))
+			.map(t => {
+				const tasks = t.file.tasks;
+				const completed = tasks.where(t=>t.completed)
+				const progress = ((completed.length / tasks.length || 0) * 100)
+				return [
+					t.file.link,
+					t.status,
+					t.priority,
+					createDivPercentage(progress.toFixed(2)),
+					createButton({
+						app,
+						el: this.container,
+						args: {
+							name: t.status == "To Do" ? "In Progress" : " Complete "
+						},
+						clickOverride: {
+							click: update,
+							params: [
+								'status',
+								t.status == "To Do" ? "In Progress" : "Completed",
+								t.file.path
+							]
+						}
+					})
+				]
+			})
+	)
+```
+
 # Livros
 ```dataviewjs
 const {update} = this.app.plugins.plugins["metaedit"].api;
