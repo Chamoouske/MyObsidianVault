@@ -1,14 +1,4 @@
-<%*
-const { update } = this.app.plugins.plugins['metaedit'].api;
-
-let title = tp.file.title;
-const re = /[*:"\\|<>/?]/g;
-if (title.contains("Untitled") || title.contains("Sem título")){
-	title = (await tp.system.prompt("Título do Módulo: ")).replace(re, '_');
-}
-
-await tp.file.rename(title);
-%>---
+---
 tags:
   - cursos/modulos
 completed: false
@@ -27,4 +17,12 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-- [ ] Aula
+- [x] 01- Criando o primeiro programa Java
+- [x] 02- Compilando e executando um programa Java
+- [x] 03- Desafio: correção de erros
+- [x] 04- Escrevendo comentários no código
+- [ ] 05- Conhecendo e usando convenções de código
+- [ ] 06- Palavras reservadas
+- [ ] 07- Trabalhando com variáveis
+- [ ] 08- Operadores aritméticos
+- [ ] 09- Desafio: variáveis e operadores aritméticos

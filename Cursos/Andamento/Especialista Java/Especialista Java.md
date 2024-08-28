@@ -1,14 +1,15 @@
 ---
 tags:
   - cursos
-url: 
+url: https://app.algaworks.com/meus-cursos/especialista-java
 finalizado: false
-title: Java
-Total_Modulos: 2
-Modulos_Finalizados: 0
-Modulos_Faltantes: 2
-status: To Do
-priority: Low
+title: Especialista Java
+Total_Modulos: 35
+Modulos_Finalizados: 1
+Modulos_Faltantes: 34
+status: Andamento
+priority: High
+
 ---
 
 ---
@@ -24,7 +25,7 @@ createButton({
 	clickOverride: {
 		click: createNewNoteTemplater,
 		params: [
-			findTFileTemplater('ModuloCursos'), 'Cursos/Andamento/Java/Modulos/Untitled', true
+			findTFileTemplater('ModuloCursos'), 'Cursos/Andamento/Especialista Java/Modulos/Untitled', true
 		]
 	}
 });
@@ -39,7 +40,7 @@ function createDivPercentage(percent){
 	return `<div style="${style}">${percent}%</div>`
 }
 
-const pages = await dv.pages(`"Cursos/Andamento/Java/Modulos"`);
+const pages = await dv.pages(`"Cursos/Andamento/Especialista Java/Modulos"`);
 
 dv.table(['Módulo', 'Progress'],
 	pages.sort(t=>-((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
@@ -70,7 +71,7 @@ async function updateStatus() {
 }
 
 (async function updatePercentTasks() {
-	const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`).file.tasks;
+	const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`);
 	const completedTasks = tasksModulos.where(t=>t.completed).length;
 	const incompletedTasks = tasksModulos.where(t=>!t.completed).length;
 	

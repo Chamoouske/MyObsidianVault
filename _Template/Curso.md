@@ -96,7 +96,7 @@ async function updateStatus() {
 }
 
 (async function updatePercentTasks() {
-	const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`).file.tasks;
+	const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`);
 	const completedTasks = tasksModulos.where(t=>t.completed).length;
 	const incompletedTasks = tasksModulos.where(t=>!t.completed).length;
 	

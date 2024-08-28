@@ -1,4 +1,6 @@
 ---
+tags:
+  - cursos/modulos
 completed: false
 ---
 
@@ -11,6 +13,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 	
 	if(incompletedTasks == 0)
 		await update('completed', true, dv.current().file.path);
+	else if(dv.current().completed) await update('completed', false, dv.current().file.path);
 })()
 ```
 ---
