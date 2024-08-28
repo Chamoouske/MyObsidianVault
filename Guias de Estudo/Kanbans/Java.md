@@ -1,7 +1,7 @@
 ---
 
 tag: kanban Java
-kanban-plugin: basic
+kanban-plugin: board
 
 ---
 
@@ -11,24 +11,23 @@ kanban-plugin: basic
 
 ## Estudando
 
-- [ ] ![[Intermediário]]
 
 
 ## Revisar
 
 - [ ] ![[Básico]]
 - [ ] ![[SpringBoot]]
+- [ ] ![[Intermediário]]
 
 
 ## Tudo certo
 
-**Concluído**
 
 
 
 
 %% kanban:settings
 ```
-{"kanban-plugin":"basic"}
+{"kanban-plugin":"board"}
 ```
 %%
