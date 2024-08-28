@@ -7,13 +7,13 @@ const re = /[*:"\\|<>/?]/g;
 if (title.startsWith("Untitled") || title.startsWith("Sem título")){
 	title = (await tp.system.prompt("Nome do Anime: ")).replace(re, '_');
 }
+
 const pathCurso = `Cursos/Andamento/${title}`;
 await tp.file.move(`${pathCurso}/${title}`);
 
 const totalModulos = await tp.system.prompt("Total de módulos: ") || 0;
-const v = findTFileTemplater('ModuloCursos');
-console.log(v);
-for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), 'Untitled', true);
+
+for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), `${pathCurso}/${title}/Modulos/Untitled`, true);
 %>---
 tags:
   - cursos
