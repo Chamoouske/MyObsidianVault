@@ -13,7 +13,7 @@ await tp.file.move(`${pathCurso}/${title}`);
 
 const totalModulos = await tp.system.prompt("Total de módulos: ") || 0;
 
-for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), `${pathCurso}/${title}/Modulos/Untitled`, true);
+for(let i = 0; i < totalModulos; i++) await createNewNoteTemplater(findTFileTemplater('ModuloCursos'), `${pathCurso}/Modulos/Untitled`, false);
 %>---
 tags:
   - cursos
@@ -24,7 +24,7 @@ Total_Modulos: <% totalModulos %>
 Modulos_Finalizados: 0
 Modulos_Faltantes: 0
 ---
-
+<% tp.file.cursor() %>
 ---
 ```dataviewjs
 const pages = await dv.pages(`"<% pathCurso %>/Modulos"`);
@@ -34,9 +34,9 @@ dv.taskList(pages.file.tasks.filter(task=> task.children = []));
 ---
 ```dataviewjs
 const { update } = this.app.plugins.plugins['metaedit'].api;
-const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`).file.tasks;
 
 (async function updatePercentTasks() {
+	const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`).file.tasks;
 	const completedTasks = tasksModulos.where(t=>t.completed).length;
 	const incompletedTasks = tasksModulos.where(t=>!t.completed).length;
 	
@@ -46,7 +46,5 @@ const tasksModulos = await dv.pages(`"${dv.current().file.folder}/Modulos"`).fil
 		await update('Modulos_Finalizados', completedTasks, dv.current().file.path);
 	if(incompletedTasks != dv.current().Modulos_Faltantes)
 		await update('Modulos_Faltantes', incompletedTasks, dv.current().file.path);
-		
-	setTimeout(updatePercentTasks, 5000);
 })()
 ```
