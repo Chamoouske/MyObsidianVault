@@ -33,7 +33,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 - [x] [Diagrama de classes: multiplicidade para arrays](https://app.algaworks.com/aulas/4471/diagrama-de-classes-multiplicidade-para-arrays)
 - [x] [Boas práticas: retorne arrays ou coleções vazias no lugar de null](https://app.algaworks.com/aulas/4472/boas-praticas-retorne-arrays-ou-colecoes-vazias-no-lugar-de-null)
 - [x] [Criando arrays multidimensionais](https://app.algaworks.com/aulas/4473/criando-arrays-multidimensionais)
-- [ ] [Iterando em arrays multidimensionais](https://app.algaworks.com/aulas/4474/iterando-em-arrays-multidimensionais)
+- [x] [Iterando em arrays multidimensionais](https://app.algaworks.com/aulas/4474/iterando-em-arrays-multidimensionais)
 - [ ] [Lendo os parâmetros da linha de comando](https://app.algaworks.com/aulas/4475/lendo-os-parametros-da-linha-de-comando)
 - [ ] [Criando métodos com argumentos variáveis com Varargs](https://app.algaworks.com/aulas/4476/criando-metodos-com-argumentos-variaveis-com-varargs)
 - [ ] [Boas práticas: use varargs com cuidado](https://app.algaworks.com/aulas/4477/boas-praticas-use-varargs-com-cuidado)
