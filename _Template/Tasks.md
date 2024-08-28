@@ -1,9 +1,7 @@
 <%*
 const prompt = tp.system.prompt;
 const suggester = tp.system.suggester;
-const {update} = this.app.plugins.plugins["metaedit"].api;
 const dv = this.app.plugins.plugins['dataview'].api;
-const tasks = await dv.pages(`"${tp.file.path(true).split('.')[0]}"`).file.tasks;
 
 let title = tp.file.title;
 const re = /[*:"\\|<>/?]/g;
