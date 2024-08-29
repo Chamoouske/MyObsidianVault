@@ -17,8 +17,8 @@ class Classe:
 
 		return _instance
 
-classe1 = new Classe("classe 1")
-classe2 = new Classe("classe 2")
+classe1 = Classe("classe 1")
+classe2 = Classe("classe 2")
 
 print(classe1.nome) # Saída é: "classe 1"
 print(classe2.nome) # Saída é: "classe 1"
