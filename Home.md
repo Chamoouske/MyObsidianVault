@@ -344,9 +344,3 @@ for(let group of pages.groupBy(t=>t.subject)){
 LIST
 FROM "Ajuda" and #Ajuda
 ```
-
-# Roteiros
-```dataview
-LIST
-FROM "Roteiros" and #roteiros
-```
