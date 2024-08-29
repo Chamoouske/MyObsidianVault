@@ -12,6 +12,7 @@ function writeFile(filename, inData){
 async function readFile(filename){
 	const path = electron.app.getPath('userData');
 	const buf = await fs.promises.readFile(`${path}/${filename}`);
+
 	return buf;
 }
 
@@ -29,17 +30,16 @@ const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld(
 	"nomeAPI", {
-		readFile: async () => {
-			return ipcRenderer.invoke('read-file', { filename: 'file.txt' });
+		readFile: async (filename) => {
+			return ipcRenderer.invoke('read-file', { filename: filename });
 		},
-		writeFile: async (data) => {
-			return ipcRenderer.invoke('write-file', { filename: 'file.txt', data: data });
-		},
+		writeFile: async (filename, data) => {
+			return ipcRenderer.invoke('write-file', { filename: filename, data: data });
 		}
 	}
 );
 ```
 Para acessar os arquivos no _front-end_, tem que seguir o exemplo:
 ```js
-await window.nomeAPI.readFile()
+await window.nomeAPI.readFile('file.txt')
 ```

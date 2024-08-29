@@ -1,6 +1,7 @@
 ---
 tag: ajuda
 ---
+
 1. Defina o seu objetivo final (específico, quebrado em passos)
 2. Defina a data para entrega desse objetivo
     - Diga publicamente o que irá fazer e diga quando irá mostrar aquilo

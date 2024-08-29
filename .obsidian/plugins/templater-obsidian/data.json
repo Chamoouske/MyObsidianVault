@@ -37,6 +37,10 @@
     {
       "folder": "Cursos/Andamento",
       "template": "_Template/Curso.md"
+    },
+    {
+      "folder": "Ajuda",
+      "template": "_Template/Ajuda.md"
     }
   ],
   "syntax_highlighting": true,
