@@ -10,10 +10,12 @@ class Car:
 		self.color = color
 		self.n_doors = n_doors
 		self.max_velocity = max_velocity
+
 class SportCar(Car):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		self.type = "Sport"
+
 class ConversibleCar(Car):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
@@ -24,6 +26,7 @@ class CarFactory:
 		"Conversible": ConversibleCar,
 		"Sport": SportCar
 	}
+
 	def new(self, car_type, *args, **kwargs):
 		return self._registry[car_type](*args, **kwargs)
 
