@@ -40,18 +40,25 @@ function createDivPercentage(percent){
 	return `<div style="${style}">${percent}%</div>`
 }
 
+function definePercentProgressionByDataviewPage(page) {
+	const tasks = page.file.tasks;
+	const completed = tasks.where(t => t.completed)
+
+	return ((completed.length / tasks.length) || 0) * 100
+}
+
 const pages = await dv.pages(`"Cursos/Andamento/Especialista Java/Modulos"`);
 
 dv.table(['Módulo', 'Progress'],
-	pages.sort(t => -((t.Modulos_Finalizados / t.Total_Modulos || 0) * 100))
-		.filter(t => !t.completed)
-		.map(t => {
-			const tasks = t.file.tasks;
-			const completed = tasks.where(t=>t.completed)
-			const progress = ((completed.length / tasks.length || 0) * 100)
+	pages.filter(t => !t.completed)
+		.sort(t => {
+			return - 1 * definePercentProgressionByDataviewPage(t);
+		}).map(t => {
 			return [
 				t.file.link,
-				createDivPercentage(progress.toFixed(2))
+				createDivPercentage(
+					definePercentProgressionByDataviewPage(t).toFixed(2)
+				)
 			]
 		})
 )
