@@ -1,7 +1,7 @@
 ---
 tags:
   - cursos/modulos
-completed: false
+completed: true
 
 ---
 
@@ -33,5 +33,5 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 13. [x] [Diagrama de classes: visibilidade public, package e private4m 26s](https://app.algaworks.com/aulas/4499/diagrama-de-classes-visibilidade-public-package-e-private)
 14. [x] [Desafio: pacotes e modificadores de acesso](https://app.algaworks.com/aulas/4500/desafio-pacotes-e-modificadores-de-acesso)
 15. [x] [Importando membros estáticos (static import)5m 12s](https://app.algaworks.com/aulas/4501/importando-membros-estaticos-static-import)
-16. [ ] [Múltiplas classes não-públicas em um único arquivo6m 20s](https://app.algaworks.com/aulas/4502/multiplas-classes-nao-publicas-em-um-unico-arquivo)
-17. [ ] [Conhecendo a documentação JavaDoc do Java SE7m 10s](https://app.algaworks.com/aulas/4503/conhecendo-a-documentacao-javadoc-do-java-se)
+16. [x] [Múltiplas classes não-públicas em um único arquivo6m 20s](https://app.algaworks.com/aulas/4502/multiplas-classes-nao-publicas-em-um-unico-arquivo)
+17. [x] [Conhecendo a documentação JavaDoc do Java SE7m 10s](https://app.algaworks.com/aulas/4503/conhecendo-a-documentacao-javadoc-do-java-se)
