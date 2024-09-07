@@ -29,7 +29,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 9. [x] [Organizando as classes em pacotes14m 40s](https://app.algaworks.com/aulas/4495/organizando-as-classes-em-pacotes)
 10. [x] [Importando classes de pacotes18m 58s](https://app.algaworks.com/aulas/4496/importando-classes-de-pacotes)
 11. [x] [Modificador de acesso public e default12m 3s](https://app.algaworks.com/aulas/4497/modificador-de-acesso-public-e-default)
-12. [ ] [Modificador de acesso private6m 39s](https://app.algaworks.com/aulas/4498/modificador-de-acesso-private)
+12. [x] [Modificador de acesso private6m 39s](https://app.algaworks.com/aulas/4498/modificador-de-acesso-private)
 13. [ ] [Diagrama de classes: visibilidade public, package e private4m 26s](https://app.algaworks.com/aulas/4499/diagrama-de-classes-visibilidade-public-package-e-private)
 14. [ ] [Desafio: pacotes e modificadores de acesso](https://app.algaworks.com/aulas/4500/desafio-pacotes-e-modificadores-de-acesso)
 15. [ ] [Importando membros estáticos (static import)5m 12s](https://app.algaworks.com/aulas/4501/importando-membros-estaticos-static-import)
