@@ -18,7 +18,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Introdução à Streams API e operações básicas13m 53s](https://app.algaworks.com/aulas/4821/introducao-a-streams-api-e-operacoes-basicas)
+1. [x] [Introdução à Streams API e operações básicas13m 53s](https://app.algaworks.com/aulas/4821/introducao-a-streams-api-e-operacoes-basicas)
 2. [ ] [Operação intermediária: Stream.filter6m 57s](https://app.algaworks.com/aulas/4822/operacao-intermediaria-streamfilter)
 3. [ ] [Operação terminal: Stream.forEach3m 30s](https://app.algaworks.com/aulas/4823/operacao-terminal-streamforeach)
 4. [ ] [Criando o pipeline com encadeamento de operações6m 10s](https://app.algaworks.com/aulas/4824/criando-o-pipeline-com-encadeamento-de-operacoes)
