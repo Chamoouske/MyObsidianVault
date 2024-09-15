@@ -1,7 +1,7 @@
 ---
 tags:
   - cursos/modulos
-completed: false
+completed: true
 
 ---
 
