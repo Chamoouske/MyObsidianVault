@@ -5,8 +5,8 @@ url: https://app.algaworks.com/meus-cursos/especialista-java
 finalizado: false
 title: Especialista Java
 Total_Modulos: 35
-Modulos_Finalizados: 29
-Modulos_Faltantes: 6
+Modulos_Finalizados: 33
+Modulos_Faltantes: 2
 status: Andamento
 priority: High
 

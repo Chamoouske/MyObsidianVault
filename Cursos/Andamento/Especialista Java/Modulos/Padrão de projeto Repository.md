@@ -17,7 +17,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Introdução ao design de software3m 45s](https://app.algaworks.com/aulas/4941/introducao-ao-design-de-software)
+1. [x] [Introdução ao design de software3m 45s](https://app.algaworks.com/aulas/4941/introducao-ao-design-de-software)
 2. [ ] [Criando entidade e camada de serviço18m 36s](https://app.algaworks.com/aulas/4942/criando-entidade-e-camada-de-servico)
 3. [ ] [Conhecendo o pattern Repository1m 48s](https://app.algaworks.com/aulas/4943/conhecendo-o-pattern-repository)
 4. [ ] [Implementando uma classe Repository10m 56s](https://app.algaworks.com/aulas/4944/implementando-uma-classe-repository)
