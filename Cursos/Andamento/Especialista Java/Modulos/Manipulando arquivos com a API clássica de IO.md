@@ -18,7 +18,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Introdução à API clássica de I/O2m 5s](https://app.algaworks.com/aulas/4850/introducao-a-api-classica-de-io)
+1. [x] [Introdução à API clássica de I/O2m 5s](https://app.algaworks.com/aulas/4850/introducao-a-api-classica-de-io)
 2. [ ] [Instanciando e criando arquivos e pastas com a classe File12m 38s](https://app.algaworks.com/aulas/4851/instanciando-e-criando-arquivos-e-pastas-com-a-classe-file)
 3. [ ] [Obtendo o caminho absoluto e canônico de File7m 41s](https://app.algaworks.com/aulas/4852/obtendo-o-caminho-absoluto-e-canonico-de-file)
 4. [ ] [Excluindo, renomeando e movendo arquivos e pastas8m 5s](https://app.algaworks.com/aulas/4853/excluindo-renomeando-e-movendo-arquivos-e-pastas)
