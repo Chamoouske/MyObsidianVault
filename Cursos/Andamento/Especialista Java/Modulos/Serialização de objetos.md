@@ -18,7 +18,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Introdução à serialização de objetos1m 34s](https://app.algaworks.com/aulas/4889/introducao-a-serializacao-de-objetos)
+1. [x] [Introdução à serialização de objetos1m 34s](https://app.algaworks.com/aulas/4889/introducao-a-serializacao-de-objetos)
 2. [ ] [Tornando classes serializáveis com a interface Serializable2m 39s](https://app.algaworks.com/aulas/4890/tornando-classes-serializaveis-com-a-interface-serializable)
 3. [ ] [Serializando objetos com ObjectOutputStream7m 38s](https://app.algaworks.com/aulas/4891/serializando-objetos-com-objectoutputstream)
 4. [ ] [Desserializando objetos com ObjectInputStream7m 54s](https://app.algaworks.com/aulas/4892/desserializando-objetos-com-objectinputstream)
