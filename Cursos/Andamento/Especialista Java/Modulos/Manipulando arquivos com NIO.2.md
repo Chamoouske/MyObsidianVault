@@ -18,11 +18,11 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Introdução ao NIO e NIO.23m 36s](https://app.algaworks.com/aulas/4868/introducao-ao-nio-e-nio2)
-2. [ ] [Representando arquivos e pastas com a classe Path14m 59s](https://app.algaworks.com/aulas/4869/representando-arquivos-e-pastas-com-a-classe-path)
-3. [ ] [Trabalhando com caminhos absolutos e relativos8m 38s](https://app.algaworks.com/aulas/4870/trabalhando-com-caminhos-absolutos-e-relativos)
-4. [ ] [Operações básicas com a classe Files6m 40s](https://app.algaworks.com/aulas/4871/operacoes-basicas-com-a-classe-files)
-5. [ ] [Copiando arquivos e diretórios7m 42s](https://app.algaworks.com/aulas/4872/copiando-arquivos-e-diretorios)
+1. [x] [Introdução ao NIO e NIO.23m 36s](https://app.algaworks.com/aulas/4868/introducao-ao-nio-e-nio2)
+2. [x] [Representando arquivos e pastas com a classe Path14m 59s](https://app.algaworks.com/aulas/4869/representando-arquivos-e-pastas-com-a-classe-path)
+3. [x] [Trabalhando com caminhos absolutos e relativos8m 38s](https://app.algaworks.com/aulas/4870/trabalhando-com-caminhos-absolutos-e-relativos)
+4. [x] [Operações básicas com a classe Files6m 40s](https://app.algaworks.com/aulas/4871/operacoes-basicas-com-a-classe-files)
+5. [x] [Copiando arquivos e diretórios7m 42s](https://app.algaworks.com/aulas/4872/copiando-arquivos-e-diretorios)
 6. [ ] [Movendo arquivos e diretórios3m 39s](https://app.algaworks.com/aulas/4873/movendo-arquivos-e-diretorios)
 7. [ ] [Excluindo arquivos e diretórios4m 49s](https://app.algaworks.com/aulas/4874/excluindo-arquivos-e-diretorios)
 8. [ ] [Realizando operações com Files.walkFileTree14m 17s](https://app.algaworks.com/aulas/4875/realizando-operacoes-com-fileswalkfiletree)
