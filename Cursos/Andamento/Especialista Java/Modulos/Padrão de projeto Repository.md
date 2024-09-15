@@ -1,7 +1,7 @@
 ---
 tags:
   - cursos/modulos
-completed: false
+completed: true
 ---
 
 ```dataviewjs
@@ -27,4 +27,4 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 8. [x] [Desacoplando a implementação de Repository6m 57s](https://app.algaworks.com/aulas/4948/desacoplando-a-implementacao-de-repository)
 9. [x] [Alternando a implementação do Repository11m 23s](https://app.algaworks.com/aulas/4949/alternando-a-implementacao-do-repository)
 10. [x] [Abstraindo a fábrica de repositórios10m 56s](https://app.algaworks.com/aulas/4950/abstraindo-a-fabrica-de-repositorios)
-11. [ ] [Criando um arquivo de configuração (properties)13m 27s](https://app.algaworks.com/aulas/4951/criando-um-arquivo-de-configuracao-properties)
+11. [x] [Criando um arquivo de configuração (properties)13m 27s](https://app.algaworks.com/aulas/4951/criando-um-arquivo-de-configuracao-properties)

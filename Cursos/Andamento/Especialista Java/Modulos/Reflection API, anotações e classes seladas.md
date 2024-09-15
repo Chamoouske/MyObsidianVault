@@ -18,7 +18,7 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 })()
 ```
 ---
-1. [ ] [Conhecendo o projeto de gerador de CSV5m 30s](https://app.algaworks.com/aulas/4952/conhecendo-o-projeto-de-gerador-de-csv)
+1. [x] [Conhecendo o projeto de gerador de CSV5m 30s](https://app.algaworks.com/aulas/4952/conhecendo-o-projeto-de-gerador-de-csv)
 2. [ ] [Lendo propriedades dinamicamente com Reflection API10m 12s](https://app.algaworks.com/aulas/4953/lendo-propriedades-dinamicamente-com-reflection-api)
 3. [ ] [Invocando a leitura de valores de propriedades14m 9s](https://app.algaworks.com/aulas/4954/invocando-a-leitura-de-valores-de-propriedades)
 4. [ ] [Introdução às anotações do Java5m 38s](https://app.algaworks.com/aulas/4955/introducao-as-anotacoes-do-java)
