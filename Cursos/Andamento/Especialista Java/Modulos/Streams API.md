@@ -19,9 +19,9 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 ```
 ---
 1. [x] [Introdução à Streams API e operações básicas13m 53s](https://app.algaworks.com/aulas/4821/introducao-a-streams-api-e-operacoes-basicas)
-2. [ ] [Operação intermediária: Stream.filter6m 57s](https://app.algaworks.com/aulas/4822/operacao-intermediaria-streamfilter)
-3. [ ] [Operação terminal: Stream.forEach3m 30s](https://app.algaworks.com/aulas/4823/operacao-terminal-streamforeach)
-4. [ ] [Criando o pipeline com encadeamento de operações6m 10s](https://app.algaworks.com/aulas/4824/criando-o-pipeline-com-encadeamento-de-operacoes)
+2. [x] [Operação intermediária: Stream.filter6m 57s](https://app.algaworks.com/aulas/4822/operacao-intermediaria-streamfilter)
+3. [x] [Operação terminal: Stream.forEach3m 30s](https://app.algaworks.com/aulas/4823/operacao-terminal-streamforeach)
+4. [x] [Criando o pipeline com encadeamento de operações6m 10s](https://app.algaworks.com/aulas/4824/criando-o-pipeline-com-encadeamento-de-operacoes)
 5. [ ] [Executando ações intermediárias com o método Stream.peek6m 53s](https://app.algaworks.com/aulas/4825/executando-acoes-intermediarias-com-o-metodo-streampeek)
 6. [ ] [Operações terminais de curto-circuito: findFirst e findAny7m 40s](https://app.algaworks.com/aulas/4826/operacoes-terminais-de-curto-circuito-findfirst-e-findany)
 7. [ ] [Testando predicados com Stream.anyMatch, Stream.allMatch e Stream.noneMatch6m 35s](https://app.algaworks.com/aulas/4827/testando-predicados-com-streamanymatch-streamallmatch-e-streamnonematch)
