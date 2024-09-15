@@ -86,8 +86,10 @@ const { update } = this.app.plugins.plugins['metaedit'].api;
 
 async function updateStatus() {
 	let novoStatus = 'To Do';
-	if(dv.current().Modulos_Finalizados == dv.current().Total_Modulos)
+	if(dv.current().Modulos_Finalizados == dv.current().Total_Modulos) {
 		novoStatus = 'Finalizado';
+		await update('finalizado', true, dv.current().file.path);
+	}
 	if(dv.current().Modulos_Finalizados != dv.current().Total_Modulos && dv.current().Modulos_Faltantes != dv.current().Total_Modulos)
 		novoStatus = 'Andamento';
 
